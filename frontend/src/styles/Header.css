@@ -1,0 +1,371 @@
+/* ========================================
+   GLOBAL HEADER
+======================================== */
+
+.header {
+  width: 100%;
+  background: #ffffff;
+  border-top: 3px solid #263238;
+}
+
+/* ========================================
+   MAIN CONTAINER
+======================================== */
+
+.header-top,
+.header-middle,
+.category-bar {
+  width: calc(100% - 40px);
+  max-width: 1405px;
+  margin: 0 auto;
+}
+
+/* ========================================
+   TOP SECTION
+======================================== */
+
+.header-top {
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 7px 5px;
+}
+
+/* ========================================
+   TOP LEFT
+======================================== */
+
+.header-top-left {
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+}
+
+/* ========================================
+   LOGO
+======================================== */
+
+.logo {
+  width: 165px;
+  height: 54px;
+  gap: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 7px;
+  background: #ffd812db;
+  border-radius: 15px;
+  cursor: pointer;
+  user-select: none;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.logo-image {
+  width: 40px;
+  object-fit: contain;
+
+  display: block;
+
+  flex-shrink: 0;
+}
+
+.logo-name {
+  width: 93px;
+  height: auto;
+  display: block;
+
+  object-fit: contain;
+
+  flex-shrink: 0;
+}
+
+/* ========================================
+   GROCERIES
+======================================== */
+
+.travel {
+  width: 162px;
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f1f1f1;
+
+  border-radius: 15px;
+
+  color: #333333;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: background 0.2s ease;
+}
+
+.travel:hover {
+  background: #e8e8e8;
+}
+
+/* ========================================
+   DELIVERY LOCATION
+======================================== */
+
+.delivery-location {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+.delivery-location svg {
+  width: 18px;
+  height: 18px;
+}
+
+.delivery-location button {
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #2874f0;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.location-arrow {
+  color: #2874f0;
+
+  font-size: 24px;
+
+  line-height: 1;
+}
+
+/* ========================================
+   SEARCH / ACTION SECTION
+======================================== */
+
+.header-middle {
+  height: 75px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 55px;
+
+  padding: 8px 5px 14px;
+
+  border-bottom: 1px solid #dddddd;
+}
+
+/* ========================================
+   SEARCH BOX
+======================================== */
+
+.search-box {
+  flex: 1;
+
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 0 20px;
+
+  border: 2px solid #2874f0;
+
+  border-radius: 15px;
+
+  background: #ffffff;
+}
+
+.search-box svg {
+  width: 23px;
+  height: 23px;
+
+  color: #555555;
+
+  flex-shrink: 0;
+}
+
+.search-box input {
+  width: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  font-size: 18px;
+
+  font-family: inherit;
+}
+
+.search-box input::placeholder {
+  color: #666666;
+}
+
+/* ========================================
+   HEADER ACTIONS
+======================================== */
+
+.header-actions {
+  display: flex;
+  align-items: center;
+
+  gap: 30px;
+
+  flex-shrink: 0;
+}
+
+.header-action {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  font-size: 16px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+}
+
+.header-action svg {
+  flex-shrink: 0;
+}
+
+.header-action:hover {
+  color: #2874f0;
+}
+
+/* ========================================
+   CATEGORY BAR
+======================================== */
+
+.category-bar {
+  height: 90px;
+
+  display: flex;
+  align-items: stretch;
+
+  border-bottom: 1px solid #dddddd;
+
+  overflow-x: auto;
+
+  scrollbar-width: none;
+}
+
+.category-bar::-webkit-scrollbar {
+  display: none;
+}
+
+/* ========================================
+   CATEGORY ITEM
+======================================== */
+
+.category {
+  position: relative;
+
+  flex: 1;
+
+  min-width: 100px;
+
+  height: 90px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  padding: 12px 6px 10px;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  user-select: none;
+}
+
+/* ========================================
+   CATEGORY ICON
+======================================== */
+
+.category-icon {
+  width: 35px;
+  height: 35px;
+
+  display: block;
+
+  object-fit: contain;
+
+  flex-shrink: 0;
+}
+
+/* ========================================
+   CATEGORY TEXT
+======================================== */
+
+.category span {
+  display: block;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  line-height: 20px;
+
+  text-align: center;
+
+  color: #111111;
+}
+
+/* ========================================
+   ACTIVE CATEGORY
+======================================== */
+
+.category.active {
+  font-weight: 700;
+}
+
+.category.active span {
+  font-weight: 700;
+}
+
+.category.active::after {
+  content: "";
+
+  position: absolute;
+
+  bottom: 0;
+
+  left: 18px;
+  right: 18px;
+
+  height: 4px;
+
+  background: #2874f0;
+
+  border-radius: 4px 4px 0 0;
+}
