@@ -573,8 +573,8 @@
 ======================================== */
 
 .category-icon {
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
 
   display: block;
 
@@ -863,4 +863,11 @@
 
 .more-trigger:hover {
   color: #2874f0;
+}
+
+/* Fix Accessories icon size */
+.category-icon[src*="accessories"] {
+  width: 63px;
+  height: 63px;
+  object-fit: contain;
 }

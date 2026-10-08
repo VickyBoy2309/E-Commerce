@@ -29,6 +29,7 @@ import homeIcon from "../../assets/images/icons/home.svg";
 import mobilesIcon from "../../assets/images/icons/mobiles.svg";
 import sportsFitnessIcon from "../../assets/images/icons/sports-fitness.svg";
 import toysBabyIcon from "../../assets/images/icons/toys-baby.svg";
+import assessoriesIcon from "../../assets/images/icons/accessories.svg";
 
 import logo from "../../assets/images/logo/logo.png";
 import logoName from "../../assets/images/logo/logo-name.png";
@@ -50,7 +51,7 @@ function Header() {
     },
     {
       name: "Accessories",
-      icon: beautyIcon,
+      icon: assessoriesIcon,
       path: "/accessories",
     },
     {
