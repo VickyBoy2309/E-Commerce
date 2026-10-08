@@ -9,9 +9,9 @@ import {
   Heart,
   Store,
   Gift,
-  Bell,
+  BellRing,
+  Monitor,
   Headphones,
-  Megaphone,
   Download,
 } from "lucide-react";
 
@@ -21,6 +21,8 @@ import appliancesIcon from "../../assets/images/icons/appliances.svg";
 import beautyIcon from "../../assets/images/icons/beauty.svg";
 import booksIcon from "../../assets/images/icons/books.svg";
 import electronicsIcon from "../../assets/images/icons/electronics.svg";
+import gamingIcon from "../../assets/images/icons/gaming.svg";
+import fashionIcon from "../../assets/images/icons/fashion.svg";
 import forYouIcon from "../../assets/images/icons/for-you.svg";
 import furnitureIcon from "../../assets/images/icons/furniture.svg";
 import homeIcon from "../../assets/images/icons/home.svg";
@@ -30,6 +32,7 @@ import toysBabyIcon from "../../assets/images/icons/toys-baby.svg";
 
 import logo from "../../assets/images/logo/logo.png";
 import logoName from "../../assets/images/logo/logo-name.png";
+import groceriesLogo from "../../assets/images/logo/groceries.png";
 
 import "../../styles/Header.css";
 
@@ -39,6 +42,16 @@ function Header() {
       name: "For You",
       icon: forYouIcon,
       path: "/for-you",
+    },
+    {
+      name: "Fashion",
+      icon: fashionIcon,
+      path: "/fashion",
+    },
+    {
+      name: "Accessories",
+      icon: beautyIcon,
+      path: "/accessories",
     },
     {
       name: "Mobiles",
@@ -85,6 +98,11 @@ function Header() {
       icon: booksIcon,
       path: "/books",
     },
+    {
+      name: "Gaming",
+      icon: gamingIcon,
+      path: "/gaming",
+    },
   ];
 
   return (
@@ -98,15 +116,23 @@ function Header() {
           {/* Logo */}
 
           <div className="logo">
-            <img src={logo} alt="" className="logo-image" />
+            <NavLink to="/for-you" className="logo">
+              <img src={logo} alt="" className="logo-image" />
 
-            <img src={logoName} alt="NammaCart" className="logo-name" />
+              <img src={logoName} alt="NammaCart" className="logo-name" />
+            </NavLink>
           </div>
 
           {/* Groceries */}
 
           <div className="groceries">
-            <span>Groceries</span>
+            <NavLink to="/groceries" className="groceries">
+              <img
+                src={groceriesLogo}
+                alt="Groceries"
+                className="groceries-logo"
+              />
+            </NavLink>
           </div>
         </div>
 
@@ -140,7 +166,7 @@ function Header() {
         {/* Navigation */}
 
         <div className="header-actions">
-          {/* Login */}
+          {/* =================== Login =================*/}
 
           <div className="login-wrapper">
             {/* Login Trigger */}
@@ -196,14 +222,6 @@ function Header() {
                 <span>Wishlist</span>
               </NavLink>
 
-              {/* Become a Seller */}
-
-              <NavLink to="/seller" className="login-dropdown-item">
-                <Store size={20} />
-
-                <span>Become a Seller</span>
-              </NavLink>
-
               {/* Rewards */}
 
               <NavLink to="/rewards" className="login-dropdown-item">
@@ -220,30 +238,6 @@ function Header() {
                 <span>Gift Cards</span>
               </NavLink>
 
-              {/* Notification Preferences */}
-
-              <NavLink to="/notifications" className="login-dropdown-item">
-                <Bell size={20} />
-
-                <span>Notification Preferences</span>
-              </NavLink>
-
-              {/* Customer Care */}
-
-              <NavLink to="/customer-care" className="login-dropdown-item">
-                <Headphones size={20} />
-
-                <span>24x7 Customer Care</span>
-              </NavLink>
-
-              {/* Advertise */}
-
-              <NavLink to="/advertise" className="login-dropdown-item">
-                <Megaphone size={20} />
-
-                <span>Advertise</span>
-              </NavLink>
-
               {/* Download App */}
 
               <NavLink to="/download-app" className="login-dropdown-item">
@@ -255,11 +249,37 @@ function Header() {
           </div>
 
           {/* More */}
+          <div className="more-wrapper">
+            {/* More Trigger */}
+            <div className="header-action more-trigger">
+              <span>More</span>
+              <ChevronDown size={16} />
+            </div>
 
-          <div className="header-action">
-            <span>More</span>
+            {/* More Dropdown */}
+            <div className="more-dropdown">
+              <h3>More</h3>
 
-            <ChevronDown size={16} />
+              <button className="more-item">
+                <Store size={20} />
+                <span>Become a Seller</span>
+              </button>
+
+              <button className="more-item">
+                <BellRing size={20} />
+                <span>Notification Settings</span>
+              </button>
+
+              <button className="more-item">
+                <Headphones size={20} />
+                <span>24x7 Customer Care</span>
+              </button>
+
+              <button className="more-item">
+                <Monitor size={20} />
+                <span>Advertise on Flipkart</span>
+              </button>
+            </div>
           </div>
 
           {/* Cart */}
@@ -282,11 +302,13 @@ function Header() {
             end={category.path === "/for-you"}
             className={({ isActive }) => `category ${isActive ? "active" : ""}`}
           >
-            <img
-              src={category.icon}
-              alt={category.name}
-              className="category-icon"
-            />
+            <div className="category-icon-wrapper">
+              <img
+                src={category.icon}
+                alt={category.name}
+                className="category-icon"
+              />
+            </div>
 
             <span>{category.name}</span>
           </NavLink>

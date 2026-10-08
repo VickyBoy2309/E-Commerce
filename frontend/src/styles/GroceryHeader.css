@@ -1,8 +1,8 @@
 /* ========================================
-   GLOBAL HEADER
+   GROCERY HEADER
 ======================================== */
 
-.header {
+.grocery-header {
   width: 100%;
   background: #ffffff;
   border-top: 3px solid #263238;
@@ -12,12 +12,12 @@
    MAIN CONTAINER
 ======================================== */
 
-.header-top,
-.header-middle,
-.category-bar {
+.grocery-header-top,
+.grocery-header-middle {
   width: calc(100% - 40px);
   max-width: 1300px;
   margin: 0 auto;
+
   font-family:
     "Inter",
     -apple-system,
@@ -33,7 +33,7 @@
    TOP SECTION
 ======================================== */
 
-.header-top {
+.grocery-header-top {
   height: 70px;
 
   display: flex;
@@ -47,7 +47,7 @@
    TOP LEFT
 ======================================== */
 
-.header-top-left {
+.grocery-header-top-left {
   display: flex;
   align-items: center;
 
@@ -55,10 +55,10 @@
 }
 
 /* ========================================
-   LOGO
+   NAMMACART LOGO
 ======================================== */
 
-.logo {
+.grocery-logo {
   width: 165px;
   height: 47px;
 
@@ -70,7 +70,9 @@
 
   padding: 0 7px;
 
-  background: #ffd812db;
+  /* Grocery page: NammaCart becomes grey */
+
+  background: #f1f1f1;
 
   border-radius: 15px;
 
@@ -80,9 +82,11 @@
   overflow: hidden;
 
   flex-shrink: 0;
+
+  text-decoration: none;
 }
 
-.logo-image {
+.grocery-logo-image {
   width: 40px;
 
   object-fit: contain;
@@ -92,7 +96,7 @@
   flex-shrink: 0;
 }
 
-.logo-name {
+.grocery-logo-name {
   width: 95px;
   height: auto;
 
@@ -107,7 +111,7 @@
    GROCERIES
 ======================================== */
 
-.groceries {
+.grocery-brand {
   width: 165px;
   height: 47px;
 
@@ -115,33 +119,30 @@
   align-items: center;
   justify-content: center;
 
-  background: #f1f1f1;
+  /* Grocery page: active */
+
+  background: #7D3409;
 
   border-radius: 15px;
-
-  color: #333333;
-
-  font-size: 16px;
-  font-weight: 600;
 
   cursor: pointer;
 
   transition: background 0.2s ease;
+
+  text-decoration: none;
 }
 
-.groceries-logo {
+.grocery-brand-logo {
   width: 90px;
 }
 
-.groceries:hover {
-  background: #e8e8e8;
-}
+
 
 /* ========================================
    DELIVERY LOCATION
 ======================================== */
 
-.delivery-location {
+.grocery-delivery-location {
   display: flex;
   align-items: center;
 
@@ -153,12 +154,12 @@
   white-space: nowrap;
 }
 
-.delivery-location svg {
+.grocery-delivery-location svg {
   width: 18px;
   height: 18px;
 }
 
-.delivery-location button {
+.grocery-delivery-location button {
   border: none;
   outline: none;
 
@@ -172,7 +173,7 @@
   cursor: pointer;
 }
 
-.location-arrow {
+.grocery-location-arrow {
   color: #2874f0;
 
   font-size: 24px;
@@ -184,7 +185,7 @@
    SEARCH / ACTION SECTION
 ======================================== */
 
-.header-middle {
+.grocery-header-middle {
   height: 75px;
 
   display: flex;
@@ -201,7 +202,7 @@
    SEARCH BOX
 ======================================== */
 
-.search-box {
+.grocery-search-box {
   flex: 1;
 
   height: 50px;
@@ -220,7 +221,7 @@
   background: #ffffff;
 }
 
-.search-box svg {
+.grocery-search-box svg {
   width: 23px;
   height: 23px;
 
@@ -229,7 +230,7 @@
   flex-shrink: 0;
 }
 
-.search-box input {
+.grocery-search-box input {
   width: 100%;
 
   border: none;
@@ -242,7 +243,7 @@
   font-family: inherit;
 }
 
-.search-box input::placeholder {
+.grocery-search-box input::placeholder {
   color: #666666;
 }
 
@@ -250,7 +251,7 @@
    HEADER ACTIONS
 ======================================== */
 
-.header-actions {
+.grocery-header-actions {
   display: flex;
   align-items: center;
 
@@ -259,7 +260,7 @@
   flex-shrink: 0;
 }
 
-.header-action {
+.grocery-header-action {
   display: flex;
   align-items: center;
 
@@ -277,7 +278,7 @@
    LOGIN WRAPPER
 ======================================== */
 
-.login-wrapper {
+.grocery-login-wrapper {
   position: relative;
 
   display: flex;
@@ -288,7 +289,7 @@
    LOGIN TRIGGER
 ======================================== */
 
-.login-trigger {
+.grocery-login-trigger {
   text-decoration: none;
 
   color: #111111;
@@ -302,7 +303,7 @@
   padding: 8px 10px;
 }
 
-.login-trigger:hover {
+.grocery-login-trigger:hover {
   color: #2874f0;
 }
 
@@ -310,7 +311,7 @@
    LOGIN DROPDOWN
 ======================================== */
 
-.login-dropdown {
+.grocery-login-dropdown {
   position: absolute;
 
   top: calc(100% + 12px);
@@ -353,7 +354,7 @@
    DROPDOWN ARROW
 ======================================== */
 
-.login-dropdown::before {
+.grocery-login-dropdown::before {
   content: "";
 
   position: absolute;
@@ -374,10 +375,10 @@
 }
 
 /* ========================================
-   SHOW DROPDOWN ON HOVER
+   SHOW LOGIN DROPDOWN
 ======================================== */
 
-.login-wrapper:hover .login-dropdown {
+.grocery-login-wrapper:hover .grocery-login-dropdown {
   opacity: 1;
 
   visibility: visible;
@@ -391,7 +392,7 @@
    LOGIN DROPDOWN HEADER
 ======================================== */
 
-.login-dropdown-header {
+.grocery-login-dropdown-header {
   height: 50px;
 
   display: flex;
@@ -407,13 +408,13 @@
   margin-bottom: 6px;
 }
 
-.login-dropdown-header span {
+.grocery-login-dropdown-header span {
   font-size: 16px;
 
   color: #555555;
 }
 
-.login-dropdown-header a {
+.grocery-login-dropdown-header a {
   display: flex;
 
   align-items: center;
@@ -440,15 +441,15 @@
   transition: background 0.2s ease;
 }
 
-.login-dropdown-header a:hover {
+.grocery-login-dropdown-header a:hover {
   background: #1f5fd1;
 }
 
 /* ========================================
-   DROPDOWN ITEMS
+   LOGIN DROPDOWN ITEMS
 ======================================== */
 
-.login-dropdown-item {
+.grocery-login-dropdown-item {
   height: 50px;
 
   display: flex;
@@ -470,7 +471,7 @@
     color 0.15s ease;
 }
 
-.login-dropdown-item svg {
+.grocery-login-dropdown-item svg {
   flex-shrink: 0;
 
   color: #222222;
@@ -478,216 +479,41 @@
   stroke-width: 1.8;
 }
 
-.login-dropdown-item span {
+.grocery-login-dropdown-item span {
   white-space: nowrap;
 }
 
 /* ========================================
-   DROPDOWN ITEM HOVER
+   LOGIN ITEM HOVER
 ======================================== */
 
-.login-dropdown-item:hover {
+.grocery-login-dropdown-item:hover {
   background: #f5f7ff;
 
   color: #2874f0;
 }
 
-.login-dropdown-item:hover svg {
+.grocery-login-dropdown-item:hover svg {
   color: #2874f0;
 }
 
-.header-action svg {
+.grocery-header-action svg {
   flex-shrink: 0;
 }
 
-.header-action:hover {
+.grocery-header-action:hover {
   color: #2874f0;
-}
-
-/* ========================================
-   CATEGORY BAR
-======================================== */
-
-.category-bar {
-  height: 90px;
-
-  display: flex;
-  align-items: stretch;
-
-  border-bottom: 1px solid #dddddd;
-
-  overflow-x: auto;
-
-  scrollbar-width: none;
-}
-
-.category-bar::-webkit-scrollbar {
-  display: none;
-}
-
-/* ========================================
-   CATEGORY ITEM
-======================================== */
-
-.category {
-  position: relative;
-
-  flex: 1;
-
-  min-width: 100px;
-
-  height: 90px;
-
-  display: flex;
-  flex-direction: column;
-
-  align-items: center;
-  justify-content: center;
-
-  gap: 2px;
-
-  padding: 12px 6px 10px;
-
-  cursor: pointer;
-
-  white-space: nowrap;
-
-  user-select: none;
-
-  /* NavLink reset */
-  text-decoration: none;
-
-  color: inherit;
-}
-
-/* ========================================
-   CATEGORY HOVER
-======================================== */
-
-.category:hover {
-  color: #2874f0;
-}
-
-/* ========================================
-   CATEGORY ICON
-======================================== */
-
-.category-icon {
-  width: 35px;
-  height: 35px;
-
-  display: block;
-
-  object-fit: contain;
-
-  flex-shrink: 0;
-}
-
-/* CATEGORY TEXT */
-
-.category span {
-  display: block;
-
-  width: 80px;
-
-  font-size: 14px;
-  font-weight: 500;
-
-  line-height: 20px;
-
-  text-align: center;
-
-  color: #111111;
-
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-/* ========================================
-   ACTIVE CATEGORY
-======================================== */
-
-.category.active {
-  font-weight: 700;
-}
-
-.category.active span {
-  font-weight: 700;
-}
-
-/* ========================================
-   ACTIVE CATEGORY
-======================================== */
-
-.category.active {
-  font-weight: 700;
-}
-
-/* Active Category Text */
-
-.category.active span {
-  font-weight: 700;
-}
-
-/* Active Category Underline */
-
-.category.active::after {
-  content: "";
-
-  position: absolute;
-
-  bottom: 0;
-
-  left: 18px;
-  right: 18px;
-
-  height: 4px;
-
-  background: #2874f0;
-
-  border-radius: 4px 4px 0 0;
-}
-
-/* ========================================
-   CATEGORY ICON WRAPPER
-======================================== */
-
-.category-icon-wrapper {
-  width: 45px;
-  height: 45px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 10px;
-
-  background: transparent;
-
-  box-sizing: border-box;
-
-  transition: background 0.2s ease;
-}
-
-/* ========================================
-   ACTIVE CATEGORY ICON BACKGROUND
-======================================== */
-
-.category.active .category-icon-wrapper {
-  background: linear-gradient(to bottom, #dbeaff 0%, #edf4ff 55%, #ffffff 100%);
-
-  border-radius: 10px;
 }
 
 /* ========================================
    MORE DROPDOWN
 ======================================== */
 
-.more-dropdown {
+.grocery-more-dropdown {
   position: absolute;
 
   top: calc(100% + 12px);
+
   right: -15px;
 
   width: 350px;
@@ -706,48 +532,10 @@
 
   z-index: 1000;
 
-  /* Hidden by default */
   opacity: 0;
+
   visibility: hidden;
-  pointer-events: none;
 
-  transform: translateY(-8px);
-
-  transition:
-    opacity 0.18s ease,
-    transform 0.18s ease,
-    visibility 0.18s ease;
-}
-
-/* ========================================
-   MORE DROPDOWN
-======================================== */
-
-.more-dropdown {
-  position: absolute;
-
-  top: calc(100% + 12px);
-  right: -15px;
-
-  width: 350px;
-
-  padding: 24px 20px;
-
-  background: #ffffff;
-
-  border: 1px solid #d6d6d6;
-
-  border-radius: 16px;
-
-  box-shadow:
-    0 4px 10px rgba(0, 0, 0, 0.12),
-    0 12px 30px rgba(0, 0, 0, 0.12);
-
-  z-index: 1000;
-
-  /* Hidden by default */
-  opacity: 0;
-  visibility: hidden;
   pointer-events: none;
 
   transform: translateY(-8px);
@@ -762,25 +550,30 @@
    MORE WRAPPER
 ======================================== */
 
-.more-wrapper {
+.grocery-more-wrapper {
   position: relative;
 
   display: flex;
   align-items: center;
 }
 
-.more-item {
+/* ========================================
+   MORE ITEM
+======================================== */
+
+.grocery-more-item {
   width: 100%;
+
   height: 55px;
 
   display: flex;
+
   align-items: center;
 
   gap: 18px;
 
   padding: 0 15px;
 
-  /* Remove browser button styling */
   border: none;
   outline: none;
 
@@ -791,7 +584,9 @@
   color: #454545;
 
   font-family: inherit;
+
   font-size: 16px;
+
   font-weight: 400;
 
   cursor: pointer;
@@ -799,6 +594,7 @@
   text-align: left;
 
   appearance: none;
+
   -webkit-appearance: none;
 
   transition:
@@ -810,12 +606,13 @@
    MORE DROPDOWN ARROW
 ======================================== */
 
-.more-dropdown::before {
+.grocery-more-dropdown::before {
   content: "";
 
   position: absolute;
 
   top: -8px;
+
   right: 40px;
 
   width: 16px;
@@ -830,10 +627,10 @@
 }
 
 /* ========================================
-   SHOW MORE DROPDOWN ON HOVER
+   SHOW MORE DROPDOWN
 ======================================== */
 
-.more-wrapper:hover .more-dropdown {
+.grocery-more-wrapper:hover .grocery-more-dropdown {
   opacity: 1;
 
   visibility: visible;
@@ -847,7 +644,7 @@
    MORE TRIGGER
 ======================================== */
 
-.more-trigger {
+.grocery-more-trigger {
   color: #111111;
 
   padding: 8px 10px;
@@ -861,6 +658,6 @@
     background 0.2s ease;
 }
 
-.more-trigger:hover {
+.grocery-more-trigger:hover {
   color: #2874f0;
 }
