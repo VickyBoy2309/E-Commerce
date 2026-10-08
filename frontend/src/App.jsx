@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ForYou from "./pages/ForYou";
 import Mobiles from "./pages/Mobiles";
 import Fashion from "./pages/Fashion";
+import Accessories from "./pages/Accessories";
 import Gaming from "./pages/Gaming";
 import Electronics from "./pages/Electronics";
 import Beauty from "./pages/Beauty";
@@ -29,6 +30,8 @@ function App() {
           <Route path="/for-you" element={<ForYou />} />
 
           <Route path="/fashion" element={<Fashion />} />
+
+          <Route path="/accessories" element={<Accessories />} />
 
           <Route path="/mobiles" element={<Mobiles />} />
 
