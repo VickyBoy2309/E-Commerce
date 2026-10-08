@@ -4,7 +4,18 @@ import {
   ChevronDown,
   ShoppingCart,
   MapPin,
+  Sparkles,
+  Package,
+  Heart,
+  Store,
+  Gift,
+  Bell,
+  Headphones,
+  Megaphone,
+  Download,
 } from "lucide-react";
+
+import { NavLink } from "react-router-dom";
 
 import appliancesIcon from "../../assets/images/icons/appliances.svg";
 import beautyIcon from "../../assets/images/icons/beauty.svg";
@@ -27,42 +38,52 @@ function Header() {
     {
       name: "For You",
       icon: forYouIcon,
+      path: "/for-you",
     },
     {
       name: "Mobiles",
       icon: mobilesIcon,
+      path: "/mobiles",
     },
     {
       name: "Electronics",
       icon: electronicsIcon,
+      path: "/electronics",
     },
     {
       name: "Beauty",
       icon: beautyIcon,
+      path: "/beauty",
     },
     {
       name: "Home",
       icon: homeIcon,
+      path: "/home",
     },
     {
       name: "Appliances",
       icon: appliancesIcon,
+      path: "/appliances",
     },
     {
       name: "Toys & Baby",
       icon: toysBabyIcon,
+      path: "/toys-baby",
     },
     {
       name: "Sports & Fitness",
       icon: sportsFitnessIcon,
+      path: "/sports-fitness",
     },
     {
       name: "Furniture",
       icon: furnitureIcon,
+      path: "/furniture",
     },
     {
       name: "Books",
       icon: booksIcon,
+      path: "/books",
     },
   ];
 
@@ -75,6 +96,7 @@ function Header() {
 
         <div className="header-top-left">
           {/* Logo */}
+
           <div className="logo">
             <img src={logo} alt="" className="logo-image" />
 
@@ -83,7 +105,7 @@ function Header() {
 
           {/* Groceries */}
 
-          <div className="travel">
+          <div className="groceries">
             <span>Groceries</span>
           </div>
         </div>
@@ -120,12 +142,116 @@ function Header() {
         <div className="header-actions">
           {/* Login */}
 
-          <div className="header-action">
-            <UserCircle size={24} />
+          <div className="login-wrapper">
+            {/* Login Trigger */}
 
-            <span>Login</span>
+            <NavLink to="/login" className="header-action login-trigger">
+              <UserCircle size={24} />
 
-            <ChevronDown size={16} />
+              <span>Login</span>
+
+              <ChevronDown size={16} />
+            </NavLink>
+
+            {/* Login Dropdown */}
+
+            <div className="login-dropdown">
+              {/* New Customer */}
+
+              <div className="login-dropdown-header">
+                <span>New customer?</span>
+
+                <NavLink to="/login">Login</NavLink>
+              </div>
+
+              {/* My Profile */}
+
+              <NavLink to="/profile" className="login-dropdown-item">
+                <UserCircle size={20} />
+
+                <span>My Profile</span>
+              </NavLink>
+
+              {/* NammaCart Plus */}
+
+              <NavLink to="/plus" className="login-dropdown-item">
+                <Sparkles size={20} />
+
+                <span>NammaCart Plus Zone</span>
+              </NavLink>
+
+              {/* Orders */}
+
+              <NavLink to="/orders" className="login-dropdown-item">
+                <Package size={20} />
+
+                <span>Orders</span>
+              </NavLink>
+
+              {/* Wishlist */}
+
+              <NavLink to="/wishlist" className="login-dropdown-item">
+                <Heart size={20} />
+
+                <span>Wishlist</span>
+              </NavLink>
+
+              {/* Become a Seller */}
+
+              <NavLink to="/seller" className="login-dropdown-item">
+                <Store size={20} />
+
+                <span>Become a Seller</span>
+              </NavLink>
+
+              {/* Rewards */}
+
+              <NavLink to="/rewards" className="login-dropdown-item">
+                <Gift size={20} />
+
+                <span>Rewards</span>
+              </NavLink>
+
+              {/* Gift Cards */}
+
+              <NavLink to="/gift-cards" className="login-dropdown-item">
+                <Gift size={20} />
+
+                <span>Gift Cards</span>
+              </NavLink>
+
+              {/* Notification Preferences */}
+
+              <NavLink to="/notifications" className="login-dropdown-item">
+                <Bell size={20} />
+
+                <span>Notification Preferences</span>
+              </NavLink>
+
+              {/* Customer Care */}
+
+              <NavLink to="/customer-care" className="login-dropdown-item">
+                <Headphones size={20} />
+
+                <span>24x7 Customer Care</span>
+              </NavLink>
+
+              {/* Advertise */}
+
+              <NavLink to="/advertise" className="login-dropdown-item">
+                <Megaphone size={20} />
+
+                <span>Advertise</span>
+              </NavLink>
+
+              {/* Download App */}
+
+              <NavLink to="/download-app" className="login-dropdown-item">
+                <Download size={20} />
+
+                <span>Download App</span>
+              </NavLink>
+            </div>
           </div>
 
           {/* More */}
@@ -149,10 +275,12 @@ function Header() {
       {/* ================= CATEGORY SECTION ================= */}
 
       <nav className="category-bar">
-        {categories.map((category, index) => (
-          <div
-            className={`category ${index === 0 ? "active" : ""}`}
+        {categories.map((category) => (
+          <NavLink
             key={category.name}
+            to={category.path}
+            end={category.path === "/for-you"}
+            className={({ isActive }) => `category ${isActive ? "active" : ""}`}
           >
             <img
               src={category.icon}
@@ -161,7 +289,7 @@ function Header() {
             />
 
             <span>{category.name}</span>
-          </div>
+          </NavLink>
         ))}
       </nav>
     </header>

@@ -16,7 +16,7 @@
 .header-middle,
 .category-bar {
   width: calc(100% - 40px);
-  max-width: 1405px;
+  max-width: 1350px;
   margin: 0 auto;
 }
 
@@ -52,21 +52,30 @@
 .logo {
   width: 165px;
   height: 54px;
+
   gap: 2px;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   padding: 0 7px;
+
   background: #ffd812db;
+
   border-radius: 15px;
+
   cursor: pointer;
   user-select: none;
+
   overflow: hidden;
+
   flex-shrink: 0;
 }
 
 .logo-image {
   width: 40px;
+
   object-fit: contain;
 
   display: block;
@@ -77,6 +86,7 @@
 .logo-name {
   width: 93px;
   height: auto;
+
   display: block;
 
   object-fit: contain;
@@ -88,7 +98,7 @@
    GROCERIES
 ======================================== */
 
-.travel {
+.groceries {
   width: 162px;
   height: 54px;
 
@@ -110,7 +120,7 @@
   transition: background 0.2s ease;
 }
 
-.travel:hover {
+.groceries:hover {
   background: #e8e8e8;
 }
 
@@ -250,6 +260,229 @@
   white-space: nowrap;
 }
 
+/* ========================================
+   LOGIN WRAPPER
+======================================== */
+
+.login-wrapper {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+}
+
+/* ========================================
+   LOGIN TRIGGER
+======================================== */
+
+.login-trigger {
+  text-decoration: none;
+
+  color: #111111;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+
+  border-radius: 8px;
+
+  padding: 8px 10px;
+}
+
+.login-trigger:hover {
+  color: #2874f0;
+}
+
+/* ========================================
+   LOGIN DROPDOWN
+======================================== */
+
+.login-dropdown {
+  position: absolute;
+
+  top: calc(100% + 12px);
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 350px;
+
+  padding: 12px 0;
+
+  background: #ffffff;
+
+  border: 1px solid #d6d6d6;
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.12),
+    0 12px 30px rgba(0, 0, 0, 0.12);
+
+  z-index: 1000;
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  pointer-events: none;
+
+  transform: translateX(-50%) translateY(-8px);
+
+  transition:
+    opacity 0.18s ease,
+    transform 0.18s ease,
+    visibility 0.18s ease;
+}
+
+/* ========================================
+   DROPDOWN ARROW
+======================================== */
+
+.login-dropdown::before {
+  content: "";
+
+  position: absolute;
+
+  top: -8px;
+
+  left: 50%;
+
+  width: 16px;
+  height: 16px;
+
+  background: #ffffff;
+
+  border-left: 1px solid #d6d6d6;
+  border-top: 1px solid #d6d6d6;
+
+  transform: translateX(-50%) rotate(45deg);
+}
+
+/* ========================================
+   SHOW DROPDOWN ON HOVER
+======================================== */
+
+.login-wrapper:hover .login-dropdown {
+  opacity: 1;
+
+  visibility: visible;
+
+  pointer-events: auto;
+
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ========================================
+   LOGIN DROPDOWN HEADER
+======================================== */
+
+.login-dropdown-header {
+  height: 50px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 0 20px;
+
+  border-bottom: 1px solid #eeeeee;
+
+  margin-bottom: 6px;
+}
+
+.login-dropdown-header span {
+  font-size: 16px;
+
+  color: #555555;
+}
+
+.login-dropdown-header a {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 110px;
+
+  height: 42px;
+
+  padding: 0 20px;
+
+  background: #2874f0;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  border-radius: 2px;
+
+  transition: background 0.2s ease;
+}
+
+.login-dropdown-header a:hover {
+  background: #1f5fd1;
+}
+
+/* ========================================
+   DROPDOWN ITEMS
+======================================== */
+
+.login-dropdown-item {
+  height: 50px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 0 20px;
+
+  color: #333333;
+
+  text-decoration: none;
+
+  font-size: 16px;
+
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+}
+
+.login-dropdown-item svg {
+  flex-shrink: 0;
+
+  color: #222222;
+
+  stroke-width: 1.8;
+}
+
+.login-dropdown-item span {
+  white-space: nowrap;
+}
+
+/* ========================================
+   DROPDOWN ITEM HOVER
+======================================== */
+
+.login-dropdown-item:hover {
+  background: #f5f7ff;
+
+  color: #2874f0;
+}
+
+.login-dropdown-item:hover svg {
+  color: #2874f0;
+}
+
 .header-action svg {
   flex-shrink: 0;
 }
@@ -307,6 +540,19 @@
   white-space: nowrap;
 
   user-select: none;
+
+  /* NavLink reset */
+  text-decoration: none;
+
+  color: inherit;
+}
+
+/* ========================================
+   CATEGORY HOVER
+======================================== */
+
+.category:hover {
+  color: #2874f0;
 }
 
 /* ========================================
