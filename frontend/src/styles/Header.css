@@ -1,6 +1,10 @@
-/* ========================================
-   GLOBAL HEADER
-======================================== */
+/* ==================================================
+   NAMMACART HEADER
+   ================================================== */
+
+/* ==================================================
+   01. GLOBAL HEADER
+   ================================================== */
 
 .header {
   width: 100%;
@@ -8,9 +12,9 @@
   border-top: 3px solid #263238;
 }
 
-/* ========================================
-   MAIN CONTAINER
-======================================== */
+/* ==================================================
+   02. SHARED HEADER CONTAINERS
+   ================================================== */
 
 .header-top,
 .header-middle,
@@ -29,127 +33,101 @@
     sans-serif;
 }
 
-/* ========================================
-   TOP SECTION
-======================================== */
+/* ==================================================
+   03. TOP SECTION LAYOUT
+   ================================================== */
 
 .header-top {
-  height: 70px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
+  height: 70px;
   padding: 7px 5px;
 }
-
-/* ========================================
-   TOP LEFT
-======================================== */
 
 .header-top-left {
   display: flex;
   align-items: center;
-
   gap: 20px;
 }
 
-/* ========================================
-   LOGO
-======================================== */
+/* ==================================================
+   04. NAMMACART LOGO
+   ================================================== */
 
+/* Logo Container */
 .logo {
-  width: 165px;
-  height: 47px;
-
-  gap: 2px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
-  padding: 0 7px;
-
+  gap: 3px;
+  width: 165px;
+  height: 47px;
+  padding: 0 10px;
+  overflow: hidden;
+  flex-shrink: 0;
   background: #ffd812db;
-
   border-radius: 15px;
-
   cursor: pointer;
   user-select: none;
-
-  overflow: hidden;
-
-  flex-shrink: 0;
 }
 
+/* Logo Icon */
 .logo-image {
-  width: 40px;
-
-  object-fit: contain;
-
   display: block;
-
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
   flex-shrink: 0;
 }
 
+/* Logo Name PNG */
 .logo-name {
-  width: 98px;
-  height: auto;
-
   display: block;
-
+  width: 85px;
+  height: auto;
   object-fit: contain;
-
   flex-shrink: 0;
 }
 
-/* ========================================
-   GROCERIES
-======================================== */
+/* ==================================================
+   05. GROCERIES LOGO / BUTTON
+   ================================================== */
 
 .groceries {
-  width: 165px;
-  height: 47px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
+  width: 165px;
+  height: 47px;
   background: #f1f1f1;
-
   border-radius: 15px;
-
   color: #333333;
-
   font-size: 16px;
   font-weight: 600;
-
   cursor: pointer;
-
   transition: background 0.2s ease;
 }
 
 .groceries-logo {
-  width: 90px;
+  width: 85px;
+  height: auto;
 }
 
 .groceries:hover {
   background: #e8e8e8;
 }
 
-/* ========================================
-   DELIVERY LOCATION
-======================================== */
+/* ==================================================
+   06. DELIVERY LOCATION
+   ================================================== */
 
 .delivery-location {
   display: flex;
   align-items: center;
-
   gap: 7px;
-
   font-size: 16px;
   font-weight: 600;
-
   white-space: nowrap;
 }
 
@@ -161,84 +139,61 @@
 .delivery-location button {
   border: none;
   outline: none;
-
   background: transparent;
-
   color: #2874f0;
-
   font-size: 16px;
   font-weight: 600;
-
   cursor: pointer;
 }
 
 .location-arrow {
   color: #2874f0;
-
   font-size: 24px;
-
   line-height: 1;
 }
 
-/* ========================================
-   SEARCH / ACTION SECTION
-======================================== */
+/* ==================================================
+   07. SEARCH / ACTION SECTION
+   ================================================== */
 
 .header-middle {
-  height: 75px;
-
   display: flex;
   align-items: center;
-
   gap: 55px;
-
+  height: 75px;
   padding: 8px 5px 14px;
-
   border-bottom: 1px solid #dddddd;
 }
 
-/* ========================================
-   SEARCH BOX
-======================================== */
+/* ==================================================
+   08. SEARCH BOX
+   ================================================== */
 
 .search-box {
-  flex: 1;
-
-  height: 50px;
-
   display: flex;
   align-items: center;
-
+  flex: 1;
   gap: 15px;
-
+  height: 50px;
   padding: 0 20px;
-
   border: 2px solid #2874f0;
-
   border-radius: 15px;
-
   background: #ffffff;
 }
 
 .search-box svg {
   width: 23px;
   height: 23px;
-
   color: #555555;
-
   flex-shrink: 0;
 }
 
 .search-box input {
   width: 100%;
-
   border: none;
   outline: none;
-
   background: transparent;
-
   font-size: 18px;
-
   font-family: inherit;
 }
 
@@ -246,254 +201,25 @@
   color: #666666;
 }
 
-/* ========================================
-   HEADER ACTIONS
-======================================== */
+/* ==================================================
+   09. HEADER ACTIONS (LOGIN / MORE / CART)
+   ================================================== */
 
 .header-actions {
   display: flex;
   align-items: center;
-
   gap: 30px;
-
   flex-shrink: 0;
 }
 
 .header-action {
   display: flex;
   align-items: center;
-
   gap: 8px;
-
   font-size: 16px;
   font-weight: 500;
-
   cursor: pointer;
-
   white-space: nowrap;
-}
-
-/* ========================================
-   LOGIN WRAPPER
-======================================== */
-
-.login-wrapper {
-  position: relative;
-
-  display: flex;
-  align-items: center;
-}
-
-/* ========================================
-   LOGIN TRIGGER
-======================================== */
-
-.login-trigger {
-  text-decoration: none;
-
-  color: #111111;
-
-  transition:
-    color 0.2s ease,
-    background 0.2s ease;
-
-  border-radius: 8px;
-
-  padding: 8px 10px;
-}
-
-.login-trigger:hover {
-  color: #2874f0;
-}
-
-/* ========================================
-   LOGIN DROPDOWN
-======================================== */
-
-.login-dropdown {
-  position: absolute;
-
-  top: calc(100% + 12px);
-
-  left: 50%;
-
-  transform: translateX(-50%);
-
-  width: 350px;
-
-  padding: 12px 0;
-
-  background: #ffffff;
-
-  border: 1px solid #d6d6d6;
-
-  border-radius: 16px;
-
-  box-shadow:
-    0 4px 10px rgba(0, 0, 0, 0.12),
-    0 12px 30px rgba(0, 0, 0, 0.12);
-
-  z-index: 1000;
-
-  opacity: 0;
-
-  visibility: hidden;
-
-  pointer-events: none;
-
-  transform: translateX(-50%) translateY(-8px);
-
-  transition:
-    opacity 0.18s ease,
-    transform 0.18s ease,
-    visibility 0.18s ease;
-}
-
-/* ========================================
-   DROPDOWN ARROW
-======================================== */
-
-.login-dropdown::before {
-  content: "";
-
-  position: absolute;
-
-  top: -8px;
-
-  left: 50%;
-
-  width: 16px;
-  height: 16px;
-
-  background: #ffffff;
-
-  border-left: 1px solid #d6d6d6;
-  border-top: 1px solid #d6d6d6;
-
-  transform: translateX(-50%) rotate(45deg);
-}
-
-/* ========================================
-   SHOW DROPDOWN ON HOVER
-======================================== */
-
-.login-wrapper:hover .login-dropdown {
-  opacity: 1;
-
-  visibility: visible;
-
-  pointer-events: auto;
-
-  transform: translateX(-50%) translateY(0);
-}
-
-/* ========================================
-   LOGIN DROPDOWN HEADER
-======================================== */
-
-.login-dropdown-header {
-  height: 50px;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: space-between;
-
-  padding: 0 20px;
-
-  border-bottom: 1px solid #eeeeee;
-
-  margin-bottom: 6px;
-}
-
-.login-dropdown-header span {
-  font-size: 16px;
-
-  color: #555555;
-}
-
-.login-dropdown-header a {
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  min-width: 110px;
-
-  height: 42px;
-
-  padding: 0 20px;
-
-  background: #2874f0;
-
-  color: #ffffff;
-
-  text-decoration: none;
-
-  font-size: 16px;
-
-  font-weight: 600;
-
-  border-radius: 2px;
-
-  transition: background 0.2s ease;
-}
-
-.login-dropdown-header a:hover {
-  background: #1f5fd1;
-}
-
-/* ========================================
-   DROPDOWN ITEMS
-======================================== */
-
-.login-dropdown-item {
-  height: 50px;
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 15px;
-
-  padding: 0 20px;
-
-  color: #333333;
-
-  text-decoration: none;
-
-  font-size: 16px;
-
-  transition:
-    background 0.15s ease,
-    color 0.15s ease;
-}
-
-.login-dropdown-item svg {
-  flex-shrink: 0;
-
-  color: #222222;
-
-  stroke-width: 1.8;
-}
-
-.login-dropdown-item span {
-  white-space: nowrap;
-}
-
-/* ========================================
-   DROPDOWN ITEM HOVER
-======================================== */
-
-.login-dropdown-item:hover {
-  background: #f5f7ff;
-
-  color: #2874f0;
-}
-
-.login-dropdown-item:hover svg {
-  color: #2874f0;
 }
 
 .header-action svg {
@@ -504,20 +230,168 @@
   color: #2874f0;
 }
 
-/* ========================================
-   CATEGORY BAR
-======================================== */
+/* ==================================================
+   10. LOGIN DROPDOWN
+   ================================================== */
+
+/* Login wrapper */
+
+.login-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Login trigger */
+
+.login-trigger {
+  padding: 8px 10px;
+  border-radius: 8px;
+  color: #111111;
+  text-decoration: none;
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+.login-trigger:hover {
+  color: #2874f0;
+}
+
+/* Login dropdown panel */
+
+.login-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  z-index: 1000;
+  width: 350px;
+  padding: 12px 0;
+  border: 1px solid #d6d6d6;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.12),
+    0 12px 30px rgba(0, 0, 0, 0.12);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateX(-50%) translateY(-8px);
+  transition:
+    opacity 0.18s ease,
+    transform 0.18s ease,
+    visibility 0.18s ease;
+}
+
+/* Login dropdown arrow */
+
+.login-dropdown::before {
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  border-top: 1px solid #d6d6d6;
+  border-left: 1px solid #d6d6d6;
+  background: #ffffff;
+  content: "";
+  transform: translateX(-50%) rotate(45deg);
+}
+
+/* Show login dropdown */
+
+.login-wrapper:hover .login-dropdown,
+.login-wrapper:focus-within .login-dropdown {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Login dropdown header */
+
+.login-dropdown-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  margin-bottom: 6px;
+  padding: 0 20px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.login-dropdown-header span {
+  color: #555555;
+  font-size: 16px;
+}
+
+.login-dropdown-header a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 110px;
+  height: 42px;
+  padding: 0 20px;
+  border-radius: 2px;
+  background: #2874f0;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.login-dropdown-header a:hover {
+  background: #1f5fd1;
+}
+
+/* Login dropdown items */
+
+.login-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  height: 50px;
+  padding: 0 20px;
+  color: #333333;
+  font-size: 16px;
+  text-decoration: none;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+}
+
+.login-dropdown-item svg {
+  flex-shrink: 0;
+  color: #222222;
+  stroke-width: 1.8;
+}
+
+.login-dropdown-item span {
+  white-space: nowrap;
+}
+
+/* Login dropdown item hover */
+
+.login-dropdown-item:hover {
+  background: #f5f7ff;
+  color: #2874f0;
+}
+
+.login-dropdown-item:hover svg {
+  color: #2874f0;
+}
+
+/* ==================================================
+   11. CATEGORY BAR
+   ================================================== */
 
 .category-bar {
-  height: 90px;
-
   display: flex;
   align-items: stretch;
-
-  border-bottom: 1px solid #dddddd;
-
+  height: 90px;
   overflow-x: auto;
-
+  border-bottom: 1px solid #dddddd;
   scrollbar-width: none;
 }
 
@@ -525,88 +399,58 @@
   display: none;
 }
 
-/* ========================================
-   CATEGORY ITEM
-======================================== */
+/* ==================================================
+   12. CATEGORY ITEMS
+   ================================================== */
 
 .category {
   position: relative;
-
-  flex: 1;
-
-  min-width: 100px;
-
-  height: 90px;
-
   display: flex;
+  flex: 1;
   flex-direction: column;
-
   align-items: center;
   justify-content: center;
-
   gap: 2px;
-
+  min-width: 100px;
+  height: 90px;
   padding: 12px 6px 10px;
-
-  cursor: pointer;
-
-  white-space: nowrap;
-
-  user-select: none;
-
-  /* NavLink reset */
-  text-decoration: none;
-
   color: inherit;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
 }
-
-/* ========================================
-   CATEGORY HOVER
-======================================== */
 
 .category:hover {
   color: #2874f0;
 }
 
-/* ========================================
-   CATEGORY ICON
-======================================== */
+/* Category icon */
 
 .category-icon {
+  display: block;
   width: 40px;
   height: 40px;
-
-  display: block;
-
   object-fit: contain;
-
   flex-shrink: 0;
 }
 
-/* CATEGORY TEXT */
+/* Category label */
 
 .category span {
   display: block;
-
   width: 80px;
-
+  overflow: hidden;
+  color: #111111;
   font-size: 14px;
   font-weight: 500;
-
   line-height: 20px;
-
   text-align: center;
-
-  color: #111111;
-
   white-space: nowrap;
-  overflow: hidden;
   text-overflow: ellipsis;
 }
 
-/* ========================================
-   ACTIVE CATEGORY
-======================================== */
+/* Active category */
 
 .category.active {
   font-weight: 700;
@@ -616,246 +460,67 @@
   font-weight: 700;
 }
 
-/* ========================================
-   ACTIVE CATEGORY
-======================================== */
-
-.category.active {
-  font-weight: 700;
-}
-
-/* Active Category Text */
-
-.category.active span {
-  font-weight: 700;
-}
-
-/* Active Category Underline */
+/* Active category underline */
 
 .category.active::after {
-  content: "";
-
   position: absolute;
-
-  bottom: 0;
-
-  left: 18px;
   right: 18px;
-
+  bottom: 0;
+  left: 18px;
   height: 4px;
-
-  background: #2874f0;
-
   border-radius: 4px 4px 0 0;
+  background: #2874f0;
+  content: "";
 }
 
-/* ========================================
-   CATEGORY ICON WRAPPER
-======================================== */
+/* Category icon wrapper */
 
 .category-icon-wrapper {
-  width: 45px;
-  height: 45px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
-  border-radius: 10px;
-
-  background: transparent;
-
   box-sizing: border-box;
-
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  background: transparent;
   transition: background 0.2s ease;
 }
 
-/* ========================================
-   ACTIVE CATEGORY ICON BACKGROUND
-======================================== */
+/* Active category icon background */
 
 .category.active .category-icon-wrapper {
-  background: linear-gradient(to bottom, #dbeaff 0%, #edf4ff 55%, #ffffff 100%);
-
   border-radius: 10px;
+  background: linear-gradient(to bottom, #dbeaff 0%, #edf4ff 55%, #ffffff 100%);
 }
 
-/* ========================================
-   MORE DROPDOWN
-======================================== */
+/* Accessories icon size override */
 
-.more-dropdown {
-  position: absolute;
-
-  top: calc(100% + 12px);
-  right: -15px;
-
-  width: 350px;
-
-  padding: 24px 20px;
-
-  background: #ffffff;
-
-  border: 1px solid #d6d6d6;
-
-  border-radius: 16px;
-
-  box-shadow:
-    0 4px 10px rgba(0, 0, 0, 0.12),
-    0 12px 30px rgba(0, 0, 0, 0.12);
-
-  z-index: 1000;
-
-  /* Hidden by default */
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-
-  transform: translateY(-8px);
-
-  transition:
-    opacity 0.18s ease,
-    transform 0.18s ease,
-    visibility 0.18s ease;
+.category-icon[src*="accessories"] {
+  width: 63px;
+  height: 63px;
+  object-fit: contain;
 }
 
-/* ========================================
-   MORE DROPDOWN
-======================================== */
+/* ==================================================
+   13. MORE DROPDOWN
+   ================================================== */
 
-.more-dropdown {
-  position: absolute;
-
-  top: calc(100% + 12px);
-  right: -15px;
-
-  width: 350px;
-
-  padding: 24px 20px;
-
-  background: #ffffff;
-
-  border: 1px solid #d6d6d6;
-
-  border-radius: 16px;
-
-  box-shadow:
-    0 4px 10px rgba(0, 0, 0, 0.12),
-    0 12px 30px rgba(0, 0, 0, 0.12);
-
-  z-index: 1000;
-
-  /* Hidden by default */
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-
-  transform: translateY(-8px);
-
-  transition:
-    opacity 0.18s ease,
-    transform 0.18s ease,
-    visibility 0.18s ease;
-}
-
-/* ========================================
-   MORE WRAPPER
-======================================== */
+/* More wrapper */
 
 .more-wrapper {
   position: relative;
-
   display: flex;
   align-items: center;
 }
 
-.more-item {
-  width: 100%;
-  height: 55px;
-
-  display: flex;
-  align-items: center;
-
-  gap: 18px;
-
-  padding: 0 15px;
-
-  /* Remove browser button styling */
-  border: none;
-  outline: none;
-
-  border-radius: 8px;
-
-  background: transparent;
-
-  color: #454545;
-
-  font-family: inherit;
-  font-size: 16px;
-  font-weight: 400;
-
-  cursor: pointer;
-
-  text-align: left;
-
-  appearance: none;
-  -webkit-appearance: none;
-
-  transition:
-    background-color 0.2s ease,
-    color 0.2s ease;
-}
-
-/* ========================================
-   MORE DROPDOWN ARROW
-======================================== */
-
-.more-dropdown::before {
-  content: "";
-
-  position: absolute;
-
-  top: -8px;
-  right: 40px;
-
-  width: 16px;
-  height: 16px;
-
-  background: #ffffff;
-
-  border-left: 1px solid #d6d6d6;
-  border-top: 1px solid #d6d6d6;
-
-  transform: rotate(45deg);
-}
-
-/* ========================================
-   SHOW MORE DROPDOWN ON HOVER
-======================================== */
-
-.more-wrapper:hover .more-dropdown {
-  opacity: 1;
-
-  visibility: visible;
-
-  pointer-events: auto;
-
-  transform: translateY(0);
-}
-
-/* ========================================
-   MORE TRIGGER
-======================================== */
+/* More trigger */
 
 .more-trigger {
-  color: #111111;
-
   padding: 8px 10px;
-
-  cursor: pointer;
-
   border-radius: 8px;
-
+  color: #111111;
+  cursor: pointer;
   transition:
     color 0.2s ease,
     background 0.2s ease;
@@ -865,9 +530,416 @@
   color: #2874f0;
 }
 
-/* Fix Accessories icon size */
-.category-icon[src*="accessories"] {
-  width: 63px;
-  height: 63px;
-  object-fit: contain;
+/* More dropdown panel */
+
+.more-dropdown {
+  position: absolute;
+  top: 100%;
+  right: -15px;
+  z-index: 1000;
+  width: 350px;
+  padding: 24px 20px;
+  border: 1px solid #d6d6d6;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.12),
+    0 12px 30px rgba(0, 0, 0, 0.12);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-8px);
+  transition:
+    opacity 0.18s ease,
+    transform 0.18s ease,
+    visibility 0.18s ease;
+}
+
+/* More dropdown arrow */
+
+.more-dropdown::before {
+  position: absolute;
+  top: -8px;
+  right: 40px;
+  width: 16px;
+  height: 16px;
+  border-top: 1px solid #d6d6d6;
+  border-left: 1px solid #d6d6d6;
+  background: #ffffff;
+  content: "";
+  transform: rotate(45deg);
+}
+
+/* Show More dropdown */
+
+.more-wrapper:hover .more-dropdown,
+.more-wrapper:focus-within .more-dropdown {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* More dropdown items */
+
+.more-item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  width: 100%;
+  height: 55px;
+  padding: 0 15px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  color: #454545;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.more-item:hover {
+  background: #f5f7ff;
+  color: #2874f0;
+}
+
+.more-item:hover svg {
+  color: #2874f0;
+}
+
+/* ==================================================
+   14. RESPONSIVE HEADER
+   ================================================== */
+
+/* Consistent sizing inside the header */
+.header,
+.header *,
+.header *::before,
+.header *::after {
+  box-sizing: border-box;
+}
+
+/* Smaller desktop screens and laptops */
+@media (max-width: 1100px) {
+  .header-top,
+  .header-middle,
+  .category-bar {
+    width: calc(100% - 32px);
+  }
+
+  .header-top-left {
+    gap: 12px;
+  }
+
+  .header-middle {
+    gap: 24px;
+  }
+
+  .header-actions {
+    gap: 16px;
+  }
+
+  .header-action {
+    gap: 6px;
+    font-size: 15px;
+  }
+
+  .logo,
+  .groceries {
+    width: 150px;
+  }
+
+  .logo-name {
+    width: 90px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 900px) {
+  .header-top {
+    gap: 16px;
+  }
+
+  .header-top-left {
+    min-width: 0;
+    gap: 10px;
+  }
+
+  .delivery-location {
+    gap: 5px;
+    font-size: 14px;
+  }
+
+  .header-middle {
+    gap: 16px;
+  }
+
+  .search-box {
+    min-width: 0;
+    padding: 0 14px;
+  }
+
+  .search-box input {
+    font-size: 16px;
+  }
+
+  .header-actions {
+    gap: 12px;
+  }
+
+  .header-action {
+    font-size: 14px;
+  }
+
+  .category {
+    flex: 0 0 100px;
+  }
+}
+
+/* Mobile phones and narrow tablets */
+@media (max-width: 700px) {
+  .header-top,
+  .header-middle,
+  .category-bar {
+    width: calc(100% - 24px);
+  }
+
+  .header-top {
+    height: auto;
+    min-height: 64px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px 0;
+  }
+
+  .header-top-left {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .logo,
+  .groceries {
+    width: 138px;
+    height: 43px;
+    border-radius: 12px;
+  }
+
+  .logo-image {
+    width: 34px;
+  }
+
+  .logo-name {
+    width: 84px;
+  }
+
+  .groceries-logo {
+    width: 78px;
+  }
+
+  .delivery-location {
+    max-width: 100%;
+    font-size: 13px;
+    white-space: normal;
+  }
+
+  .delivery-location button {
+    font-size: 13px;
+  }
+
+  .header-middle {
+    height: auto;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 10px 0 12px;
+  }
+
+  .search-box {
+    flex: 1 1 100%;
+    width: 100%;
+    height: 46px;
+    gap: 10px;
+    padding: 0 12px;
+    border-radius: 12px;
+  }
+
+  .search-box svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .search-box input {
+    font-size: 16px;
+  }
+
+  .header-actions {
+    display: flex;
+    justify-content: space-between;
+    flex: 1 1 100%;
+    width: 100%;
+    gap: 8px;
+  }
+
+  .header-action {
+    gap: 5px;
+    padding: 7px 5px;
+    font-size: 14px;
+  }
+
+  .category-bar {
+    height: 84px;
+  }
+
+  .category {
+    flex: 0 0 88px;
+    min-width: 88px;
+    height: 84px;
+    padding: 8px 4px 9px;
+  }
+
+  .category-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .category-icon-wrapper {
+    width: 40px;
+    height: 40px;
+  }
+
+  .category span {
+    width: 78px;
+    font-size: 12px;
+    line-height: 17px;
+  }
+
+  .category.active::after {
+    right: 12px;
+    left: 12px;
+    height: 3px;
+  }
+
+  /* Keep dropdowns inside the mobile viewport */
+  .login-dropdown {
+    left: auto;
+    right: 0;
+    width: min(350px, calc(100vw - 24px));
+    transform: translateY(-8px);
+  }
+
+  .login-wrapper:hover .login-dropdown,
+  .login-wrapper:focus-within .login-dropdown {
+    transform: translateY(0);
+  }
+
+  .login-dropdown::before {
+    left: auto;
+    right: 34px;
+    transform: rotate(45deg);
+  }
+
+  .more-dropdown {
+    right: 0;
+    width: min(350px, calc(100vw - 24px));
+  }
+
+  .more-dropdown::before {
+    right: 30px;
+  }
+}
+
+/* Small mobile phones */
+@media (max-width: 420px) {
+  .header-top,
+  .header-middle,
+  .category-bar {
+    width: calc(100% - 20px);
+  }
+
+  .header-top-left {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .logo,
+  .groceries {
+    width: calc(50% - 4px);
+    max-width: 165px;
+  }
+
+  .delivery-location {
+    width: 100%;
+  }
+
+  .header-actions {
+    gap: 4px;
+  }
+
+  .header-action {
+    gap: 4px;
+    padding: 7px 3px;
+    font-size: 12px;
+  }
+
+  .header-action svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .login-dropdown,
+  .more-dropdown {
+    width: min(330px, calc(100vw - 20px));
+  }
+
+  .login-dropdown-header {
+    gap: 10px;
+    padding: 0 12px;
+  }
+
+  .login-dropdown-header span {
+    font-size: 14px;
+  }
+
+  .login-dropdown-header a {
+    min-width: 88px;
+    padding: 0 12px;
+    font-size: 14px;
+  }
+
+  .login-dropdown-item {
+    gap: 12px;
+    padding: 0 14px;
+    font-size: 14px;
+  }
+
+  .more-dropdown {
+    padding: 16px 12px;
+  }
+
+  .more-item {
+    gap: 12px;
+    height: 50px;
+    padding: 0 10px;
+    font-size: 14px;
+  }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .header *,
+  .header *::before,
+  .header *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }
