@@ -611,11 +611,12 @@
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  margin: 2px 0 12px;
-  color: #555b65;
-  font-size: 12px;
-  line-height: 1.55;
-  cursor: pointer;
+  width: 100%;
+  margin: 2px 0 14px;
+  color: #8b95a7;
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 1.6;
 }
 
 .auth-terms input {
@@ -624,6 +625,35 @@
   height: 16px;
   margin: 2px 0 0;
   accent-color: var(--auth-blue);
+}
+
+.auth-terms input[type="checkbox"] {
+  flex: 0 0 17px;
+  width: 17px;
+  height: 17px;
+  margin: 2px 0 0;
+  padding: 0;
+  accent-color: #2874f0;
+  cursor: pointer;
+}
+
+.auth-terms label {
+  margin: 0;
+  color: #8b95a7;
+  font: inherit;
+  cursor: pointer;
+}
+
+.auth-terms a {
+  color: #2874f0;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.auth-terms a:hover {
+  color: #1558c0;
+  text-decoration: underline;
 }
 
 /* 12. SUBMIT BUTTON */
@@ -969,6 +999,13 @@
   }
   .auth-switch {
     line-height: 1.8;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-terms {
+    gap: 8px;
+    font-size: 12px;
   }
 }
 

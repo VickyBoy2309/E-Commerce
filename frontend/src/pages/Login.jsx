@@ -374,11 +374,45 @@ export default function Login() {
                   </div>
                 )}
               </div>
+
               {message && (
                 <p className="auth-message" role="status">
                   {message}
                 </p>
               )}
+
+              {isRegister && (
+                <div className="auth-terms">
+                  <input
+                    id="auth-terms"
+                    type="checkbox"
+                    name="terms"
+                    checked={form.terms}
+                    onChange={handleChange}
+                    required
+                  />
+                  <label htmlFor="auth-terms">
+                    I agree to the{" "}
+                    <a
+                      href="/terms-of-service"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Terms of Service
+                    </a>{" "}
+                    and{" "}
+                    <a
+                      href="/privacy-policy"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Privacy Policy
+                    </a>
+                    .
+                  </label>
+                </div>
+              )}
+
               <button className="auth-submit" type="submit" disabled={loading}>
                 {loading
                   ? "Please wait..."
