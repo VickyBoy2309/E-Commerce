@@ -1,0 +1,391 @@
+/* ==================================================
+   01. LOCATION OVERLAY
+   ================================================== */
+.location-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(4px);
+}
+
+/* ==================================================
+   02. LOCATION MODAL
+   ================================================== */
+.location-modal {
+  width: min(100%, 560px);
+  max-height: calc(100dvh - 40px);
+  overflow-y: auto;
+  padding: 22px;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  background: #ffffff;
+  color: #111827;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.22);
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 transparent;
+}
+
+/* ==================================================
+   03. MODAL HEADER
+   ================================================== */
+.location-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.location-modal-header h2 {
+  margin: 0;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.location-modal-header p {
+  margin: 6px 0 0;
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.location-close {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: #f3f4f6;
+  color: #374151;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.location-close:hover {
+  background: #e5e7eb;
+}
+
+.location-close:focus-visible {
+  outline: 2px solid #2874f0;
+  outline-offset: 3px;
+}
+
+/* ==================================================
+   04. ADDRESS SEARCH
+   ================================================== */
+.location-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 5px 6px 5px 12px;
+  margin-bottom: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  background: #ffffff;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.location-search:focus-within {
+  border-color: #2874f0;
+  box-shadow: 0 0 0 3px rgba(40, 116, 240, 0.12);
+}
+
+.location-search > svg {
+  flex-shrink: 0;
+  color: #6b7280;
+}
+
+.location-search input {
+  width: 100%;
+  min-width: 0;
+  padding: 8px 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #111827;
+  font: inherit;
+  font-size: 14px;
+}
+
+.location-search input::placeholder {
+  color: #9ca3af;
+}
+
+.location-search button {
+  flex-shrink: 0;
+  padding: 10px 13px;
+  border: 0;
+  border-radius: 7px;
+  background: #2874f0;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.location-search button:hover:not(:disabled) {
+  background: #1d5fca;
+}
+
+.location-search button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* ==================================================
+   05. CURRENT LOCATION BUTTON
+   ================================================== */
+.location-current-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 3px 0 14px;
+  padding: 9px 0;
+  border: 0;
+  background: transparent;
+  color: #2874f0;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.location-current-button:hover:not(:disabled) {
+  color: #1d5fca;
+}
+
+.location-current-button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+/* ==================================================
+   06. MAP CONTAINER
+   ================================================== */
+.location-map-wrapper {
+  position: relative;
+  width: 100%;
+  height: 360px;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #e5e3df;
+}
+
+.location-map-wrapper > div:first-child {
+  width: 100%;
+  height: 100%;
+}
+
+/* ==================================================
+   07. FIXED CENTER PIN
+   ================================================== */
+.location-center-pin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  transform: translate(-50%, -100%);
+  filter: drop-shadow(0 3px 3px rgba(0, 0, 0, 0.3));
+}
+
+.location-center-pin svg {
+  display: block;
+  overflow: visible;
+}
+
+@media (max-width: 600px) {
+  .location-map-wrapper {
+    height: 320px;
+  }
+}
+
+/* ==================================================
+   08. MAP LOADING STATE
+   ================================================== */
+.location-map-loading {
+  display: grid;
+  min-height: 240px;
+  place-items: center;
+  border-radius: 12px;
+  background: #f3f4f6;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* ==================================================
+   09. SELECTED ADDRESS
+   ================================================== */
+.location-selection {
+  padding: 15px 0 12px;
+}
+
+.location-selection-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #111827;
+  font-size: 14px;
+}
+
+.location-selection-heading svg {
+  flex-shrink: 0;
+  color: #2874f0;
+}
+
+.location-selection p {
+  margin: 9px 0 5px;
+  color: #374151;
+  font-size: 14px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.location-selection small {
+  color: #6b7280;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* ==================================================
+   10. NOTICES AND ERRORS
+   ================================================== */
+.location-notice,
+.location-error {
+  margin: 10px 0;
+  font-size: 13px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.location-notice {
+  color: #b45309;
+}
+
+.location-error {
+  color: #b91c1c;
+}
+
+/* ==================================================
+   11. DELIVERY AVAILABILITY
+   ================================================== */
+.location-availability {
+  padding: 12px;
+  margin: 8px 0 14px;
+  border-radius: 9px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.location-availability.is-available {
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.location-availability.is-unavailable {
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+/* ==================================================
+   12. CONFIRM LOCATION BUTTON
+   ================================================== */
+.location-confirm-button {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 10px;
+  background: #2874f0;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.location-confirm-button:hover:not(:disabled) {
+  background: #1d5fca;
+}
+
+.location-confirm-button:focus-visible {
+  outline: 2px solid #2874f0;
+  outline-offset: 3px;
+}
+
+.location-confirm-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ==================================================
+   13. MOBILE RESPONSIVENESS
+   ================================================== */
+@media (max-width: 600px) {
+  .location-overlay {
+    align-items: flex-end;
+    padding: 0;
+  }
+
+  .location-modal {
+    width: 100%;
+    max-height: 94dvh;
+    padding: 18px;
+    border-radius: 18px 18px 0 0;
+  }
+
+  .location-modal-header h2 {
+    font-size: 19px;
+  }
+
+  .location-search {
+    gap: 7px;
+  }
+
+  .location-search button {
+    padding: 10px;
+  }
+
+  .location-map-wrapper > div:first-child {
+    height: 320px;
+  }
+
+  .location-center-pin {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+/* ==================================================
+   14. REDUCED MOTION
+   ================================================== */
+@media (prefers-reduced-motion: reduce) {
+  .location-close,
+  .location-search,
+  .location-search button,
+  .location-current-button,
+  .location-confirm-button {
+    transition: none;
+  }
+}

@@ -35,9 +35,13 @@ import logo from "../../assets/images/logo/logo.png";
 import logoName from "../../assets/images/logo/logo-name.png";
 import groceriesLogo from "../../assets/images/logo/groceries.png";
 
+import useNammaCartLocation from "../../context/useNammaCartLocation";
+
 import "../../styles/Header.css";
 
 function Header() {
+  const { location, openLocationPicker } = useNammaCartLocation();
+
   const categories = [
     {
       name: "For You",
@@ -139,17 +143,23 @@ function Header() {
 
         {/* Right Side */}
 
-        <div className="delivery-location">
-          <MapPin size={18} />
+        <button
+          type="button"
+          className="your-existing-location-class"
+          onClick={openLocationPicker}
+          aria-label="Select delivery location"
+        >
+          <MapPin size={20} />
 
-          <span>Location not set</span>
+          <span>
+            <span className="your-existing-location-label">Deliver to</span>
 
-          <button>Select delivery location</button>
-
-          <span className="location-arrow">›</span>
-        </div>
+            <span className="your-existing-location-value">
+              {location?.address || "Select delivery location"}
+            </span>
+          </span>
+        </button>
       </div>
-
       {/* ================= SEARCH SECTION ================= */}
 
       <div className="header-middle">
