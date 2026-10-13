@@ -1,399 +1,267 @@
-import { useMemo, useRef, useState } from "react";
-import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
-import { MapPin, Search, LocateFixed, X } from "lucide-react";
-import "../../styles/LocationPicker.css";
+import { useEffect, useState } from "react";
+import { LocateFixed, MapPin, X } from "lucide-react";
+import { Map, MapControls } from "@/components/ui/map";
+import "../../styles/LocationPickerModal.css";
 
-const API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
+const CHENNAI = [80.2707, 13.0827];
 
-const DELIVERY_CENTER = {
-  lat: Number(import.meta.env.VITE_DELIVERY_CENTER_LAT || 13.0827),
-  lng: Number(import.meta.env.VITE_DELIVERY_CENTER_LNG || 80.2707),
+const INITIAL_VIEWPORT = {
+  center: CHENNAI,
+  zoom: 13,
+  bearing: 0,
+  pitch: 0,
 };
 
-const DELIVERY_RADIUS_KM = Number(
-  import.meta.env.VITE_DELIVERY_RADIUS_KM || 10,
-);
+function formatAddress(properties) {
+  const street = [properties.housenumber, properties.street]
+    .filter(Boolean)
+    .join(" ");
 
-const MAP_CONTAINER_STYLE = {
-  width: "100%",
-  height: "360px",
-};
+  const parts = [
+    street || properties.name,
+    properties.neighbourhood,
+    properties.suburb,
+    properties.city || properties.town || properties.village,
+    properties.state,
+    properties.postcode,
+  ];
 
-const MAP_OPTIONS = {
-  streetViewControl: false,
-  mapTypeControl: false,
-  fullscreenControl: false,
-  clickableIcons: false,
-};
-
-function distanceInKm(a, b) {
-  const toRadians = (degrees) => (degrees * Math.PI) / 180;
-  const earthRadiusKm = 6371;
-
-  const latDifference = toRadians(b.lat - a.lat);
-  const lngDifference = toRadians(b.lng - a.lng);
-
-  const value =
-    Math.sin(latDifference / 2) ** 2 +
-    Math.cos(toRadians(a.lat)) *
-      Math.cos(toRadians(b.lat)) *
-      Math.sin(lngDifference / 2) ** 2;
-
-  return 2 * earthRadiusKm * Math.asin(Math.sqrt(Math.min(1, value)));
+  return [...new Set(parts.filter(Boolean))].join(", ");
 }
 
-function sameLocation(a, b) {
-  if (!a || !b) return false;
+export default function LocationPickerModal({ onClose, onConfirm }) {
+  const [viewport, setViewport] = useState(INITIAL_VIEWPORT);
+  const [resolvedLocation, setResolvedLocation] = useState(null);
+  const [addressLookupError, setAddressLookupError] = useState("");
+  const [locationError, setLocationError] = useState("");
+  const [locating, setLocating] = useState(false);
 
-  return (
-    Math.abs(a.lat - b.lat) < 0.000005 && Math.abs(a.lng - b.lng) < 0.000005
-  );
-}
+  const longitude = viewport.center[0];
+  const latitude = viewport.center[1];
 
-// The wrapper controls the modal lifecycle.
-// Closing the modal unmounts its content, so reopening initializes
-// state from the latest saved location without a resetting useEffect.
-export default function LocationPickerModal({
-  open,
-  initialLocation,
-  onClose,
-  onConfirm,
-}) {
-  if (!open) return null;
+  const hasCurrentAddress =
+    resolvedLocation?.latitude === latitude &&
+    resolvedLocation?.longitude === longitude;
 
-  const locationKey = initialLocation
-    ? `${initialLocation.lat},${initialLocation.lng},${initialLocation.address || ""}`
-    : "new-location";
+  const loadingAddress =
+    !hasCurrentAddress || resolvedLocation?.status === "loading";
 
-  return (
-    <LocationPickerContent
-      key={locationKey}
-      initialLocation={initialLocation}
-      onClose={onClose}
-      onConfirm={onConfirm}
-    />
-  );
-}
+  const address =
+    hasCurrentAddress && resolvedLocation?.status === "success"
+      ? resolvedLocation.address
+      : "";
 
-function LocationPickerContent({ initialLocation, onClose, onConfirm }) {
-  const { isLoaded, loadError } = useJsApiLoader({
-    id: "nammacart-google-maps",
-    googleMapsApiKey: API_KEY || "",
-  });
+  // Reverse-geocode the current map center.
+  useEffect(() => {
+    let cancelled = false;
 
-  const [position, setPosition] = useState(() =>
-    initialLocation
-      ? { lat: initialLocation.lat, lng: initialLocation.lng }
-      : null,
-  );
+    const timer = setTimeout(async () => {
+      try {
+        const url =
+          `https://photon.komoot.io/reverse` +
+          `?lat=${latitude}&lon=${longitude}`;
 
-  const [address, setAddress] = useState(initialLocation?.address || "");
+        const response = await fetch(url);
 
-  const [query, setQuery] = useState("");
-  const [message, setMessage] = useState("");
-  const [busy, setBusy] = useState(false);
+        if (!response.ok) {
+          throw new Error("Address lookup failed.");
+        }
 
-  const mapInstanceRef = useRef(null);
-  const requestIdRef = useRef(0);
+        const data = await response.json();
+        const properties = data.features?.[0]?.properties;
 
-  const lastGeocodedRef = useRef(
-    initialLocation?.address && initialLocation
-      ? { lat: initialLocation.lat, lng: initialLocation.lng }
-      : null,
-  );
+        if (!properties) {
+          throw new Error("No address found.");
+        }
 
-  const initialCenter = useMemo(
-    () =>
-      initialLocation
-        ? { lat: initialLocation.lat, lng: initialLocation.lng }
-        : DELIVERY_CENTER,
-    [initialLocation],
-  );
+        const formattedAddress = formatAddress(properties);
 
-  const available = position
-    ? distanceInKm(position, DELIVERY_CENTER) <= DELIVERY_RADIUS_KM
-    : false;
+        if (!formattedAddress) {
+          throw new Error("No readable address found.");
+        }
 
-  function reverseGeocode(coords) {
-    const requestId = ++requestIdRef.current;
+        if (!cancelled) {
+          setResolvedLocation({
+            latitude,
+            longitude,
+            address: formattedAddress,
+            status: "success",
+          });
 
-    lastGeocodedRef.current = coords;
-    setPosition(coords);
-    setAddress("");
-    setMessage("");
-    setBusy(true);
+          setAddressLookupError("");
+        }
+      } catch {
+        if (!cancelled) {
+          setResolvedLocation({
+            latitude,
+            longitude,
+            address: "",
+            status: "error",
+          });
 
-    const geocoder = new window.google.maps.Geocoder();
-
-    geocoder.geocode({ location: coords }, (results, status) => {
-      if (requestId !== requestIdRef.current) return;
-
-      setBusy(false);
-
-      if (status === "OK" && results?.[0]) {
-        setAddress(results[0].formatted_address);
-      } else {
-        setAddress(`${coords.lat.toFixed(6)}, ${coords.lng.toFixed(6)}`);
-        setMessage(
-          "Address lookup failed. You can still use these coordinates.",
-        );
-      }
-    });
-  }
-
-  function searchAddress(event) {
-    event.preventDefault();
-
-    if (!query.trim() || !isLoaded || busy) return;
-
-    const requestId = ++requestIdRef.current;
-
-    setBusy(true);
-    setMessage("");
-
-    const geocoder = new window.google.maps.Geocoder();
-
-    geocoder.geocode(
-      { address: query.trim(), region: "IN" },
-      (results, status) => {
-        if (requestId !== requestIdRef.current) return;
-
-        setBusy(false);
-
-        if (status !== "OK" || !results?.[0]) {
-          setMessage(
-            "Address not found. Try a more specific address or PIN code.",
+          setAddressLookupError(
+            "We couldn't find a street address here. You can still confirm the coordinates.",
           );
-          return;
         }
+      }
+    }, 500);
 
-        const result = results[0];
-        const point = result.geometry.location;
-        const coords = { lat: point.lat(), lng: point.lng() };
+    return () => {
+      cancelled = true;
+      clearTimeout(timer);
+    };
+  }, [latitude, longitude]);
 
-        lastGeocodedRef.current = coords;
-        setPosition(coords);
-        setAddress(result.formatted_address);
-        setMessage("");
-
-        if (mapInstanceRef.current) {
-          mapInstanceRef.current.panTo(coords);
-          mapInstanceRef.current.setZoom(16);
-        }
-      },
-    );
-  }
-
-  function useCurrentLocation() {
+  // Move the map to the device's current location.
+  const useCurrentLocation = () => {
     if (!navigator.geolocation) {
-      setMessage("Your browser does not support location access.");
+      setLocationError("Your browser doesn't support location detection.");
       return;
     }
 
-    setMessage("");
+    setLocating(true);
+    setLocationError("");
+    setAddressLookupError("");
 
     navigator.geolocation.getCurrentPosition(
       ({ coords }) => {
-        const location = {
-          lat: coords.latitude,
-          lng: coords.longitude,
-        };
+        setViewport((current) => ({
+          ...current,
+          center: [coords.longitude, coords.latitude],
+          zoom: 16,
+        }));
 
-        if (mapInstanceRef.current) {
-          mapInstanceRef.current.panTo(location);
-          mapInstanceRef.current.setZoom(16);
-        }
-
-        reverseGeocode(location);
+        setLocating(false);
       },
-      () => {
-        setMessage(
-          "Location access was denied or unavailable. Allow location permission and try again.",
-        );
+      (error) => {
+        const message =
+          error.code === error.PERMISSION_DENIED
+            ? "Location permission was denied. Allow location access in your browser settings."
+            : error.code === error.TIMEOUT
+              ? "Finding your location took too long. Please try again."
+              : "Unable to determine your location. Please try again.";
+
+        setLocationError(message);
+        setLocating(false);
       },
       {
         enableHighAccuracy: true,
-        timeout: 10000,
-        maximumAge: 60000,
+        timeout: 15000,
+        maximumAge: 0,
       },
     );
-  }
+  };
 
-  function handleMapIdle() {
-    const map = mapInstanceRef.current;
-    if (!map) return;
-
-    const center = map.getCenter();
-    if (!center) return;
-
-    const coords = {
-      lat: center.lat(),
-      lng: center.lng(),
-    };
-
-    if (sameLocation(lastGeocodedRef.current, coords)) return;
-
-    reverseGeocode(coords);
-  }
-
-  function confirmLocation() {
-    if (!position || !address || busy) return;
+  // Confirm the location underneath the center pin.
+  const confirmLocation = () => {
+    if (loadingAddress || locating) return;
 
     onConfirm({
-      lat: position.lat,
-      lng: position.lng,
-      address,
-      available,
-      checkedAt: new Date().toISOString(),
+      address:
+        address ||
+        `Selected location (${latitude.toFixed(5)}, ${longitude.toFixed(5)})`,
+      latitude,
+      longitude,
     });
-  }
+  };
 
   return (
-    <div
-      className="location-overlay"
-      onMouseDown={(event) => {
-        if (event.target === event.currentTarget) onClose();
-      }}
-    >
+    <div className="location-modal-backdrop" onClick={onClose}>
       <section
         className="location-modal"
         role="dialog"
         aria-modal="true"
-        aria-labelledby="location-title"
+        aria-labelledby="location-modal-title"
+        onClick={(event) => event.stopPropagation()}
       >
+        {/* Header */}
         <div className="location-modal-header">
-          <div>
-            <h2 id="location-title">Choose delivery location</h2>
-            <p>Move the map to position the pin.</p>
-          </div>
+          <h2 id="location-modal-title">Choose delivery location</h2>
 
           <button
             type="button"
-            className="location-close"
+            className="location-close-button"
             onClick={onClose}
             aria-label="Close location picker"
           >
-            <X size={21} />
+            <X size={22} />
           </button>
         </div>
 
-        <form className="location-search" onSubmit={searchAddress}>
-          <Search size={19} />
-
-          <input
-            value={query}
-            onChange={(event) => setQuery(event.target.value)}
-            placeholder="Search address, area or PIN code"
-            aria-label="Search delivery address"
-          />
-
-          <button type="submit" disabled={busy || !query.trim()}>
-            Search
-          </button>
-        </form>
-
-        <button
-          type="button"
-          className="location-current-button"
-          onClick={useCurrentLocation}
-          disabled={busy}
+        {/* Selected address */}
+        <div
+          className="location-address-card"
+          aria-live="polite"
+          aria-busy={loadingAddress}
         >
-          <LocateFixed size={18} />
-          Use my current location
-        </button>
-
-        {!API_KEY && (
-          <p className="location-error">
-            Add VITE_GOOGLE_MAPS_API_KEY to your .env file.
-          </p>
-        )}
-
-        {loadError && (
-          <p className="location-error">
-            Google Maps could not load. Check your API key, enabled APIs,
-            billing and website restrictions.
-          </p>
-        )}
-
-        {!isLoaded && !loadError && API_KEY && (
-          <div className="location-map-loading">Loading Google Maps...</div>
-        )}
-
-        {isLoaded && (
-          <div className="location-map-wrapper">
-            <GoogleMap
-              mapContainerStyle={MAP_CONTAINER_STYLE}
-              center={initialCenter}
-              zoom={initialLocation ? 16 : 12}
-              options={MAP_OPTIONS}
-              onLoad={(map) => {
-                mapInstanceRef.current = map;
-              }}
-              onIdle={handleMapIdle}
-              onUnmount={() => {
-                mapInstanceRef.current = null;
-              }}
-            />
-
-            {/* Fixed pin overlay — never moves with the map */}
-            <div className="location-center-pin" aria-hidden="true">
-              <MapPin
-                size={38}
-                fill="#2874F0"
-                color="#ffffff"
-                strokeWidth={2.5}
-              />
-            </div>
-          </div>
-        )}
-
-        <div className="location-selection">
-          <div className="location-selection-heading">
-            <MapPin size={20} />
-            <strong>Selected address</strong>
+          <div className="location-address-icon">
+            <MapPin size={22} />
           </div>
 
-          <p>
-            {address ||
-              "Search for an address or move the map to select a location."}
-          </p>
+          <div className="location-address-details">
+            <strong>
+              {loadingAddress
+                ? "Finding address..."
+                : "Selected delivery location"}
+            </strong>
 
-          {position && (
+            <p>
+              {loadingAddress
+                ? "Please wait while we identify this place."
+                : address ||
+                  "Address unavailable. You can use the coordinates below."}
+            </p>
+
             <small>
-              {position.lat.toFixed(6)}, {position.lng.toFixed(6)}
+              {latitude.toFixed(5)}, {longitude.toFixed(5)}
             </small>
-          )}
+          </div>
         </div>
 
-        {message && (
-          <p className="location-notice" role="status">
-            {message}
+        {/* Interactive map */}
+        <div className="location-map">
+          <Map viewport={viewport} onViewportChange={setViewport}>
+            <MapControls />
+          </Map>
+
+          {/* Fixed pin in the center of the map */}
+          <div className="location-map-pin" aria-hidden="true">
+            <MapPin size={40} fill="white" />
+          </div>
+
+          {/* My Location: bottom-left */}
+          <button
+            type="button"
+            className="location-map-current-button"
+            onClick={useCurrentLocation}
+            disabled={locating}
+            aria-label="Use my current location"
+            title="Use my current location"
+          >
+            <LocateFixed size={19} />
+
+            <span>{locating ? "Locating..." : "My Location"}</span>
+          </button>
+        </div>
+
+        {/* Errors */}
+        {(locationError || addressLookupError) && (
+          <p className="location-error" role="status">
+            {locationError || addressLookupError}
           </p>
         )}
 
-        {position && address && !busy && (
-          <div
-            className={
-              available
-                ? "location-availability is-available"
-                : "location-availability is-unavailable"
-            }
-            role="status"
+        {/* Fixed footer */}
+        <div className="location-modal-footer">
+          <button
+            type="button"
+            className="location-confirm-button"
+            onClick={confirmLocation}
+            disabled={loadingAddress || locating}
           >
-            {available
-              ? "Delivery appears available in this area."
-              : "This location is outside the configured delivery radius."}
-          </div>
-        )}
-
-        <button
-          type="button"
-          className="location-confirm-button"
-          onClick={confirmLocation}
-          disabled={!position || !address || busy}
-        >
-          {busy ? "Finding address..." : "Confirm location"}
-        </button>
+            {loadingAddress ? "Finding address..." : "Confirm location"}
+          </button>
+        </div>
       </section>
     </div>
   );

@@ -1,0 +1,508 @@
+/* =========================================
+   MODAL BACKDROP
+========================================= */
+
+.location-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: grid;
+  place-items: center;
+
+  padding: 20px;
+  box-sizing: border-box;
+
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* =========================================
+   MODAL CONTAINER
+========================================= */
+
+.location-modal {
+  display: flex;
+  flex-direction: column;
+
+  width: min(100%, 1000px);
+  height: min(850px, 92vh);
+  max-height: 92vh;
+  min-height: 0;
+
+  padding: 26px;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  background: #ffffff;
+  color: #171717;
+  border-radius: 16px;
+
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+}
+
+/* =========================================
+   MODAL HEADER
+========================================= */
+
+.location-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+
+  flex-shrink: 0;
+  margin-bottom: 18px;
+}
+
+.location-modal-header h2 {
+  margin: 0;
+
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.location-close-button {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+
+  padding: 6px;
+
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: #171717;
+
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.location-close-button:hover {
+  background: #f3f4f6;
+}
+
+.location-close-button:focus-visible {
+  outline: 2px solid #4f63ed;
+  outline-offset: 3px;
+}
+
+/* =========================================
+   FULL-WIDTH ADDRESS CARD
+========================================= */
+
+.location-address-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+
+  width: 100%;
+  min-width: 0;
+  min-height: 100px;
+  flex-shrink: 0;
+
+  margin-bottom: 16px;
+  padding: 16px;
+  box-sizing: border-box;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+
+  background: #f8fafc;
+}
+
+.location-address-icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+
+  width: 42px;
+  height: 42px;
+
+  border-radius: 10px;
+  background: #e8efff;
+  color: #4f63ed;
+}
+
+.location-address-details {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.location-address-details strong {
+  display: block;
+  margin-bottom: 6px;
+
+  color: #171717;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.location-address-details p {
+  margin: 0 0 6px;
+
+  color: #374151;
+  font-size: 14px;
+  line-height: 1.5;
+
+  overflow-wrap: anywhere;
+}
+
+.location-address-details small {
+  display: block;
+
+  color: #6b7280;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* =========================================
+   MAP CONTAINER
+========================================= */
+
+.location-map {
+  position: relative;
+
+  width: 100%;
+  flex: 1 1 0;
+  min-height: 260px;
+
+  overflow: hidden;
+  isolation: isolate;
+
+  border-radius: 12px;
+  background: #e5e7eb;
+}
+
+/*
+  Make the Mapcn root fill the entire map container.
+  The map and its built-in zoom controls stay interactive.
+*/
+
+.location-map > div:first-child {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+}
+
+/* =========================================
+   FIXED CENTER PIN
+========================================= */
+
+.location-map-pin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 5;
+
+  transform: translate(-50%, -100%);
+
+  color: #4f63ed;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.25));
+
+  pointer-events: none;
+}
+
+/* =========================================
+   MY LOCATION BUTTON - BOTTOM LEFT
+========================================= */
+
+.location-map-current-button {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  z-index: 20;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  min-height: 42px;
+  padding: 0 14px;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 9px;
+
+  background: #ffffff;
+  color: #262626;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.location-map-current-button svg {
+  flex-shrink: 0;
+  color: #4f63ed;
+}
+
+.location-map-current-button:hover:not(:disabled) {
+  background: #f5f7ff;
+  border-color: #4f63ed;
+  box-shadow: 0 3px 10px rgba(79, 99, 237, 0.2);
+}
+
+.location-map-current-button:focus-visible {
+  outline: 2px solid #4f63ed;
+  outline-offset: 3px;
+}
+
+.location-map-current-button:disabled {
+  cursor: wait;
+  opacity: 0.75;
+}
+
+.location-icon-loading {
+  animation: location-icon-pulse 1s ease-in-out infinite;
+}
+
+@keyframes location-icon-pulse {
+  50% {
+    opacity: 0.35;
+  }
+}
+
+/* =========================================
+   ZOOM CONTROLS - BOTTOM RIGHT
+========================================= */
+
+/*
+  MapControls already positions the zoom buttons.
+  This override brings them closer to the bottom edge.
+*/
+
+.location-map .location-map-zoom-controls {
+  right: 10px;
+  bottom: 48px;
+  z-index: 15;
+}
+
+/* =========================================
+   LOCATION ERROR
+========================================= */
+
+.location-error {
+  flex-shrink: 0;
+
+  margin: 10px 0 0;
+  padding: 10px 12px;
+
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+
+  background: #fef2f2;
+  color: #b91c1c;
+
+  font-size: 13px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+/* =========================================
+   MODAL FOOTER
+========================================= */
+
+.location-modal-footer {
+  flex-shrink: 0;
+
+  padding-top: 12px;
+  background: #ffffff;
+}
+
+/* =========================================
+   CONFIRM LOCATION BUTTON
+========================================= */
+
+.location-confirm-button {
+  display: block;
+
+  width: 100%;
+  min-height: 50px;
+
+  padding: 14px;
+  box-sizing: border-box;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #4f63ed;
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.location-confirm-button:hover:not(:disabled) {
+  background: #3d50d9;
+}
+
+.location-confirm-button:active:not(:disabled) {
+  transform: scale(0.99);
+}
+
+.location-confirm-button:focus-visible {
+  outline: 2px solid #4f63ed;
+  outline-offset: 3px;
+}
+
+.location-confirm-button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 768px) {
+  .location-modal-backdrop {
+    padding: 14px;
+  }
+
+  .location-modal {
+    width: 100%;
+    height: 92vh;
+    max-height: 92vh;
+    padding: 20px;
+    border-radius: 14px;
+  }
+
+  .location-modal-header h2 {
+    font-size: 21px;
+  }
+
+  .location-address-card {
+    min-height: 96px;
+    padding: 14px;
+  }
+
+  .location-address-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .location-map {
+    min-height: 240px;
+  }
+
+  .location-map-current-button {
+    left: 10px;
+    bottom: 10px;
+    min-height: 40px;
+    padding: 0 11px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 540px) {
+  .location-modal-backdrop {
+    padding: 8px;
+  }
+
+  .location-modal {
+    width: 100%;
+    height: 94vh;
+    max-height: 94vh;
+
+    padding: 14px;
+    border-radius: 12px;
+  }
+
+  .location-modal-header {
+    margin-bottom: 14px;
+  }
+
+  .location-modal-header h2 {
+    font-size: 18px;
+  }
+
+  .location-address-card {
+    gap: 10px;
+    min-height: 0;
+    margin-bottom: 12px;
+    padding: 12px;
+  }
+
+  .location-address-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .location-address-details strong {
+    font-size: 14px;
+  }
+
+  .location-address-details p {
+    font-size: 13px;
+  }
+
+  .location-map {
+    min-height: 220px;
+  }
+
+  .location-map-current-button {
+    left: 8px;
+    bottom: 8px;
+
+    gap: 7px;
+    min-height: 38px;
+    padding: 0 10px;
+
+    font-size: 12px;
+  }
+
+  .location-map .location-map-zoom-controls {
+    right: 8px;
+    bottom: 46px;
+  }
+
+  .location-modal-footer {
+    padding-top: 10px;
+  }
+
+  .location-confirm-button {
+    min-height: 46px;
+    font-size: 15px;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .location-close-button,
+  .location-map-current-button,
+  .location-confirm-button {
+    transition: none;
+  }
+
+  .location-icon-loading {
+    animation: none;
+  }
+}

@@ -15,6 +15,7 @@ import {
   Download,
 } from "lucide-react";
 
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 import appliancesIcon from "../../assets/images/icons/appliances.svg";
@@ -29,18 +30,20 @@ import homeIcon from "../../assets/images/icons/home.svg";
 import mobilesIcon from "../../assets/images/icons/mobiles.svg";
 import sportsFitnessIcon from "../../assets/images/icons/sports-fitness.svg";
 import toysBabyIcon from "../../assets/images/icons/toys-baby.svg";
-import assessoriesIcon from "../../assets/images/icons/accessories.svg";
+import accessoriesIcon from "../../assets/images/icons/accessories.svg";
+
+import LocationPickerModal from "../Location/LocationPickerModal";
 
 import logo from "../../assets/images/logo/logo.png";
 import logoName from "../../assets/images/logo/logo-name.png";
 import groceriesLogo from "../../assets/images/logo/groceries.png";
 
-import useNammaCartLocation from "../../context/useNammaCartLocation";
-
 import "../../styles/Header.css";
 
 function Header() {
-  const { location, openLocationPicker } = useNammaCartLocation();
+  const [isLocationPickerOpen, setIsLocationPickerOpen] = useState(false);
+
+  const [location, setLocation] = useState(null);
 
   const categories = [
     {
@@ -55,7 +58,7 @@ function Header() {
     },
     {
       name: "Accessories",
-      icon: assessoriesIcon,
+      icon: accessoriesIcon,
       path: "/accessories",
     },
     {
@@ -116,7 +119,6 @@ function Header() {
 
       <div className="header-top">
         {/* Left Side */}
-
         <div className="header-top-left">
           {/* Logo */}
 
@@ -140,22 +142,23 @@ function Header() {
             </NavLink>
           </div>
         </div>
-
         {/* Right Side */}
-
         <button
           type="button"
-          className="your-existing-location-class"
-          onClick={openLocationPicker}
+          className="delivery-location-button"
+          onClick={() => setIsLocationPickerOpen(true)}
           aria-label="Select delivery location"
         >
-          <MapPin size={20} />
+          <span className="delivery-location-icon">
+            <MapPin size={21} />
+          </span>
 
-          <span>
-            <span className="your-existing-location-label">Deliver to</span>
+          <span className="delivery-location-text">
+            <span className="delivery-location-label">Deliver to</span>
 
-            <span className="your-existing-location-value">
-              {location?.address || "Select delivery location"}
+            <span className="delivery-location-value">
+              <span>{location?.address || "Select delivery location"}</span>
+              <ChevronDown size={15} />
             </span>
           </span>
         </button>
@@ -324,7 +327,18 @@ function Header() {
             <span>{category.name}</span>
           </NavLink>
         ))}
+        /
       </nav>
+      {/* LOCATION PICKER MODAL */}
+      {isLocationPickerOpen && (
+        <LocationPickerModal
+          onClose={() => setIsLocationPickerOpen(false)}
+          onConfirm={(selectedLocation) => {
+            setLocation(selectedLocation);
+            setIsLocationPickerOpen(false);
+          }}
+        />
+      )}
     </header>
   );
 }

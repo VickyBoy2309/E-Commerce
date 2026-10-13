@@ -16,6 +16,8 @@ import Books from "./pages/Books";
 import Login from "./pages/Login";
 import Groceries from "./pages/Groceries";
 
+import MapTest from "./components/Location/MapTest";
+
 import NammaCartLayout from "./components/layout/NammaCartLayout";
 
 function App() {
@@ -61,6 +63,8 @@ function App() {
         {/* ================= AUTH ================= */}
 
         <Route path="/login" element={<Login />} />
+
+        <Route path="/map-test" element={<MapTest />} />
       </Routes>
     </BrowserRouter>
   );
