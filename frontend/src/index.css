@@ -16,9 +16,13 @@ html,
 body {
   width: 100%;
   min-height: 100%;
-
+  zoom: 95%;
   margin: 0;
   padding: 0;
+}
+
+html:has(.auth-layout) {
+  zoom: 105%;
 }
 
 /* ========================================

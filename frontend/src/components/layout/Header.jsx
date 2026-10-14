@@ -327,7 +327,6 @@ function Header() {
             <span>{category.name}</span>
           </NavLink>
         ))}
-        /
       </nav>
       {/* LOCATION PICKER MODAL */}
       {isLocationPickerOpen && (

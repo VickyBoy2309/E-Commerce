@@ -1,4 +1,4 @@
-import {  useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "../../styles/PromoSlider.css";
 
 export default function PromoSlider({
@@ -22,6 +22,7 @@ export default function PromoSlider({
   const lastPointerX = useRef(0);
   const dragDistance = useRef(0);
   const didDrag = useRef(false);
+  const dragSessionActive = useRef(false);
   const activeIndexRef = useRef(cloneCount);
 
   const slides = hasMultipleBanners
@@ -53,10 +54,10 @@ export default function PromoSlider({
 
       if (!first || !second) return;
 
-      const firstLeft = first.getBoundingClientRect().left;
-      const secondLeft = second.getBoundingClientRect().left;
+      // Measure layout positions directly, without zoom correction.
+      const step = second.offsetLeft - first.offsetLeft;
 
-      setSlideStep(secondLeft - firstLeft);
+      setSlideStep(step);
     };
 
     measure();
@@ -67,6 +68,10 @@ export default function PromoSlider({
 
     if (track.children[0]) {
       observer.observe(track.children[0]);
+    }
+
+    if (track.children[1]) {
+      observer.observe(track.children[1]);
     }
 
     return () => observer.disconnect();
@@ -127,11 +132,13 @@ export default function PromoSlider({
   ======================================== */
 
   const handlePointerDown = (event) => {
-    if (!hasMultipleBanners) return;
+    if (!hasMultipleBanners || dragSessionActive.current) return;
 
     if (event.pointerType === "mouse" && event.button !== 0) {
       return;
     }
+
+    dragSessionActive.current = true;
 
     pointerStartX.current = event.clientX;
     lastPointerX.current = event.clientX;
@@ -145,12 +152,8 @@ export default function PromoSlider({
     event.currentTarget.setPointerCapture(event.pointerId);
   };
 
-  /* ========================================
-     FOLLOW THE CURSOR / FINGER
-  ======================================== */
-
   const handlePointerMove = (event) => {
-    if (!isDragging) return;
+    if (!dragSessionActive.current) return;
 
     const distance = event.clientX - pointerStartX.current;
 
@@ -164,12 +167,10 @@ export default function PromoSlider({
     setDragOffset(distance);
   };
 
-  /* ========================================
-     RELEASE AND SNAP TO A SLIDE
-  ======================================== */
-
   const finishDragging = () => {
-    if (!isDragging) return;
+    if (!dragSessionActive.current) return;
+
+    dragSessionActive.current = false;
 
     const distance = dragDistance.current;
     const threshold = Math.min(100, Math.max(35, slideStep * 0.12));
@@ -184,11 +185,11 @@ export default function PromoSlider({
   };
 
   const handlePointerUp = (event) => {
+    finishDragging();
+
     if (event.currentTarget.hasPointerCapture(event.pointerId)) {
       event.currentTarget.releasePointerCapture(event.pointerId);
     }
-
-    finishDragging();
   };
 
   const handlePointerCancel = () => {

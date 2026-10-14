@@ -181,74 +181,74 @@ export const promoBanners = {
     {
       id: 2,
       image: new URL(
-        "../assets/images/02-Fashion/banners/02-Formal Shoes.png",
+        "../assets/images/03-Accessories/banners/02-Women's Accessories.png",
         import.meta.url,
       ).href,
-      alt: "Formal Shoes",
+      alt: "Women's Accessories",
     },
     {
       id: 3,
       image: new URL(
-        "../assets/images/02-Fashion/banners/03-Samantha.png",
+        "../assets/images/03-Accessories/banners/03-Sunglasses.png",
         import.meta.url,
       ).href,
-      alt: "Women's Kurta & More",
+      alt: "Sunglasses",
     },
     {
       id: 4,
       image: new URL(
-        "../assets/images/02-Fashion/banners/04-Dhanush.png",
+        "../assets/images/03-Accessories/banners/04-Men's Belt Wallet.png",
         import.meta.url,
       ).href,
-      alt: "Men's Clothes ",
+      alt: "Men's Belt Wallet ",
     },
     {
       id: 5,
       image: new URL(
-        "../assets/images/02-Fashion/banners/05-Sports Shoes.png",
+        "../assets/images/03-Accessories/banners/05-Men's Bracelets.png",
         import.meta.url,
       ).href,
-      alt: "Sports Shoes",
+      alt: "Men's Bracelets",
     },
     {
       id: 6,
       image: new URL(
-        "../assets/images/02-Fashion/banners/06-Sai Pallavi.png",
+        "../assets/images/03-Accessories/banners/06-Women's Jew.png",
         import.meta.url,
       ).href,
-      alt: "Sarees",
+      alt: "Women's Jewellers",
     },
     {
       id: 7,
       image: new URL(
-        "../assets/images/02-Fashion/banners/07-Crocs.png",
+        "../assets/images/03-Accessories/banners/07-Hats.png",
         import.meta.url,
       ).href,
-      alt: "Crocs",
+      alt: "Hats & Caps",
     },
     {
       id: 8,
       image: new URL(
-        "../assets/images/02-Fashion/banners/08-Kertty.png",
+        "../assets/images/03-Accessories/banners/08-Women's Watches.png",
         import.meta.url,
       ).href,
-      alt: "Lehangas",
+      alt: "Women's Watches",
     },
     {
       id: 9,
       image: new URL(
-        "../assets/images/02-Fashion/banners/09-Suriya Joe.png",
+        "../assets/images/03-Accessories/banners/09-Couple Rings.png",
         import.meta.url,
       ).href,
-      alt: "Primary Sales",
+      alt: "Couple Rings",
     },
     {
       id: 10,
       image: new URL(
-        "../assets/images/02-Fashion/banners/10-Trolley Bags.png",
+        "../assets/images/03-Accessories/banners/10-Women's Bags.png",
         import.meta.url,
       ).href,
-      alt: "Trolley Bags",
+      alt: "Women's Bags",
     },
   ],
 
@@ -257,82 +257,82 @@ export const promoBanners = {
     {
       id: 1,
       image: new URL(
-        "../assets/images/ ",
+        "../assets/images/04-Mobiles/banners/01-IPhone 17.png",
         import.meta.url,
       ).href,
-      alt: "Mens Kurtas",
+      alt: "IPhone 17",
     },
     {
       id: 2,
       image: new URL(
-        "../assets/images/02-Fashion/banners/02-Formal Shoes.png",
+        "../assets/images/04-Mobiles/banners/02-Samsung S25 FE.png",
         import.meta.url,
       ).href,
-      alt: "Formal Shoes",
+      alt: "Samsung S25 FE",
     },
     {
       id: 3,
       image: new URL(
-        "../assets/images/02-Fashion/banners/03-Samantha.png",
+        "../assets/images/04-Mobiles/banners/03-VIVO T5x 5G.png",
         import.meta.url,
       ).href,
-      alt: "Women's Kurta & More",
+      alt: "VIVO T5x 5G",
     },
     {
       id: 4,
       image: new URL(
-        "../assets/images/02-Fashion/banners/04-Dhanush.png",
+        "../assets/images/04-Mobiles/banners/04-AI Pulse 2 FE.png",
         import.meta.url,
       ).href,
-      alt: "Men's Clothes ",
+      alt: "AI Pulse 2 FE",
     },
     {
       id: 5,
       image: new URL(
-        "../assets/images/02-Fashion/banners/05-Sports Shoes.png",
+        "../assets/images/04-Mobiles/banners/05-IPhone 15.png",
         import.meta.url,
       ).href,
-      alt: "Sports Shoes",
+      alt: "IPhone 15",
     },
     {
       id: 6,
       image: new URL(
-        "../assets/images/02-Fashion/banners/06-Sai Pallavi.png",
+        "../assets/images/04-Mobiles/banners/06-OPPO K14x.png",
         import.meta.url,
       ).href,
-      alt: "Sarees",
+      alt: "OPPO K14x",
     },
     {
       id: 7,
       image: new URL(
-        "../assets/images/02-Fashion/banners/07-Crocs.png",
+        "../assets/images/04-Mobiles/banners/07-Google Pixel 10a.png",
         import.meta.url,
       ).href,
-      alt: "Crocs",
+      alt: "Google Pixel 10a",
     },
     {
       id: 8,
       image: new URL(
-        "../assets/images/02-Fashion/banners/08-Kertty.png",
+        "../assets/images/04-Mobiles/banners/08-Motorola Edge 70.png",
         import.meta.url,
       ).href,
-      alt: "Lehangas",
+      alt: "Motorola Edge 70",
     },
     {
       id: 9,
       image: new URL(
-        "../assets/images/02-Fashion/banners/09-Suriya Joe.png",
+        "../assets/images/04-Mobiles/banners/09-HMD Vibe 2 5G.png",
         import.meta.url,
       ).href,
-      alt: "Primary Sales",
+      alt: "HMD Vibe 2 5G",
     },
     {
       id: 10,
       image: new URL(
-        "../assets/images/02-Fashion/banners/10-Trolley Bags.png",
+        "../assets/images/04-Mobiles/banners/10-HMD Vibe 2 Pro 5G.png",
         import.meta.url,
       ).href,
-      alt: "Trolley Bags",
+      alt: "HDM Vibe 2 Pro 5G",
     },
   ],
 
@@ -341,82 +341,74 @@ export const promoBanners = {
     {
       id: 1,
       image: new URL(
-        "../assets/images/ ",
+        "../assets/images/05-Electronics/banners/01-Will Smith.png",
         import.meta.url,
       ).href,
-      alt: "Mens Kurtas",
+      alt: "Bank Offer Refreshed",
     },
     {
       id: 2,
       image: new URL(
-        "../assets/images/02-Fashion/banners/02-Formal Shoes.png",
+        "../assets/images/05-Electronics/banners/02-Action Camera.png",
         import.meta.url,
       ).href,
-      alt: "Formal Shoes",
+      alt: "Action Cameras",
     },
     {
       id: 3,
       image: new URL(
-        "../assets/images/02-Fashion/banners/03-Samantha.png",
+        "../assets/images/05-Electronics/banners/03-Lenovo.png",
         import.meta.url,
       ).href,
-      alt: "Women's Kurta & More",
+      alt: "Lenovo",
     },
     {
       id: 4,
       image: new URL(
-        "../assets/images/02-Fashion/banners/04-Dhanush.png",
+        "../assets/images/05-Electronics/banners/04-Hair Styler.png",
         import.meta.url,
       ).href,
-      alt: "Men's Clothes ",
+      alt: "Hair Styler",
     },
     {
       id: 5,
       image: new URL(
-        "../assets/images/02-Fashion/banners/05-Sports Shoes.png",
+        "../assets/images/05-Electronics/banners/05-AI Glasses.png",
         import.meta.url,
       ).href,
-      alt: "Sports Shoes",
+      alt: "AI Glasses",
     },
     {
       id: 6,
       image: new URL(
-        "../assets/images/02-Fashion/banners/06-Sai Pallavi.png",
+        "../assets/images/05-Electronics/banners/06-Moto Pad 70 Pro.png",
         import.meta.url,
       ).href,
-      alt: "Sarees",
+      alt: "Moto Pad 70 Pro",
     },
     {
       id: 7,
       image: new URL(
-        "../assets/images/02-Fashion/banners/07-Crocs.png",
+        "../assets/images/05-Electronics/banners/07-ASUS TUF R7 3050.png",
         import.meta.url,
       ).href,
-      alt: "Crocs",
+      alt: "ASUS TUF R7 3050",
     },
     {
       id: 8,
       image: new URL(
-        "../assets/images/02-Fashion/banners/08-Kertty.png",
+        "../assets/images/05-Electronics/banners/08-Pendrive.png",
         import.meta.url,
       ).href,
-      alt: "Lehangas",
+      alt: "Pendrives",
     },
     {
       id: 9,
       image: new URL(
-        "../assets/images/02-Fashion/banners/09-Suriya Joe.png",
+        "../assets/images/05-Electronics/banners/09-Earphone.png",
         import.meta.url,
       ).href,
-      alt: "Primary Sales",
-    },
-    {
-      id: 10,
-      image: new URL(
-        "../assets/images/02-Fashion/banners/10-Trolley Bags.png",
-        import.meta.url,
-      ).href,
-      alt: "Trolley Bags",
+      alt: "Earphones",
     },
   ],
 
@@ -425,82 +417,74 @@ export const promoBanners = {
     {
       id: 1,
       image: new URL(
-        "../assets/images/ ",
+        "../assets/images/06-Beauty/banners/01-Rashmika.png",
         import.meta.url,
       ).href,
-      alt: "Mens Kurtas",
+      alt: "Sales is Live Now",
     },
     {
       id: 2,
       image: new URL(
-        "../assets/images/02-Fashion/banners/02-Formal Shoes.png",
+        "../assets/images/06-Beauty/banners/02-Skincare.png",
         import.meta.url,
       ).href,
-      alt: "Formal Shoes",
+      alt: "Skincare Banner",
     },
     {
       id: 3,
       image: new URL(
-        "../assets/images/02-Fashion/banners/03-Samantha.png",
+        "../assets/images/06-Beauty/banners/03-Body Care.png",
         import.meta.url,
       ).href,
-      alt: "Women's Kurta & More",
+      alt: "Bath & Body Care",
     },
     {
       id: 4,
       image: new URL(
-        "../assets/images/02-Fashion/banners/04-Dhanush.png",
+        "../assets/images/06-Beauty/banners/04-Super Light Skincare.png",
         import.meta.url,
       ).href,
-      alt: "Men's Clothes ",
+      alt: "Light Skincare Banner",
     },
     {
       id: 5,
       image: new URL(
-        "../assets/images/02-Fashion/banners/05-Sports Shoes.png",
+        "../assets/images/06-Beauty/banners/05-SRK.png",
         import.meta.url,
       ).href,
-      alt: "Sports Shoes",
+      alt: "SRK Foxtale Banner",
     },
     {
       id: 6,
       image: new URL(
-        "../assets/images/02-Fashion/banners/06-Sai Pallavi.png",
+        "../assets/images/06-Beauty/banners/06-Fragrance.png",
         import.meta.url,
       ).href,
-      alt: "Sarees",
+      alt: "Fragrances",
     },
     {
       id: 7,
       image: new URL(
-        "../assets/images/02-Fashion/banners/07-Crocs.png",
+        "../assets/images/06-Beauty/banners/07-Makeup.png",
         import.meta.url,
       ).href,
-      alt: "Crocs",
+      alt: "Makeup Banner",
     },
     {
       id: 8,
       image: new URL(
-        "../assets/images/02-Fashion/banners/08-Kertty.png",
+        "../assets/images/06-Beauty/banners/08-Healthy Hair.png",
         import.meta.url,
       ).href,
-      alt: "Lehangas",
+      alt: "Healthy Hair Care",
     },
     {
       id: 9,
       image: new URL(
-        "../assets/images/02-Fashion/banners/09-Suriya Joe.png",
+        "../assets/images/06-Beauty/banners/09-GenZ Faves.png",
         import.meta.url,
       ).href,
       alt: "Primary Sales",
-    },
-    {
-      id: 10,
-      image: new URL(
-        "../assets/images/02-Fashion/banners/10-Trolley Bags.png",
-        import.meta.url,
-      ).href,
-      alt: "Trolley Bags",
     },
   ],
 
@@ -509,82 +493,82 @@ export const promoBanners = {
     {
       id: 1,
       image: new URL(
-        "../assets/images/ ",
+        "../assets/images/07-Home/banners/01-Fahadh Faasil.png",
         import.meta.url,
       ).href,
-      alt: "Mens Kurtas",
+      alt: "Sale is Live Now ",
     },
     {
       id: 2,
       image: new URL(
-        "../assets/images/02-Fashion/banners/02-Formal Shoes.png",
+        "../assets/images/07-Home/banners/02-Furniture.png",
         import.meta.url,
       ).href,
-      alt: "Formal Shoes",
+      alt: "Furniture",
     },
     {
       id: 3,
       image: new URL(
-        "../assets/images/02-Fashion/banners/03-Samantha.png",
+        "../assets/images/07-Home/banners/03-Greenchef.png",
         import.meta.url,
       ).href,
-      alt: "Women's Kurta & More",
+      alt: "Greenchef Banner",
     },
     {
       id: 4,
       image: new URL(
-        "../assets/images/02-Fashion/banners/04-Dhanush.png",
+        "../assets/images/07-Home/banners/04-Bulb.png",
         import.meta.url,
       ).href,
-      alt: "Men's Clothes ",
+      alt: "Bulb ",
     },
     {
       id: 5,
       image: new URL(
-        "../assets/images/02-Fashion/banners/05-Sports Shoes.png",
+        "../assets/images/07-Home/banners/05-Home Makeover.png",
         import.meta.url,
       ).href,
-      alt: "Sports Shoes",
+      alt: "Home Makeovers",
     },
     {
       id: 6,
       image: new URL(
-        "../assets/images/02-Fashion/banners/06-Sai Pallavi.png",
+        "../assets/images/07-Home/banners/06-Quick Fix.png",
         import.meta.url,
       ).href,
-      alt: "Sarees",
+      alt: "Quick Fix Tools",
     },
     {
       id: 7,
       image: new URL(
-        "../assets/images/02-Fashion/banners/07-Crocs.png",
+        "../assets/images/07-Home/banners/07-Lunch Box.png",
         import.meta.url,
       ).href,
-      alt: "Crocs",
+      alt: "Lunch Boxes",
     },
     {
       id: 8,
       image: new URL(
-        "../assets/images/02-Fashion/banners/08-Kertty.png",
+        "../assets/images/07-Home/banners/08-Gas Stove.png",
         import.meta.url,
       ).href,
-      alt: "Lehangas",
+      alt: "Gas Stove",
     },
     {
       id: 9,
       image: new URL(
-        "../assets/images/02-Fashion/banners/09-Suriya Joe.png",
+        "../assets/images/07-Home/banners/09-Bazzar.png",
         import.meta.url,
       ).href,
-      alt: "Primary Sales",
+      alt: "Bazzar Banner",
     },
     {
       id: 10,
       image: new URL(
-        "../assets/images/02-Fashion/banners/10-Trolley Bags.png",
+        "../assets/images/07-Home/banners/10-Home Decor.png",
         import.meta.url,
       ).href,
-      alt: "Trolley Bags",
+      alt: "Home Decor Banner",
     },
   ],
 
@@ -593,82 +577,82 @@ export const promoBanners = {
     {
       id: 1,
       image: new URL(
-        "../assets/images/ ",
+        "../assets/images/08-Appliances/banners/01-Ronaldo.png",
         import.meta.url,
       ).href,
-      alt: "Mens Kurtas",
+      alt: "Ronaldo BBD Live Now",
     },
     {
       id: 2,
       image: new URL(
-        "../assets/images/02-Fashion/banners/02-Formal Shoes.png",
+        "../assets/images/08-Appliances/banners/02-Water Purifier.png",
         import.meta.url,
       ).href,
-      alt: "Formal Shoes",
+      alt: "Water Purifier Banner",
     },
     {
       id: 3,
       image: new URL(
-        "../assets/images/02-Fashion/banners/03-Samantha.png",
+        "../assets/images/08-Appliances/banners/03-Refrigerator.png",
         import.meta.url,
       ).href,
-      alt: "Women's Kurta & More",
+      alt: "Refrigerator Banner",
     },
     {
       id: 4,
       image: new URL(
-        "../assets/images/02-Fashion/banners/04-Dhanush.png",
+        "../assets/images/08-Appliances/banners/04-Mixer Grinder.png",
         import.meta.url,
       ).href,
-      alt: "Men's Clothes ",
+      alt: "Mixer Grinder Banner",
     },
     {
       id: 5,
       image: new URL(
-        "../assets/images/02-Fashion/banners/05-Sports Shoes.png",
+        "../assets/images/08-Appliances/banners/05-3 Door Refrigerator.png",
         import.meta.url,
       ).href,
-      alt: "Sports Shoes",
+      alt: "3 Door Refrigerator Banner",
     },
     {
       id: 6,
       image: new URL(
-        "../assets/images/02-Fashion/banners/06-Sai Pallavi.png",
+        "../assets/images/08-Appliances/banners/06-75 4K TV.png",
         import.meta.url,
       ).href,
-      alt: "Sarees",
+      alt: "75 Inches 4K TV",
     },
     {
       id: 7,
       image: new URL(
-        "../assets/images/02-Fashion/banners/07-Crocs.png",
+        "../assets/images/08-Appliances/banners/07-Washing Machine.png",
         import.meta.url,
       ).href,
-      alt: "Crocs",
+      alt: "Washing Machines Banner",
     },
     {
       id: 8,
       image: new URL(
-        "../assets/images/02-Fashion/banners/08-Kertty.png",
+        "../assets/images/08-Appliances/banners/08-Aquafresh Purifier.png",
         import.meta.url,
       ).href,
-      alt: "Lehangas",
+      alt: "Aquafresh Water Purifier",
     },
     {
       id: 9,
       image: new URL(
-        "../assets/images/02-Fashion/banners/09-Suriya Joe.png",
+        "../assets/images/08-Appliances/banners/09-AC.png",
         import.meta.url,
       ).href,
-      alt: "Primary Sales",
+      alt: "AC Banner",
     },
     {
       id: 10,
       image: new URL(
-        "../assets/images/02-Fashion/banners/10-Trolley Bags.png",
+        "../assets/images/08-Appliances/banners/10-Fans.png",
         import.meta.url,
       ).href,
-      alt: "Trolley Bags",
+      alt: "Fans",
     },
   ],
 
@@ -677,82 +661,74 @@ export const promoBanners = {
     {
       id: 1,
       image: new URL(
-        "../assets/images/ ",
+        "../assets/images/09-Toys Baby/banners/01-Dr.Pusari.png",
         import.meta.url,
       ).href,
-      alt: "Mens Kurtas",
+      alt: "Dr.Pusari",
     },
     {
       id: 2,
       image: new URL(
-        "../assets/images/02-Fashion/banners/02-Formal Shoes.png",
+        "../assets/images/09-Toys Baby/banners/02-Essentials.png",
         import.meta.url,
       ).href,
-      alt: "Formal Shoes",
+      alt: "Baby Essentials",
     },
     {
       id: 3,
       image: new URL(
-        "../assets/images/02-Fashion/banners/03-Samantha.png",
+        "../assets/images/09-Toys Baby/banners/03-Diapers.png",
         import.meta.url,
       ).href,
-      alt: "Women's Kurta & More",
+      alt: "Baby Diapers",
     },
     {
       id: 4,
       image: new URL(
-        "../assets/images/02-Fashion/banners/04-Dhanush.png",
+        "../assets/images/09-Toys Baby/banners/04-Little.png",
         import.meta.url,
       ).href,
-      alt: "Men's Clothes ",
+      alt: "Little Vehicle",
     },
     {
       id: 5,
       image: new URL(
-        "../assets/images/02-Fashion/banners/05-Sports Shoes.png",
+        "../assets/images/09-Toys Baby/banners/05-Johnson.png",
         import.meta.url,
       ).href,
-      alt: "Sports Shoes",
+      alt: "Johnson & Johnson",
     },
     {
       id: 6,
       image: new URL(
-        "../assets/images/02-Fashion/banners/06-Sai Pallavi.png",
+        "../assets/images/09-Toys Baby/banners/06-Stationary.png",
         import.meta.url,
       ).href,
-      alt: "Sarees",
+      alt: "Stationary Items",
     },
     {
       id: 7,
       image: new URL(
-        "../assets/images/02-Fashion/banners/07-Crocs.png",
+        "../assets/images/09-Toys Baby/banners/07-New Launches.png",
         import.meta.url,
       ).href,
-      alt: "Crocs",
+      alt: "New Launches Banner",
     },
     {
       id: 8,
       image: new URL(
-        "../assets/images/02-Fashion/banners/08-Kertty.png",
+        "../assets/images/09-Toys Baby/banners/08-Just Launched.png",
         import.meta.url,
       ).href,
-      alt: "Lehangas",
+      alt: "Just Launches",
     },
     {
       id: 9,
       image: new URL(
-        "../assets/images/02-Fashion/banners/09-Suriya Joe.png",
+        "../assets/images/09-Toys Baby/banners/09-Gifts Toys.png",
         import.meta.url,
       ).href,
-      alt: "Primary Sales",
-    },
-    {
-      id: 10,
-      image: new URL(
-        "../assets/images/02-Fashion/banners/10-Trolley Bags.png",
-        import.meta.url,
-      ).href,
-      alt: "Trolley Bags",
+      alt: "Gifts Toys & More",
     },
   ],
 
@@ -760,10 +736,7 @@ export const promoBanners = {
   sportsFitness: [
     {
       id: 1,
-      image: new URL(
-        "../assets/images/ ",
-        import.meta.url,
-      ).href,
+      image: new URL("../assets/images/ ", import.meta.url).href,
       alt: "Mens Kurtas",
     },
     {
@@ -844,10 +817,7 @@ export const promoBanners = {
   furniture: [
     {
       id: 1,
-      image: new URL(
-        "../assets/images/ ",
-        import.meta.url,
-      ).href,
+      image: new URL("../assets/images/ ", import.meta.url).href,
       alt: "Mens Kurtas",
     },
     {
@@ -928,10 +898,7 @@ export const promoBanners = {
   books: [
     {
       id: 1,
-      image: new URL(
-        "../assets/images/ ",
-        import.meta.url,
-      ).href,
+      image: new URL("../assets/images/ ", import.meta.url).href,
       alt: "Mens Kurtas",
     },
     {
@@ -1012,10 +979,7 @@ export const promoBanners = {
   gaming: [
     {
       id: 1,
-      image: new URL(
-        "../assets/images/ ",
-        import.meta.url,
-      ).href,
+      image: new URL("../assets/images/ ", import.meta.url).href,
       alt: "Mens Kurtas",
     },
     {

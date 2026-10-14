@@ -1,13 +1,76 @@
-.mobiles-page {
-  padding: 30px 40px;
+/* ========================================
+   NAMMACART - MOBILES PAGE
+======================================== */
+
+/* Mobile Page Container */
+.for-you-page {
+  width: 100%;
+  min-width: 0;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.mobiles-page h1 {
-  margin: 0 0 10px;
-  font-size: 32px;
+/* ========================================
+   MOBILE PROMOTIONAL BANNER
+======================================== */
+
+.mobile-banner {
+  width: calc(100% - 40px);
+  max-width: 1300px;
+  margin: 18px auto 24px;
+  overflow: hidden;
+  border-radius: 16px;
+  box-sizing: border-box;
 }
 
-.mobiles-page p {
-  margin: 0;
-  font-size: 16px;
+.mobile-banner img {
+  display: block;
+  padding-left: 70px;
+  width: 95%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ========================================
+   MOBILE PROMOTIONAL SLIDESHOW
+======================================== */
+
+.for-you-page .promo-slider {
+  width: calc(100% - 40px);
+  max-width: 1300px;
+  min-width: 0;
+  margin: 0 auto 24px;
+  box-sizing: border-box;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 768px) {
+  .mobile-banner {
+    width: calc(100% - 24px);
+    margin: 14px auto 18px;
+    border-radius: 12px;
+  }
+
+  .for-you-page .promo-slider {
+    width: calc(100% - 24px);
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mobile-banner {
+    width: calc(100% - 20px);
+    margin: 10px auto 14px;
+    border-radius: 10px;
+  }
+
+  .for-you-page .promo-slider {
+    width: calc(100% - 20px);
+    margin-bottom: 16px;
+  }
 }
