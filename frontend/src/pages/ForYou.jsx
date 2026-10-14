@@ -4,9 +4,8 @@ import { promoBanners } from "../data/promoBanner.js";
 export default function ForYou() {
   return (
     <main className="for-you-page">
+      {/* Slideshow Banners */}
       <PromoSlider banners={promoBanners.forYou} />
-
-      {/* Your existing For You content */}
     </main>
   );
 }

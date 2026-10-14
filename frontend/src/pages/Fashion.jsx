@@ -1,10 +1,11 @@
-function Fashion() {
+import PromoSlider from "../components/layout/PromoSlider.jsx";
+import { promoBanners } from "../data/promoBanner.js";
+
+export default function Fashion() {
   return (
-    <main>
-      <h1>Fashion</h1>
-      <p>Welcome to the Fashion section</p>
+    <main className="for-you-page">
+      {/* Slideshow Banners */}
+      <PromoSlider banners={promoBanners.fashion} />
     </main>
   );
 }
-
-export default Fashion;

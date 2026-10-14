@@ -1,10 +1,11 @@
-function Beauty() {
+import PromoSlider from "../components/layout/PromoSlider.jsx";
+import { promoBanners } from "../data/promoBanner.js";
+
+export default function Beauty() {
   return (
-    <main>
-      <h1>Beauty</h1>
-      <p>Welcome to the Beauty section</p>
+    <main className="for-you-page">
+      {/* Slideshow Banners */}
+      <PromoSlider banners={promoBanners.beauty} />
     </main>
   );
 }
-
-export default Beauty;

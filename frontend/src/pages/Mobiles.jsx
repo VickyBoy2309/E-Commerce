@@ -1,12 +1,11 @@
-import "../styles/Mobiles.css";
+import PromoSlider from "../components/layout/PromoSlider.jsx";
+import { promoBanners } from "../data/promoBanner.js";
 
-function Mobiles() {
+export default function Mobiles() {
   return (
-    <main className="mobiles-page">
-      <h1>Mobiles</h1>
-      <p>Welcome to the Mobiles section</p>
+    <main className="for-you-page">
+      {/* Slideshow Banners */}
+      <PromoSlider banners={promoBanners.mobiles} />
     </main>
   );
 }
-
-export default Mobiles;

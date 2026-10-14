@@ -1,10 +1,11 @@
-function Accessories() {
+import PromoSlider from "../components/layout/PromoSlider.jsx";
+import { promoBanners } from "../data/promoBanner.js";
+
+export default function Accessories() {
   return (
-    <main>
-      <h1>Accessories</h1>
-      <p>Welcome to the Accessories section</p>
+    <main className="for-you-page">
+      {/* Slideshow Banners */}
+      <PromoSlider banners={promoBanners.accessories} />
     </main>
   );
 }
-
-export default Accessories;

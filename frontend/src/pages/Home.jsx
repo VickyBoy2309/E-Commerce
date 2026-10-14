@@ -1,10 +1,11 @@
-function Home() {
+import PromoSlider from "../components/layout/PromoSlider.jsx";
+import { promoBanners } from "../data/promoBanner.js";
+
+export default function Home() {
   return (
-    <main>
-      <h1>Home</h1>
-      <p>Welcome to the Home section</p>
+    <main className="for-you-page">
+      {/* Slideshow Banners */}
+      <PromoSlider banners={promoBanners.home} />
     </main>
   );
 }
-
-export default Home;

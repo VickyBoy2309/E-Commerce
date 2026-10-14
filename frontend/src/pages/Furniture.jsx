@@ -1,10 +1,11 @@
-function Furniture() {
+import PromoSlider from "../components/layout/PromoSlider.jsx";
+import { promoBanners } from "../data/promoBanner.js";
+
+export default function Furniture() {
   return (
-    <main>
-      <h1>Furniture</h1>
-      <p>Welcome to the Furniture section</p>
+    <main className="for-you-page">
+      {/* Slideshow Banners */}
+      <PromoSlider banners={promoBanners.furniture} />
     </main>
   );
 }
-
-export default Furniture;

@@ -1,10 +1,11 @@
-function Gaming() {
+import PromoSlider from "../components/layout/PromoSlider.jsx";
+import { promoBanners } from "../data/promoBanner.js";
+
+export default function Gaming() {
   return (
-    <main>
-      <h1>Gaming</h1>
-      <p>Welcome to the Gaming section</p>
+    <main className="for-you-page">
+      {/* Slideshow Banners */}
+      <PromoSlider banners={promoBanners.gaming} />
     </main>
   );
 }
-
-export default Gaming;

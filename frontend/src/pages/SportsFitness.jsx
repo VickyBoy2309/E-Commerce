@@ -1,10 +1,11 @@
-function SportsFitness() {
+import PromoSlider from "../components/layout/PromoSlider.jsx";
+import { promoBanners } from "../data/promoBanner.js";
+
+export default function SportsFitness() {
   return (
-    <main>
-      <h1>Sports & Fitness</h1>
-      <p>Welcome to the Sports & Fitness section</p>
+    <main className="for-you-page">
+      {/* Slideshow Banners */}
+      <PromoSlider banners={promoBanners.sportsFitness} />
     </main>
   );
 }
-
-export default SportsFitness;

@@ -1,10 +1,11 @@
-function Books() {
+import PromoSlider from "../components/layout/PromoSlider.jsx";
+import { promoBanners } from "../data/promoBanner.js";
+
+export default function Books() {
   return (
-    <main>
-      <h1>Books</h1>
-      <p>Welcome to the Books section</p>
+    <main className="for-you-page">
+      {/* Slideshow Banners */}
+      <PromoSlider banners={promoBanners.books} />
     </main>
   );
 }
-
-export default Books;

@@ -1,10 +1,11 @@
-function Appliances() {
+import PromoSlider from "../components/layout/PromoSlider.jsx";
+import { promoBanners } from "../data/promoBanner.js";
+
+export default function Appliances() {
   return (
-    <main>
-      <h1>Appliances</h1>
-      <p>Welcome to the Appliances section</p>
+    <main className="for-you-page">
+      {/* Slideshow Banners */}
+      <PromoSlider banners={promoBanners.appliances} />
     </main>
   );
 }
-
-export default Appliances;
