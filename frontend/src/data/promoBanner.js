@@ -736,80 +736,51 @@ export const promoBanners = {
   sportsFitness: [
     {
       id: 1,
-      image: new URL("../assets/images/ ", import.meta.url).href,
-      alt: "Mens Kurtas",
+      image: new URL(
+        "../assets/images/10-Sports and Fitness/banners/01-Seeman.png",
+        import.meta.url,
+      ).href,
+      alt: "Seeman banner",
     },
     {
       id: 2,
       image: new URL(
-        "../assets/images/02-Fashion/banners/02-Formal Shoes.png",
+        "../assets/images/10-Sports and Fitness/banners/02-Adrenex.png",
         import.meta.url,
       ).href,
-      alt: "Formal Shoes",
+      alt: "Adrenex banner",
     },
     {
       id: 3,
       image: new URL(
-        "../assets/images/02-Fashion/banners/03-Samantha.png",
+        "../assets/images/10-Sports and Fitness/banners/03-Cardio essentials.png",
         import.meta.url,
       ).href,
-      alt: "Women's Kurta & More",
+      alt: "Cardio essentials banner",
     },
     {
       id: 4,
       image: new URL(
-        "../assets/images/02-Fashion/banners/04-Dhanush.png",
+        "../assets/images/10-Sports and Fitness/banners/04-Cycles.png",
         import.meta.url,
       ).href,
-      alt: "Men's Clothes ",
+      alt: "Cycles banner",
     },
     {
       id: 5,
       image: new URL(
-        "../assets/images/02-Fashion/banners/05-Sports Shoes.png",
+        "../assets/images/10-Sports and Fitness/banners/05-NIVIA.png",
         import.meta.url,
       ).href,
-      alt: "Sports Shoes",
+      alt: "NIVIA banner",
     },
     {
       id: 6,
       image: new URL(
-        "../assets/images/02-Fashion/banners/06-Sai Pallavi.png",
+        "../assets/images/10-Sports and Fitness/banners/06-Adrenex sports.png",
         import.meta.url,
       ).href,
-      alt: "Sarees",
-    },
-    {
-      id: 7,
-      image: new URL(
-        "../assets/images/02-Fashion/banners/07-Crocs.png",
-        import.meta.url,
-      ).href,
-      alt: "Crocs",
-    },
-    {
-      id: 8,
-      image: new URL(
-        "../assets/images/02-Fashion/banners/08-Kertty.png",
-        import.meta.url,
-      ).href,
-      alt: "Lehangas",
-    },
-    {
-      id: 9,
-      image: new URL(
-        "../assets/images/02-Fashion/banners/09-Suriya Joe.png",
-        import.meta.url,
-      ).href,
-      alt: "Primary Sales",
-    },
-    {
-      id: 10,
-      image: new URL(
-        "../assets/images/02-Fashion/banners/10-Trolley Bags.png",
-        import.meta.url,
-      ).href,
-      alt: "Trolley Bags",
+      alt: "Adrenex sports banner",
     },
   ],
 
@@ -817,80 +788,56 @@ export const promoBanners = {
   furniture: [
     {
       id: 1,
-      image: new URL("../assets/images/ ", import.meta.url).href,
-      alt: "Mens Kurtas",
+      image: new URL("../assets/images/11-Furniture/banners/01-Tom Hiddleston.png", import.meta.url,).href,
+      alt: "Tom Hiddleston banner",
     },
     {
       id: 2,
       image: new URL(
-        "../assets/images/02-Fashion/banners/02-Formal Shoes.png",
+        "../assets/images/11-Furniture/banners/02-Mattresses.png",
         import.meta.url,
       ).href,
-      alt: "Formal Shoes",
+      alt: "Mattresses banners",
     },
     {
       id: 3,
       image: new URL(
-        "../assets/images/02-Fashion/banners/03-Samantha.png",
+        "../assets/images/11-Furniture/banners/03-Bedroom furniture.png",
         import.meta.url,
       ).href,
-      alt: "Women's Kurta & More",
+      alt: "Bedroom furniture banner",
     },
     {
       id: 4,
       image: new URL(
-        "../assets/images/02-Fashion/banners/04-Dhanush.png",
+        "../assets/images/11-Furniture/banners/04-Chairs.png",
         import.meta.url,
       ).href,
-      alt: "Men's Clothes ",
+      alt: "Chairs banner",
     },
     {
       id: 5,
       image: new URL(
-        "../assets/images/02-Fashion/banners/05-Sports Shoes.png",
+        "../assets/images/11-Furniture/banners/05-Deals on top brands.png",
         import.meta.url,
       ).href,
-      alt: "Sports Shoes",
+      alt: "Deals on top brands",
     },
     {
       id: 6,
       image: new URL(
-        "../assets/images/02-Fashion/banners/06-Sai Pallavi.png",
+        "../assets/images/11-Furniture/banners/06-Solidwood furniture.png",
         import.meta.url,
       ).href,
-      alt: "Sarees",
+      alt: "Solidwood furniture",
     },
     {
       id: 7,
       image: new URL(
-        "../assets/images/02-Fashion/banners/07-Crocs.png",
+        "../assets/images/11-Furniture/banners/07- Room savings.png",
         import.meta.url,
       ).href,
-      alt: "Crocs",
-    },
-    {
-      id: 8,
-      image: new URL(
-        "../assets/images/02-Fashion/banners/08-Kertty.png",
-        import.meta.url,
-      ).href,
-      alt: "Lehangas",
-    },
-    {
-      id: 9,
-      image: new URL(
-        "../assets/images/02-Fashion/banners/09-Suriya Joe.png",
-        import.meta.url,
-      ).href,
-      alt: "Primary Sales",
-    },
-    {
-      id: 10,
-      image: new URL(
-        "../assets/images/02-Fashion/banners/10-Trolley Bags.png",
-        import.meta.url,
-      ).href,
-      alt: "Trolley Bags",
+      alt: "Room savings",
     },
   ],
 
