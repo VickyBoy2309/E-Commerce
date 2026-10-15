@@ -845,80 +845,34 @@ export const promoBanners = {
   books: [
     {
       id: 1,
-      image: new URL("../assets/images/ ", import.meta.url).href,
-      alt: "Mens Kurtas",
+      image: new URL("../assets/images/12-Books/banners/01-Vijay and Surya.png", 
+        import.meta.url,
+      ).href,
+      alt: "Vijay and Surya banner",
     },
     {
       id: 2,
       image: new URL(
-        "../assets/images/02-Fashion/banners/02-Formal Shoes.png",
+        "../assets/images/12-Books/banners/02-Author signed copies.png",
         import.meta.url,
       ).href,
-      alt: "Formal Shoes",
+      alt: "Author signed copie",
     },
     {
       id: 3,
       image: new URL(
-        "../assets/images/02-Fashion/banners/03-Samantha.png",
+        "../assets/images/12-Books/banners/03-Pubilsher books.png",
         import.meta.url,
       ).href,
-      alt: "Women's Kurta & More",
+      alt: "Publisher books",
     },
     {
       id: 4,
       image: new URL(
-        "../assets/images/02-Fashion/banners/04-Dhanush.png",
+        "../assets/images/12-Books/banners/04-NCERT textbook.png",
         import.meta.url,
       ).href,
-      alt: "Men's Clothes ",
-    },
-    {
-      id: 5,
-      image: new URL(
-        "../assets/images/02-Fashion/banners/05-Sports Shoes.png",
-        import.meta.url,
-      ).href,
-      alt: "Sports Shoes",
-    },
-    {
-      id: 6,
-      image: new URL(
-        "../assets/images/02-Fashion/banners/06-Sai Pallavi.png",
-        import.meta.url,
-      ).href,
-      alt: "Sarees",
-    },
-    {
-      id: 7,
-      image: new URL(
-        "../assets/images/02-Fashion/banners/07-Crocs.png",
-        import.meta.url,
-      ).href,
-      alt: "Crocs",
-    },
-    {
-      id: 8,
-      image: new URL(
-        "../assets/images/02-Fashion/banners/08-Kertty.png",
-        import.meta.url,
-      ).href,
-      alt: "Lehangas",
-    },
-    {
-      id: 9,
-      image: new URL(
-        "../assets/images/02-Fashion/banners/09-Suriya Joe.png",
-        import.meta.url,
-      ).href,
-      alt: "Primary Sales",
-    },
-    {
-      id: 10,
-      image: new URL(
-        "../assets/images/02-Fashion/banners/10-Trolley Bags.png",
-        import.meta.url,
-      ).href,
-      alt: "Trolley Bags",
+      alt: "NCERT textbook",
     },
   ],
 
@@ -926,80 +880,42 @@ export const promoBanners = {
   gaming: [
     {
       id: 1,
-      image: new URL("../assets/images/ ", import.meta.url).href,
-      alt: "Mens Kurtas",
+      image: new URL("../assets/images/13-Gaming/banners/01-Vijay.png", 
+        import.meta.url,
+      ).href,
+      alt: "Vijay banner",
     },
     {
       id: 2,
       image: new URL(
-        "../assets/images/02-Fashion/banners/02-Formal Shoes.png",
+        "../assets/images/13-Gaming/banners/02-Gaming Console.png",
         import.meta.url,
       ).href,
-      alt: "Formal Shoes",
+      alt: "Gaming console banner",
     },
     {
       id: 3,
       image: new URL(
-        "../assets/images/02-Fashion/banners/03-Samantha.png",
+        "../assets/images/13-Gaming/banners/03-Racing Wheel.png",
         import.meta.url,
       ).href,
-      alt: "Women's Kurta & More",
+      alt: "Racing wheel banner",
     },
     {
       id: 4,
       image: new URL(
-        "../assets/images/02-Fashion/banners/04-Dhanush.png",
+        "../assets/images/13-Gaming/banners/04-Controllers.png",
         import.meta.url,
       ).href,
-      alt: "Men's Clothes ",
+      alt: "controllers banner",
     },
     {
       id: 5,
       image: new URL(
-        "../assets/images/02-Fashion/banners/05-Sports Shoes.png",
+        "../assets/images/13-Gaming/banners/05-Games.png",
         import.meta.url,
       ).href,
-      alt: "Sports Shoes",
-    },
-    {
-      id: 6,
-      image: new URL(
-        "../assets/images/02-Fashion/banners/06-Sai Pallavi.png",
-        import.meta.url,
-      ).href,
-      alt: "Sarees",
-    },
-    {
-      id: 7,
-      image: new URL(
-        "../assets/images/02-Fashion/banners/07-Crocs.png",
-        import.meta.url,
-      ).href,
-      alt: "Crocs",
-    },
-    {
-      id: 8,
-      image: new URL(
-        "../assets/images/02-Fashion/banners/08-Kertty.png",
-        import.meta.url,
-      ).href,
-      alt: "Lehangas",
-    },
-    {
-      id: 9,
-      image: new URL(
-        "../assets/images/02-Fashion/banners/09-Suriya Joe.png",
-        import.meta.url,
-      ).href,
-      alt: "Primary Sales",
-    },
-    {
-      id: 10,
-      image: new URL(
-        "../assets/images/02-Fashion/banners/10-Trolley Bags.png",
-        import.meta.url,
-      ).href,
-      alt: "Trolley Bags",
+      alt: "Games banner",
     },
   ],
 };
