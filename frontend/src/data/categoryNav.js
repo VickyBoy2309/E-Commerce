@@ -1923,6 +1923,146 @@ const categoryNavigation = {
       sectionId: "trading-books",
     },
   ],
+
+  // 13 - Gaming
+
+  gaming: [
+    {
+      id: "gaming-controllers",
+      name: "Gaming Controllers",
+      image: new URL(
+        "../assets/images/13-Gaming/icons/01-Gaming Controllers.png",
+        import.meta.url,
+      ).href,
+      sectionId: "gaming-controllers",
+    },
+    {
+      id: "gaming-consoles",
+      name: "Gaming Consoles",
+      image: new URL(
+        "../assets/images/13-Gaming/icons/02-Gaming Consoles.png",
+        import.meta.url,
+      ).href,
+      sectionId: "gaming-consoles",
+    },
+    {
+      id: "gaming-headsets",
+      name: "Gaming Headsets",
+      image: new URL(
+        "../assets/images/13-Gaming/icons/03-Gaming Headsets.png",
+        import.meta.url,
+      ).href,
+      sectionId: "gaming-headsets",
+    },
+    {
+      id: "gaming-keyboards",
+      name: "Gaming Keyboards",
+      image: new URL(
+        "../assets/images/13-Gaming/icons/04-Gaming Keyboards.png",
+        import.meta.url,
+      ).href,
+      sectionId: "gaming-keyboards",
+    },
+    {
+      id: "gaming-mice",
+      name: "Gaming Mice",
+      image: new URL(
+        "../assets/images/13-Gaming/icons/05-Gaming Mice.png",
+        import.meta.url,
+      ).href,
+      sectionId: "gaming-mice",
+    },
+    {
+      id: "gaming-monitors",
+      name: "Gaming Monitors",
+      image: new URL(
+        "../assets/images/13-Gaming/icons/06-Gaming Monitors.png",
+        import.meta.url,
+      ).href,
+      sectionId: "gaming-monitors",
+    },
+    {
+      id: "gaming-laptops",
+      name: "Gaming Laptops",
+      image: new URL(
+        "../assets/images/13-Gaming/icons/07-Gaming Laptops.png",
+        import.meta.url,
+      ).href,
+      sectionId: "gaming-laptops",
+    },
+    {
+      id: "gaming-chairs",
+      name: "Gaming Chairs",
+      image: new URL(
+        "../assets/images/13-Gaming/icons/08-Gaming Chairs.png",
+        import.meta.url,
+      ).href,
+      sectionId: "gaming-chairs",
+    },
+    {
+      id: "racing-wheels",
+      name: "Racing Wheels",
+      image: new URL(
+        "../assets/images/13-Gaming/icons/09-Racing Wheels.png",
+        import.meta.url,
+      ).href,
+      sectionId: "racing-wheels",
+    },
+    {
+      id: "handheld-consoles",
+      name: "Handheld Consoles",
+      image: new URL(
+        "../assets/images/13-Gaming/icons/10-Handheld Consoles.png",
+        import.meta.url,
+      ).href,
+      sectionId: "handheld-consoles",
+    },
+    {
+      id: "gaming-microphones",
+      name: "Gaming Microphones",
+      image: new URL(
+        "../assets/images/13-Gaming/icons/11-Gaming Microphones.png",
+        import.meta.url,
+      ).href,
+      sectionId: "gaming-microphones",
+    },
+    {
+      id: "mouse-keyboard-pads",
+      name: "Mouse & Keyboard Pads",
+      image: new URL(
+        "../assets/images/13-Gaming/icons/12-Mouse & Keyboard Pads.png",
+        import.meta.url,
+      ).href,
+      sectionId: "mouse-keyboard-pads",
+    },
+    {
+      id: "charging-docks",
+      name: "Charging Docks",
+      image: new URL(
+        "../assets/images/13-Gaming/icons/13-Charging Docks.png",
+        import.meta.url,
+      ).href,
+      sectionId: "charging-docks",
+    },
+    {
+      id: "vr-headsets",
+      name: "VR Headsets",
+      image: new URL(
+        "../assets/images/13-Gaming/icons/14-VR Headsets.png",
+        import.meta.url,
+      ).href,
+      sectionId: "vr-headsets",
+    },
+    {
+      id: "capture-cards",
+      name: "Capture Cards",
+      image: new URL(
+        "../assets/images/13-Gaming/icons/15-Capture Cards.png",
+        import.meta.url,
+      ).href,
+      sectionId: "capture-cards",
+    },
+  ],
 };
 
 export default categoryNavigation;
