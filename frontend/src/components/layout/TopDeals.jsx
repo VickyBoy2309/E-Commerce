@@ -18,7 +18,7 @@ function TopDeals({ backgroundImage, products = [] }) {
 
   return (
     <section className="top-deals-section">
-      <h2 className="spotlight-title">Top Deals</h2>
+      <h2 className="spotlight-title">Top Deals on tech</h2>
 
       <div
         className="top-deals"
