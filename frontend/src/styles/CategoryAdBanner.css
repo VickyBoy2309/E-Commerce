@@ -1,0 +1,22 @@
+.category-ad-banner {
+  width: calc(100% - 40px);
+  max-width: 1258px;
+  margin: 24px auto;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.category-ad-banner-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+@media (max-width: 768px) {
+  .category-ad-banner {
+    width: calc(100% - 24px);
+    margin: 16px auto;
+  }
+}

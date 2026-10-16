@@ -1,0 +1,217 @@
+/* ==============================
+   TOP DEALS SECTION
+================================ */
+
+.top-deals-section {
+  width: calc(100% - 32px);
+  max-width: 1300px;
+  margin: 24px auto 0;
+  box-sizing: border-box;
+}
+
+/* ==============================
+   TOP DEALS TITLE
+================================ */
+
+.top-deals-section .spotlight-title {
+  margin: 0px 0px 16px;
+  margin-top: 40px !important;
+  color: #111;
+  font-family: "Arial" !important;
+  font-size: 29px !important;
+  font-weight: 700;
+  letter-spacing: -0.02px;
+  line-height: 30px;
+}
+
+/* ==============================
+   TOP DEALS BACKGROUND BANNER
+================================ */
+
+.top-deals {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 34px 12px 14px;
+  box-sizing: border-box;
+
+  background-color: #2874f0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+/* ==============================
+   SLIDER CONTAINER
+================================ */
+
+.top-deals__slider {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+}
+
+/* ==============================
+   HORIZONTAL PRODUCT TRACK
+================================ */
+
+.top-deals__track {
+  display: flex;
+  align-items: stretch;
+  gap: 12px;
+
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  scroll-behavior: smooth;
+  scroll-snap-type: x proximity;
+}
+
+.top-deals__track::-webkit-scrollbar {
+  display: none;
+}
+
+/* ==============================
+   PRODUCT CARDS
+================================ */
+
+.top-deals__card {
+  flex: 0 0 178px;
+  min-width: 0;
+  margin: 0;
+
+  overflow: hidden;
+  scroll-snap-align: start;
+}
+
+/* Clickable Product Link */
+
+.top-deals__link {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  color: inherit;
+  text-decoration: none;
+}
+
+.top-deals__link:focus-visible {
+  outline: 2px solid #2874f0;
+  outline-offset: 3px;
+  border-radius: 12px;
+}
+
+/* Product Image */
+
+.top-deals__image {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+/* ==============================
+   CAROUSEL NAVIGATION ARROWS
+================================ */
+
+.top-deals__arrow {
+  position: absolute;
+  top: 40%;
+  z-index: 2;
+  transform: translateY(-50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #fff;
+  color: #333;
+
+  box-shadow: 0 2px 8px rgb(0 0 0 / 18%);
+
+  font-size: 30px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.top-deals__arrow--left {
+  left: 6px;
+}
+
+.top-deals__arrow--right {
+  right: 6px;
+}
+
+.top-deals__arrow:hover {
+  background: #f1f1f1;
+}
+
+.top-deals__arrow:focus-visible {
+  outline: 2px solid #2874f0;
+  outline-offset: 2px;
+}
+
+/* ==============================
+   TABLET RESPONSIVENESS
+================================ */
+
+@media (max-width: 900px) {
+  .top-deals__card {
+    flex-basis: 160px;
+  }
+
+  .top-deals {
+    padding: 14px 10px 12px;
+  }
+}
+
+/* ==============================
+   MOBILE RESPONSIVENESS
+================================ */
+
+@media (max-width: 600px) {
+  .top-deals-section {
+    width: calc(100% - 20px);
+    margin-top: 16px;
+  }
+
+  .top-deals-section .spotlight-title {
+    margin-bottom: 12px;
+    font-size: 20px;
+  }
+
+  .top-deals {
+    padding: 10px 8px;
+    border-radius: 10px;
+  }
+
+  .top-deals__track {
+    gap: 10px;
+  }
+
+  .top-deals__card {
+    flex-basis: 140px;
+  }
+
+  .top-deals__arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 26px;
+  }
+}
