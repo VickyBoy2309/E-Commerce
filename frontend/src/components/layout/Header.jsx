@@ -15,7 +15,7 @@ import {
   Download,
 } from "lucide-react";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
 import appliancesIcon from "../../assets/images/icons/appliances.svg";
@@ -44,6 +44,25 @@ function Header() {
   const [isLocationPickerOpen, setIsLocationPickerOpen] = useState(false);
 
   const [location, setLocation] = useState(null);
+
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      console.log("Scroll position:", window.scrollY);
+      setIsScrolled(window.scrollY > 100);
+    };
+
+    window.addEventListener("scroll", handleScroll, {
+      passive: true,
+    });
+
+    handleScroll();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const categories = [
     {
@@ -308,7 +327,9 @@ function Header() {
 
       {/* ================= CATEGORY SECTION ================= */}
 
-      <nav className="category-bar">
+      <nav
+        className={`category-bar ${isScrolled ? "category-bar--compact" : ""}`}
+      >
         {categories.map((category) => (
           <NavLink
             key={category.name}

@@ -1,15 +1,72 @@
-import { useRef } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import "../../styles/Spotlight.css";
 
 function Spotlight({ spot = [] }) {
   const sliderRef = useRef(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(false);
+
+  const updateArrows = useCallback(() => {
+    const slider = sliderRef.current;
+
+    if (!slider) return;
+
+    const maxScroll = Math.max(0, slider.scrollWidth - slider.clientWidth);
+
+    setCanScrollLeft(slider.scrollLeft > 1);
+    setCanScrollRight(slider.scrollLeft < maxScroll - 1);
+  }, []);
+
+  useEffect(() => {
+    const slider = sliderRef.current;
+
+    if (!slider) return;
+
+    updateArrows();
+
+    slider.addEventListener("scroll", updateArrows);
+    window.addEventListener("resize", updateArrows);
+
+    const observer = new ResizeObserver(updateArrows);
+    observer.observe(slider);
+
+    if (slider.firstElementChild) {
+      observer.observe(slider.firstElementChild);
+    }
+
+    return () => {
+      slider.removeEventListener("scroll", updateArrows);
+      window.removeEventListener("resize", updateArrows);
+      observer.disconnect();
+    };
+  }, [spot.length, updateArrows]);
 
   const scrollSlider = (direction) => {
-    if (!sliderRef.current) return;
+    const slider = sliderRef.current;
 
-    sliderRef.current.scrollBy({
-      left: direction * 334,
+    if (!slider) return;
+
+    const cards = slider.querySelectorAll(".spotlight-card");
+
+    if (!cards.length) return;
+
+    const cardWidth = cards[0].getBoundingClientRect().width;
+    const styles = window.getComputedStyle(slider);
+    const gap = parseFloat(styles.columnGap) || 0;
+    const cardStep = cardWidth + gap;
+
+    const maxScroll = Math.max(0, slider.scrollWidth - slider.clientWidth);
+
+    const scrollDistance = cardStep * 4;
+
+    const targetPosition =
+      direction > 0
+        ? Math.min(maxScroll, slider.scrollLeft + scrollDistance)
+        : Math.max(0, slider.scrollLeft - scrollDistance);
+
+    slider.scrollTo({
+      left: targetPosition,
       behavior: "smooth",
     });
   };
@@ -25,36 +82,42 @@ function Spotlight({ spot = [] }) {
               <Link
                 to={ad.link || "/"}
                 className="spotlight-link"
-                aria-label={`View ${ad.alt}`}
+                aria-label={`View ${ad.alt || "advertisement"}`}
               >
                 <img
                   className="spotlight-image"
                   src={ad.image}
-                  alt={ad.alt}
-                  loading="lazy"
+                  alt={ad.alt || ""}
+                  loading="eager"
+                  decoding="async"
+                  onLoad={updateArrows}
                 />
               </Link>
             </article>
           ))}
         </div>
 
-        <button
-          type="button"
-          className="spotlight-arrow"
-          onClick={() => scrollSlider(1)}
-          aria-label="Next advertisements"
-        >
-          &#8250;
-        </button>
+        {canScrollLeft && (
+          <button
+            type="button"
+            className="spotlight-arrow spotlight-arrow-prev"
+            onClick={() => scrollSlider(-1)}
+            aria-label="Previous advertisements"
+          >
+            &#8249;
+          </button>
+        )}
 
-        <button
-          type="button"
-          className="spotlight-arrow spotlight-arrow-prev"
-          onClick={() => scrollSlider(-1)}
-          aria-label="Previous advertisements"
-        >
-          &#8249;
-        </button>
+        {canScrollRight && (
+          <button
+            type="button"
+            className="spotlight-arrow"
+            onClick={() => scrollSlider(1)}
+            aria-label="Next advertisements"
+          >
+            &#8250;
+          </button>
+        )}
       </div>
     </section>
   );
