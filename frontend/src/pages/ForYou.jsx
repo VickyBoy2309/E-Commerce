@@ -42,7 +42,7 @@ export default function ForYou() {
       <Spotlight spot={spotlight.forYou} />
       {/* Tech Top Deals Section */}
       <TopDeals
-        title="Top deals on Tech"
+        title="Top Deals on Tech"
         backgroundImage={techTopDealsBackground}
         products={topDeals.forYouTechTopDeals}
       />
@@ -50,19 +50,19 @@ export default function ForYou() {
       <FeaturedBrands brands={featuredBrands} />
       {/* Appliances Top Deals Section */}
       <TopDeals
-        title="Top deals on Appliances"
+        title="Top Deals on Appliances"
         backgroundImage={appliancesTopDealsBackground}
         products={topDeals.forYouAppliancesTopDeals}
       />
       {/* Fashion Top Deals Section */}
       <TopDeals
-        title="Top deals on Fashion"
+        title="Top Deals on Fashion"
         backgroundImage={fashionTopDealsBackground}
         products={topDeals.forYouFashionTopDeals}
       />
       {/* Beauty Top Deals Section */}
       <TopDeals
-        title="Top deals on Beauty & More"
+        title="Top Deals on Beauty & More"
         backgroundImage={beautyTopDealsBackground}
         products={topDeals.forYouBeautyTopDeals}
       />

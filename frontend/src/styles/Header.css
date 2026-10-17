@@ -1,4 +1,3 @@
-/* Global header */
 .header {
   position: sticky;
   top: 0;
@@ -29,8 +28,6 @@
   max-width: 1300px;
   margin: 0 auto;
 }
-
-/* Top row: logos and delivery location */
 .header-top {
   display: flex;
   align-items: center;
@@ -175,8 +172,6 @@
   font-size: 24px;
   line-height: 1;
 }
-
-/* Search and action row */
 .header-middle {
   display: flex;
   align-items: center;
@@ -236,8 +231,6 @@
 .header-action:hover {
   color: #2874f0;
 }
-
-/* Login dropdown */
 .login-wrapper {
   position: relative;
   display: inline-flex;
@@ -271,7 +264,7 @@
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transform: translate(-50%, -8px);
+  transform: translate (-50%, -8px);
   transition:
     opacity 0.18s ease,
     transform 0.18s ease,
@@ -294,7 +287,7 @@
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-  transform: translate(-50%, 0);
+  transform: translate (-50%, 0);
 }
 .login-dropdown-header {
   display: flex;
@@ -355,18 +348,20 @@
 .login-dropdown-item:hover svg {
   color: #2874f0;
 }
-
-/* Category bar: icons normally visible, labels remain in compact mode */
 .category-bar {
   position: relative;
   z-index: 10;
   display: flex;
   align-items: stretch;
   height: 90px;
+  min-height: 90px;
   overflow-x: auto;
   background: #fff;
   border-bottom: 1px solid #ddd;
   scrollbar-width: none;
+  transition:
+    height 0.3s ease,
+    min-height 0.3s ease;
 }
 .category-bar::-webkit-scrollbar {
   display: none;
@@ -383,6 +378,11 @@
   height: 90px;
   padding: 12px 6px 10px;
   color: inherit;
+  transition:
+    height 0.3s ease,
+    min-height 0.3s ease,
+    padding 0.3s ease,
+    gap 0.3s ease;
   text-decoration: none;
   white-space: nowrap;
   cursor: pointer;
@@ -398,9 +398,19 @@
   flex-shrink: 0;
   width: 45px;
   height: 45px;
+  max-height: 45px;
+  margin: 0;
   border-radius: 10px;
   background: transparent;
-  transition: background 0.2s ease;
+  opacity: 1;
+  overflow: hidden;
+  transform: translateY(0);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    max-height 0.3s ease,
+    margin 0.3s ease,
+    background 0.2s ease;
 }
 .category-icon {
   display: block;
@@ -450,26 +460,35 @@
 .category-bar--compact {
   height: 42px;
   min-height: 42px;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 .category-bar--compact .category-icon-wrapper {
-  display: none !important;
+  width: 45px;
+  height: 0;
+  max-height: 0;
+  margin: 0;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+  transform: translateY(-10px);
 }
 .category-bar--compact .category {
-  flex: 1 0 auto;
-  flex-direction: row;
-  gap: 0;
   height: 42px;
   min-height: 42px;
-  min-width: max-content;
-  padding: 0 12px;
+  padding-top: 0;
+  padding-bottom: 0;
+  gap: 0;
+  flex-direction: column;
+  justify-content: center;
 }
 .category-bar--compact .category span {
-  width: auto;
-  overflow: visible;
-  text-overflow: clip;
+  width: 80px;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
-
-/* More dropdown */
 .more-wrapper {
   position: relative;
   display: flex;
@@ -557,8 +576,6 @@
 .more-item:hover svg {
   color: #2874f0;
 }
-
-/* Responsive layout */
 @media (max-width: 1100px) {
   .header-top,
   .header-middle,
