@@ -24,6 +24,9 @@
     "Helvetica Neue",
     Arial,
     sans-serif;
+
+    filter: blur(0.3px);
+    opacity: 0.9;
 }
 
 /* ========================================
