@@ -104,5 +104,37 @@ export const categoryAds = {
       ).href,
       alt: "TCL T8DS Mini LED TV",
     },
+    {
+      id: 14,
+      image: new URL(
+        "../assets/images/01-For You/ads/14-Moto Book 60 Laptop.webp",
+        import.meta.url,
+      ).href,
+      alt: "Moto Laptop",
+    },
+    {
+      id: 15,
+      image: new URL(
+        "../assets/images/01-For You/ads/15-Big muscles.webp",
+        import.meta.url,
+      ).href,
+      alt: "Big Muscles",
+    },
+    {
+      id: 16,
+      image: new URL(
+        "../assets/images/01-For You/ads/16-Livpure.webp",
+        import.meta.url,
+      ).href,
+      alt: "Livepure",
+    },
+    {
+      id: 17,
+      image: new URL(
+        "../assets/images/01-For You/ads/17-Muscleblaze.webp",
+        import.meta.url,
+      ).href,
+      alt: "Muscleblaze",
+    },
   ],
 };
