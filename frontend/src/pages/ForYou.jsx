@@ -41,11 +41,14 @@ export default function ForYou() {
       {/* Spotlight Section */}
       <Spotlight spot={spotlight.forYou} />
       {/* Tech Top Deals Section */}
+
       <TopDeals
         title="Top Deals on Tech"
-        backgroundImage={techTopDealsBackground}
         products={topDeals.forYouTechTopDeals}
+        backgroundImage={techTopDealsBackground}
+        className="top-deals-tech"
       />
+
       {/* Featured Brands */}
       <FeaturedBrands brands={featuredBrands} />
       {/* Appliances Top Deals Section */}

@@ -1,9 +1,15 @@
+/* ============================================
+   TOP DEALS — SECTION LAYOUT
+============================================ */
+
 .top-deals-section {
   width: calc(100% - 32px);
   max-width: 1300px;
   margin: 24px auto 0;
   box-sizing: border-box;
 }
+
+/* Section title */
 .top-deals-section .spotlight-title {
   margin: 40px 0 16px;
   color: #111;
@@ -13,25 +19,36 @@
   letter-spacing: -0.02px;
   line-height: 30px;
 }
+
+/* ============================================
+   TOP DEALS — MAIN CONTAINER
+============================================ */
+
 .top-deals {
   position: relative;
   width: 100%;
+  min-height: 350px;
   margin: 0 auto;
   padding: 34px 12px 14px;
   box-sizing: border-box;
-  background-color: #2874f0;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
   border-radius: 14px;
   overflow: hidden;
 }
+
+/* ============================================
+   SLIDER — VIEWPORT AND TRACK
+============================================ */
+
 .top-deals__slider {
   position: relative;
   width: 100%;
   min-width: 0;
   overflow: hidden;
 }
+
 .top-deals__track {
   display: flex;
   align-items: stretch;
@@ -46,17 +63,25 @@
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
 }
+
 .top-deals__track::-webkit-scrollbar {
   display: none;
 }
+
+/* ============================================
+   PRODUCT CARDS — 6 VISIBLE ON DESKTOP
+============================================ */
+
 .top-deals__card {
-  flex: 0 0 calc((100% - 72px) / 7);
+  flex: 0 0 calc((100% - 60px) / 6);
   min-width: 0;
   margin: 0;
   overflow: hidden;
   box-sizing: border-box;
   scroll-snap-align: start;
 }
+
+/* Product link */
 .top-deals__link {
   display: block;
   width: 100%;
@@ -64,11 +89,14 @@
   color: inherit;
   text-decoration: none;
 }
+
 .top-deals__link:focus-visible {
   outline: 2px solid #2874f0;
   outline-offset: 3px;
   border-radius: 12px;
 }
+
+/* Product image */
 .top-deals__image {
   display: block;
   width: 100%;
@@ -76,6 +104,20 @@
   object-fit: contain;
   border-radius: 12px;
 }
+
+/* Optional product labels */
+.top-deals__label {
+  margin: 8px 0 0;
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ============================================
+   SLIDER — NAVIGATION ARROWS
+============================================ */
+
 .top-deals__arrow {
   position: absolute;
   top: 40%;
@@ -99,47 +141,92 @@
     background 0.2s ease,
     box-shadow 0.2s ease;
 }
+
 .top-deals__arrow--left {
   left: 6px;
 }
+
 .top-deals__arrow--right {
   right: 6px;
 }
+
 .top-deals__arrow:hover {
   background: #f1f1f1;
   box-shadow: 0 3px 12px rgb(0 0 0 / 22%);
 }
+
 .top-deals__arrow:focus-visible {
   outline: 2px solid #2874f0;
   outline-offset: 2px;
 }
+
+/* Fashion Page - Women's Wear Section */
+.womens-wear-section .top-deals-container {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-top: 0 !important;
+}
+
+.womens-wear-section .top-deals-header {
+  margin-bottom: 8px !important;
+  padding-bottom: 0 !important;
+}
+
+.womens-wear-section .top-deals-content {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+.womens-wear-section .top-deals {
+  padding-top: 0;
+}
+
+.womens-wear-section .top-deals__slider {
+  transform: translateX(-15px);
+}
+
+/* ============================================
+   TABLET — 3 VISIBLE CARDS
+============================================ */
+
 @media (max-width: 900px) {
   .top-deals {
     padding: 14px 10px 12px;
   }
+
   .top-deals__card {
-    flex-basis: calc((100% - 36px) / 4);
+    flex-basis: calc((100% - 24px) / 3);
   }
 }
+
+/* ============================================
+   MOBILE — 2 VISIBLE CARDS
+============================================ */
+
 @media (max-width: 600px) {
   .top-deals-section {
     width: calc(100% - 20px);
     margin-top: 16px;
   }
+
   .top-deals-section .spotlight-title {
     margin-bottom: 12px;
     font-size: 20px !important;
   }
+
   .top-deals {
     padding: 10px 8px;
     border-radius: 10px;
   }
+
   .top-deals__track {
     gap: 10px;
   }
+
   .top-deals__card {
     flex-basis: calc((100% - 10px) / 2);
   }
+
   .top-deals__arrow {
     width: 36px;
     height: 36px;

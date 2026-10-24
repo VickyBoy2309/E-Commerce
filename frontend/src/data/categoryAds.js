@@ -137,4 +137,24 @@ export const categoryAds = {
       alt: "Muscleblaze",
     },
   ],
+
+  // 02 - Fashion
+  fashion: [
+    {
+      id: 1,
+      image: new URL(
+        "../assets/images/02-Fashion/ads/01-Aristocrat.webp",
+        import.meta.url,
+      ).href,
+      alt: "Aristocrat",
+    },
+    {
+      id: 2,
+      image: new URL(
+        "../assets/images/02-Fashion/ads/02-Aristocrat2.webp",
+        import.meta.url,
+      ).href,
+      alt: "Aristocrat Collection",
+    },
+  ],
 };

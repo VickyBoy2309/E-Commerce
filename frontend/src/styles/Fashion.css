@@ -1,8 +1,5 @@
-/* ========================================
-   NAMMACART - FASHION PAGE
-======================================== */
-
-.for-you-page {
+/* Fashion Page */
+.fashion-page {
   width: 100%;
   min-width: 0;
   margin: 0 auto;
@@ -10,11 +7,8 @@
   box-sizing: border-box;
 }
 
-/* ========================================
-   FASHION PROMOTIONAL SLIDESHOW
-======================================== */
-
-.for-you-page .promo-slider {
+/* Fashion Promo Slider */
+.fashion-page .promo-slider {
   width: calc(100% - 40px);
   max-width: 1300px;
   min-width: 0;
@@ -22,20 +16,153 @@
   box-sizing: border-box;
 }
 
-/* ========================================
-   RESPONSIVE DESIGN
-======================================== */
+/* Shop for Loved Ones */
+.fashion-loved-ones {
+  width: 100%;
+  max-width: 1300px;
+  margin: 18px auto 24px;
+  padding: 12px 20px 12px 0px;
+  box-sizing: border-box;
+  background: #fff;
+}
+.fashion-loved-ones-title {
+  margin: 0 0 12px;
+  color: #111;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+.fashion-loved-ones-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 210px));
+  gap: 24px;
+  align-items: start;
+}
+.fashion-loved-ones-card {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  text-decoration: none;
+  line-height: 0;
+}
+.fashion-loved-ones-image-wrapper {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+.fashion-loved-ones-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  object-fit: contain;
+  object-position: center;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  transition: transform 0.2s ease;
+}
+.fashion-loved-ones-card:hover .fashion-loved-ones-image {
+  transform: translateY(-2px);
+}
 
+/* Fashion Category Ad Banner */
+.fashion-page .category-ad-banner {
+  width: 100%;
+  max-width: 1300px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Price Drop */
+.price-drop {
+  width: 100%;
+  max-width: 1300px;
+  margin: 24px auto;
+  padding: 0 20px 0 0px;
+  box-sizing: border-box;
+}
+.price-drop h2 {
+  margin: 0 0 16px;
+  color: #111;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.price-drop-images {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 235px));
+  gap: 27px;
+  align-items: start;
+}
+.price-drop-images img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  object-fit: contain;
+  object-position: center;
+  border: none;
+  border-radius: 12px;
+}
+
+/* Tablet Responsive */
 @media (max-width: 768px) {
-  .for-you-page .promo-slider {
+  .fashion-page .promo-slider {
     width: calc(100% - 24px);
     margin: 14px auto 20px;
   }
+  .fashion-loved-ones {
+    padding: 12px;
+  }
+  .fashion-loved-ones-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+  }
+  .price-drop {
+    padding: 0 12px;
+  }
+  .price-drop-images {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+  }
 }
 
+/* Mobile Responsive */
 @media (max-width: 480px) {
-  .for-you-page .promo-slider {
+  .fashion-page .promo-slider {
     width: calc(100% - 20px);
     margin: 10px auto 16px;
+  }
+  .fashion-loved-ones {
+    margin: 16px auto;
+    padding: 10px;
+  }
+  .fashion-loved-ones-title {
+    margin-bottom: 10px;
+    font-size: 19px;
+  }
+  .fashion-loved-ones-grid {
+    gap: 8px;
+  }
+  .price-drop {
+    margin: 18px auto;
+    padding: 0 10px;
+  }
+  .price-drop h2 {
+    margin-bottom: 12px;
+    font-size: 20px;
+  }
+  .price-drop-images {
+    gap: 8px;
   }
 }

@@ -355,6 +355,146 @@ const topDeals = {
       link: "/product/treadmills",
     },
   ],
+
+  // Fashion Women's Wear
+
+  fashionWomensWear: [
+    {
+      id: 1,
+      image: new URL(
+        "../assets/images/02-Fashion/womensWear/01-Kurta Sarees.webp",
+        import.meta.url,
+      ).href,
+      alt: "Kurta Sarees",
+      link: "/product/kurta-sarees",
+    },
+    {
+      id: 2,
+      image: new URL(
+        "../assets/images/02-Fashion/womensWear/02-Y2K Styles.webp",
+        import.meta.url,
+      ).href,
+      alt: "Y2K Styles",
+      link: "/product/y2k-styles",
+    },
+    {
+      id: 3,
+      image: new URL(
+        "../assets/images/02-Fashion/womensWear/03-Zuya.webp",
+        import.meta.url,
+      ).href,
+      alt: "Zuya",
+      link: "/product/zuya",
+    },
+    {
+      id: 4,
+      image: new URL(
+        "../assets/images/02-Fashion/womensWear/04-Suits.webp",
+        import.meta.url,
+      ).href,
+      alt: "Women's Suits",
+      link: "/product/womens-suits",
+    },
+    {
+      id: 5,
+      image: new URL(
+        "../assets/images/02-Fashion/womensWear/05-Embellished Sarees.webp",
+        import.meta.url,
+      ).href,
+      alt: "Embellished Sarees",
+      link: "/product/embellished-sarees",
+    },
+    {
+      id: 6,
+      image: new URL(
+        "../assets/images/02-Fashion/womensWear/06-Dresses Co-Ords.webp",
+        import.meta.url,
+      ).href,
+      alt: "Dresses and Co-ord Sets",
+      link: "/product/dresses-coords",
+    },
+    {
+      id: 7,
+      image: new URL(
+        "../assets/images/02-Fashion/womensWear/07-Baggy Jeans.webp",
+        import.meta.url,
+      ).href,
+      alt: "Baggy Jeans",
+      link: "/product/baggy-jeans",
+    },
+    {
+      id: 8,
+      image: new URL(
+        "../assets/images/02-Fashion/womensWear/08-Tissue Sets.webp",
+        import.meta.url,
+      ).href,
+      alt: "Tissue Sets",
+      link: "/product/tissue-sets",
+    },
+    {
+      id: 9,
+      image: new URL(
+        "../assets/images/02-Fashion/womensWear/09-Clovia Zivame.webp",
+        import.meta.url,
+      ).href,
+      alt: "Clovia and Zivame",
+      link: "/product/clovia-zivame",
+    },
+    {
+      id: 10,
+      image: new URL(
+        "../assets/images/02-Fashion/womensWear/10-V-Mart, Max.webp",
+        import.meta.url,
+      ).href,
+      alt: "V-Mart and Max",
+      link: "/product/v-mart-max",
+    },
+    {
+      id: 11,
+      image: new URL(
+        "../assets/images/02-Fashion/womensWear/11-Lehenga Cholis.webp",
+        import.meta.url,
+      ).href,
+      alt: "Lehenga Cholis",
+      link: "/product/lehenga-cholis",
+    },
+    {
+      id: 12,
+      image: new URL(
+        "../assets/images/02-Fashion/womensWear/12-Ethnic Dress.webp",
+        import.meta.url,
+      ).href,
+      alt: "Ethnic Dresses",
+      link: "/product/ethnic-dresses",
+    },
+    {
+      id: 13,
+      image: new URL(
+        "../assets/images/02-Fashion/womensWear/13-Dress Materials.webp",
+        import.meta.url,
+      ).href,
+      alt: "Dress Materials",
+      link: "/product/dress-materials",
+    },
+    {
+      id: 14,
+      image: new URL(
+        "../assets/images/02-Fashion/womensWear/14-Sweatshirts.webp",
+        import.meta.url,
+      ).href,
+      alt: "Women's Sweatshirts",
+      link: "/product/womens-sweatshirts",
+    },
+    {
+      id: 15,
+      image: new URL(
+        "../assets/images/02-Fashion/womensWear/15-Designer Blouses.webp",
+        import.meta.url,
+      ).href,
+      alt: "Designer Blouses",
+      link: "/product/designer-blouses",
+    },
+  ],
 };
 
 export default topDeals;
