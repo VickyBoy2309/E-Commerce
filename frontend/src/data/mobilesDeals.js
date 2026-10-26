@@ -174,7 +174,7 @@ const mobilesDeals = {
     {
       id: 10,
       image: new URL(
-        "../assets/images/04-Mobiles/midRangeDeals/10-Realme P4x.webp",
+        "../assets/images/04-Mobiles/midRangeDeals/10-Realme P4x 5G.webp",
         import.meta.url,
       ).href,
       alt: "Realme P4x",
@@ -270,7 +270,7 @@ const mobilesDeals = {
     {
       id: 10,
       image: new URL(
-        "../assets/images/04-Mobiles/budgetDeals/10-Vivo T5 Lite 44W.webp",
+        "../assets/images/04-Mobiles/budgetDeals/10-Vivo T5 Lite 44W 5G.webp",
         import.meta.url,
       ).href,
       alt: "vivo T5 Lite 44W",
