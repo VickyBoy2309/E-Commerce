@@ -12,6 +12,15 @@ import CategoryAdBanner from "../components/layout/CategoryAdBanner.jsx";
 import TopDeals from "../components/layout/TopDeals.jsx";
 import topDeals from "../data/topDeals.js";
 
+import FeaturedBrands from "../components/layout/FeaturedBrands.jsx";
+import featuredBrands from "../data/featuredBrands.js";
+
+import topTrendyBanner from "../assets/images/02-Fashion/topDealsTrendy/Top Deals Trendy Banner.webp";
+
+import top50Banner from "../assets/images/02-Fashion/top50/Top Banner.png";
+
+import watchShopBanner from "../assets/images/02-Fashion/banners/Watch & Shop Live!.jpg";
+
 import "../styles/Fashion.css";
 
 const fashionShowcase = [
@@ -55,7 +64,7 @@ export default function Fashion() {
 
       {/* Shop for Loved Ones */}
       <section className="fashion-loved-ones">
-        <h2 className="fashion-loved-ones-title">Shop for loved ones!</h2>
+        <h2 className="fashion-loved-ones-title">Shop For Loved Ones!</h2>
 
         <div className="fashion-loved-ones-grid">
           {fashionShowcase.map((category) => (
@@ -75,7 +84,16 @@ export default function Fashion() {
           ))}
         </div>
       </section>
-      <CategoryAdBanner ads={categoryAds.fashion} />
+
+      <div className="top-50-section">
+        <img
+          src={top50Banner}
+          alt="Top Deals on Trendy"
+          className="top-trendy-banner"
+        />
+        <TopDeals title="" products={topDeals.top50} />
+      </div>
+
       <section className="price-drop">
         <h2>Price Surprise Store</h2>
         <div className="price-drop-images">
@@ -114,8 +132,47 @@ export default function Fashion() {
           </Link>
         </div>
       </section>
+
+      <CategoryAdBanner ads={categoryAds.fashion} />
+
       <div className="womens-wear-section">
         <TopDeals title="Women's Wear" products={topDeals.fashionWomensWear} />
+      </div>
+      <div className="mens-wear-section">
+        <TopDeals title="Men's Wear" products={topDeals.fashionMensWear} />
+      </div>
+      <div className="kids-wear-section">
+        <TopDeals title="Kid's Wear" products={topDeals.fashionKidsWear} />
+      </div>
+      <div className="footwear-section">
+        <TopDeals title="Footwear" products={topDeals.fashionFootwear} />
+      </div>
+
+      {/* Featured Brands */}
+      <FeaturedBrands brands={featuredBrands.fashion} />
+
+      <div className="under599-section">
+        <TopDeals
+          title="Top Brands Under ₹599"
+          products={topDeals.fashionUnder599}
+        />
+      </div>
+
+      <div className="top-trendy-section">
+        <img
+          src={topTrendyBanner}
+          alt="Top Deals on Trendy"
+          className="top-trendy-banner"
+        />
+        <TopDeals title="" products={topDeals.fashionTopTrendy} />
+      </div>
+
+      <div className="watchShop-section">
+        <img
+          src={watchShopBanner}
+          alt="Watch And Shop Live!"
+          className="watchShop-banner"
+        />
       </div>
     </main>
   );

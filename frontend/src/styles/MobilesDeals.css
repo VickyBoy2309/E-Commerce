@@ -1,0 +1,141 @@
+/* ========================================
+   NAMMACART - MOBILES PREMIUM DEALS
+======================================== */
+
+.mobiles-deals-section {
+  width: calc(100% - 40px);
+  max-width: 1300px;
+  min-width: 0;
+  margin: -45px auto 24px;
+  box-sizing: border-box;
+}
+
+/* Section Title */
+
+.mobiles-deals-title {
+  margin: 0 0 16px;
+  padding: 0;
+  color: #111;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.4px;
+}
+
+/* Slider Container */
+
+.mobiles-deals-slider {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+}
+
+/* Horizontal Track */
+
+.mobiles-deals-track {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: x proximity;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 0;
+}
+
+.mobiles-deals-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* Individual Deal Cards */
+
+.mobiles-deals-card {
+  flex: 0 0 calc((100% - 48px) / 4.5);
+  min-width: 0;
+  overflow: hidden;
+  scroll-snap-align: start;
+  box-sizing: border-box;
+}
+
+/* Complete Promotional Images */
+
+.mobiles-deals-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* Right Navigation Arrow */
+
+.mobiles-deals-next {
+  position: absolute;
+  top: 42%;
+  right: 12px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: #fff;
+  color: #333;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
+  cursor: pointer;
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.mobiles-deals-next:hover {
+  box-shadow: 0 3px 12px rgb(0 0 0 / 22%);
+  transform: scale(1.04);
+}
+
+.mobiles-deals-next:active {
+  transform: scale(0.96);
+}
+
+/* Responsive Layout */
+
+@media (max-width: 768px) {
+  .mobiles-deals-section {
+    width: calc(100% - 24px);
+    margin: 14px auto 20px;
+  }
+
+  .mobiles-deals-title {
+    margin-bottom: 12px;
+    font-size: 22px;
+  }
+
+  .mobiles-deals-track {
+    gap: 10px;
+  }
+
+  .mobiles-deals-card {
+    flex-basis: 42%;
+  }
+
+  .mobiles-deals-next {
+    right: 6px;
+    width: 44px;
+    height: 44px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mobiles-deals-card {
+    flex-basis: 65%;
+  }
+}

@@ -157,4 +157,18 @@ export const categoryAds = {
       alt: "Aristocrat Collection",
     },
   ],
+
+  // 04 - Mobiles
+  mobiles: [
+    {
+      id: 1,
+      image: new URL(
+        "../assets/images/04-Mobiles/ads/01-Galaxy S25.png",
+        import.meta.url,
+      ).href,
+      alt: "Samsung Galaxy S25",
+    },
+  ],
+
+  // 05 
 };

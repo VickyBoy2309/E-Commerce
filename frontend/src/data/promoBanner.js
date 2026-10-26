@@ -788,7 +788,10 @@ export const promoBanners = {
   furniture: [
     {
       id: 1,
-      image: new URL("../assets/images/11-Furniture/banners/01-Tom Hiddleston.png", import.meta.url,).href,
+      image: new URL(
+        "../assets/images/11-Furniture/banners/01-Tom Hiddleston.png",
+        import.meta.url,
+      ).href,
       alt: "Tom Hiddleston banner",
     },
     {
@@ -845,7 +848,8 @@ export const promoBanners = {
   books: [
     {
       id: 1,
-      image: new URL("../assets/images/12-Books/banners/01-Vijay and Surya.png", 
+      image: new URL(
+        "../assets/images/12-Books/banners/01-Vijay and Surya.png",
         import.meta.url,
       ).href,
       alt: "Vijay and Surya banner",
@@ -880,7 +884,8 @@ export const promoBanners = {
   gaming: [
     {
       id: 1,
-      image: new URL("../assets/images/13-Gaming/banners/01-Vijay.png", 
+      image: new URL(
+        "../assets/images/13-Gaming/banners/01-Vijay.png",
         import.meta.url,
       ).href,
       alt: "Vijay banner",
@@ -916,6 +921,100 @@ export const promoBanners = {
         import.meta.url,
       ).href,
       alt: "Games banner",
+    },
+  ],
+
+  // Mobiles Page - Just Launched
+  justLaunched: [
+    {
+      id: 1,
+      image: new URL(
+        "../assets/images/04-Mobiles/slideShow/01-Ai Pulse 2 FE.webp",
+        import.meta.url,
+      ).href,
+      alt: "AI Pulse 2 FE",
+      link: "/product/ai-pulse-2-fe",
+    },
+    {
+      id: 2,
+      image: new URL(
+        "../assets/images/04-Mobiles/slideShow/02-Samsung Galaxy F70 5G.webp",
+        import.meta.url,
+      ).href,
+      alt: "Samsung Galaxy F70 5G",
+      link: "/product/samsung-galaxy-f70-5g",
+    },
+    {
+      id: 3,
+      image: new URL(
+        "../assets/images/04-Mobiles/slideShow/03-Mivi One 5G.webp",
+        import.meta.url,
+      ).href,
+      alt: "Mivi One 5G",
+      link: "/product/mivi-one-5g",
+    },
+    {
+      id: 4,
+      image: new URL(
+        "../assets/images/04-Mobiles/slideShow/04-Vivo S2 FE.webp",
+        import.meta.url,
+      ).href,
+      alt: "Vivo S2 FE",
+      link: "/product/vivo-s2-fe",
+    },
+    {
+      id: 5,
+      image: new URL(
+        "../assets/images/04-Mobiles/slideShow/05-Realme P4s Lite.webp",
+        import.meta.url,
+      ).href,
+      alt: "Realme P4s Lite",
+      link: "/product/realme-p4s-lite",
+    },
+    {
+      id: 6,
+      image: new URL(
+        "../assets/images/04-Mobiles/slideShow/06-HMD Vibe2 Pro.webp",
+        import.meta.url,
+      ).href,
+      alt: "HMD Vibe2 Pro",
+      link: "/product/hmd-vibe2-pro",
+    },
+    {
+      id: 7,
+      image: new URL(
+        "../assets/images/04-Mobiles/slideShow/07-Phone 4a.webp",
+        import.meta.url,
+      ).href,
+      alt: "Phone 4a",
+      link: "/product/phone-4a",
+    },
+    {
+      id: 8,
+      image: new URL(
+        "../assets/images/04-Mobiles/slideShow/08-Oppo K14 Plus 5G.webp",
+        import.meta.url,
+      ).href,
+      alt: "OPPO K14 Plus 5G",
+      link: "/product/oppo-k14-plus-5g",
+    },
+    {
+      id: 9,
+      image: new URL(
+        "../assets/images/04-Mobiles/slideShow/09-Phone 4b.webp",
+        import.meta.url,
+      ).href,
+      alt: "Phone 4b",
+      link: "/product/phone-4b",
+    },
+    {
+      id: 10,
+      image: new URL(
+        "../assets/images/04-Mobiles/slideShow/10-Vivo T5 Lite 44W 5G.webp",
+        import.meta.url,
+      ).href,
+      alt: "Vivo T5 Lite 44W 5G",
+      link: "/product/vivo-t5-lite-44w-5g",
     },
   ],
 };

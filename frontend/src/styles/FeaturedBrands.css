@@ -107,6 +107,11 @@
 .featured-brands__arrow--next {
   right: 12px;
 }
+
+.fashion-page .featured-brands-section {
+  margin-top: -50px;
+}
+
 @media (max-width: 768px) {
   .featured-brands-section {
     width: calc(100% - 24px);

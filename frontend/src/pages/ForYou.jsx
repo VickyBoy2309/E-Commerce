@@ -36,12 +36,15 @@ export default function ForYou() {
     <main className="for-you-page">
       {/* Slideshow Banners */}
       <PromoSlider banners={promoBanners.forYou} />
+
       {/* Ads Banner */}
+
       <CategoryAdBanner ads={categoryAds.forYou} />
+
       {/* Spotlight Section */}
       <Spotlight spot={spotlight.forYou} />
-      {/* Tech Top Deals Section */}
 
+      {/* Tech Top Deals Section */}
       <TopDeals
         title="Top Deals on Tech"
         products={topDeals.forYouTechTopDeals}
@@ -50,25 +53,30 @@ export default function ForYou() {
       />
 
       {/* Featured Brands */}
-      <FeaturedBrands brands={featuredBrands} />
+      <FeaturedBrands brands={featuredBrands.forYou} />
+
       {/* Appliances Top Deals Section */}
       <TopDeals
         title="Top Deals on Appliances"
         backgroundImage={appliancesTopDealsBackground}
         products={topDeals.forYouAppliancesTopDeals}
       />
+
       {/* Fashion Top Deals Section */}
       <TopDeals
         title="Top Deals on Fashion"
         backgroundImage={fashionTopDealsBackground}
         products={topDeals.forYouFashionTopDeals}
       />
+
       {/* Beauty Top Deals Section */}
       <TopDeals
         title="Top Deals on Beauty & More"
         backgroundImage={beautyTopDealsBackground}
         products={topDeals.forYouBeautyTopDeals}
       />
+
+      {/* Top Brands & Best Deals */}
       <TopBrands title="Top Brands & Best Deals" brands={topBrands} />
     </main>
   );

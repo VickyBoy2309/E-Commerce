@@ -185,6 +185,359 @@
   transform: translateX(-15px);
 }
 
+/* Fashion Page - Men's Wear Section */
+.mens-wear-section {
+  margin-top: -50px !important;
+  padding-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.mens-wear-section .top-deals-section {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.mens-wear-section .top-deals-container {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.mens-wear-section .top-deals-header {
+  margin-top: 0 !important;
+  margin-bottom: 8px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.mens-wear-section .top-deals-content {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.mens-wear-section .top-deals {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.mens-wear-section .top-deals__slider {
+  transform: translateX(-15px);
+}
+
+/* Fashion Page - Kid's Wear Section */
+.kids-wear-section {
+  margin-top: -50px !important;
+  padding-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.kids-wear-section .top-deals-section {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.kids-wear-section .top-deals-container {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.kids-wear-section .top-deals-header {
+  margin-top: 0 !important;
+  margin-bottom: 8px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.kids-wear-section .top-deals-content {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.kids-wear-section .top-deals {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.kids-wear-section .top-deals__slider {
+  transform: translateX(-15px);
+}
+
+/* Fashion Page - Footwear */
+.footwear-section {
+  margin-top: -50px !important;
+  padding-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.footwear-section .top-deals-section {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.footwear-section .top-deals-container {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.footwear-section .top-deals-header {
+  margin-top: 0 !important;
+  margin-bottom: 8px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.footwear-section .top-deals-content {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.footwear-section .top-deals {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.footwear-section .top-deals__slider {
+  transform: translateX(-15px);
+}
+
+/* Fashion Page - Top Deals on Trendy*/
+
+/* Main section */
+.top-trendy-section {
+  width: calc(100% - 32px);
+  max-width: 1300px;
+  margin: -50px auto 0 !important;
+  padding: 0;
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+/* Top Trendy banner */
+.top-trendy-section .top-trendy-banner {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+  margin: 0 auto 10px;
+  padding: 50px 0 0;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+/* Top Deals section wrapper */
+.top-trendy-section .top-deals-section {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box;
+}
+
+/* Top Deals container */
+.top-trendy-section .top-deals-container {
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box;
+}
+
+/* Section heading */
+.top-trendy-section .top-deals-header {
+  margin: 0 0 8px !important;
+  padding: 0 !important;
+}
+
+/* Product content */
+.top-trendy-section .top-deals-content {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Top Deals main container */
+.top-trendy-section .top-deals {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box;
+}
+
+/* Slider viewport */
+.top-trendy-section .top-deals__slider {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box;
+  transform: none !important;
+}
+
+/* Horizontal product track */
+.top-trendy-section .top-deals__track {
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .top-trendy-section {
+    width: calc(100% - 20px);
+    margin-top: -20px !important;
+  }
+
+  .top-trendy-section .top-trendy-banner {
+    padding-top: 20px;
+    margin-bottom: 8px;
+  }
+}
+
+/* Fashion Page - Top 50 Deals */
+
+/* Main section */
+.top-50-section {
+  width: calc(100% - 32px);
+  max-width: 1300px;
+  margin: -50px auto 0 !important;
+  padding: 0;
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+/* Top 50 banner */
+.top-50-section .top-trendy-banner {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+  margin: 0 auto 10px;
+  padding: 50px 0 0;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+/* Top Deals section wrapper */
+.top-50-section .top-deals-section {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box;
+}
+
+/* Top Deals container */
+.top-50-section .top-deals-container {
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box;
+}
+
+/* Section heading */
+.top-50-section .top-deals-header {
+  margin: 0 0 8px !important;
+  padding: 0 !important;
+}
+
+/* Product content */
+.top-50-section .top-deals-content {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Top Deals main container */
+.top-50-section .top-deals {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box;
+  height: auto;
+  min-height: 0;
+  padding-bottom: 0px;
+}
+
+/* Slider viewport */
+.top-50-section .top-deals__slider {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box;
+  transform: none !important;
+}
+
+/* Horizontal product track */
+.top-50-section .top-deals__track {
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .top-50-section {
+    width: calc(100% - 20px);
+    margin-top: -20px !important;
+  }
+
+  .top-50-section .top-trendy-banner {
+    padding-top: 20px;
+    margin-bottom: 8px;
+  }
+}
+
+/* Fashion Page - Top Brands Under ₹599 */
+.under599-section {
+  margin-top: 0px !important;
+  padding-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.under599-section .top-deals-section {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.under599-section .top-deals-container {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.under599-section .top-deals-header {
+  margin-top: 0 !important;
+  margin-bottom: 8px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.under599-section .top-deals-content {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.under599-section .top-deals {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.under599-section .top-deals__slider {
+  transform: translateX(-15px);
+}
+
 /* ============================================
    TABLET — 3 VISIBLE CARDS
 ============================================ */

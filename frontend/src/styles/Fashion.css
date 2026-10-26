@@ -28,8 +28,8 @@
 .fashion-loved-ones-title {
   margin: 0 0 12px;
   color: #111;
-  font-size: 22px;
-  font-weight: 500;
+  font-size: 24px;
+  font-weight: 700 !important;
   line-height: 1.4;
 }
 .fashion-loved-ones-grid {
@@ -80,6 +80,7 @@
   max-width: 1300px;
   margin-right: auto;
   margin-left: auto;
+  margin-top: 50px !important;
 }
 
 /* Price Drop */
@@ -87,14 +88,14 @@
   width: 100%;
   max-width: 1300px;
   margin: 24px auto;
-  padding: 0 20px 0 0px;
+  padding: 0px 20px 0 0px;
   box-sizing: border-box;
 }
 .price-drop h2 {
   margin: 0 0 16px;
   color: #111;
-  font-size: 25px;
-  font-weight: 600;
+  font-size: 24px;
+  font-weight: 700;
   line-height: 1.4;
 }
 .price-drop-images {
@@ -113,6 +114,40 @@
   object-position: center;
   border: none;
   border-radius: 12px;
+}
+
+/* Watch & Shop Live! */
+.watchShop-section {
+  width: calc(100% - 32px);
+  max-width: 1300px;
+  margin: -30px auto 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.watchShop-banner {
+  display: block;
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  object-position: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border-radius: 12px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .watchShop-section {
+    width: calc(100% - 20px);
+    margin-top: 16px;
+  }
+
+  .watchShop-banner {
+    border-radius: 8px;
+  }
 }
 
 /* Tablet Responsive */

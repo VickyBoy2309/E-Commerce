@@ -1,0 +1,110 @@
+/* Shop Your Vibe Section */
+.shop-your-vibe {
+  width: calc(100% - 40px);
+  max-width: 1300px;
+  margin: 0 auto 18px;
+  padding: 0;
+  min-width: 0;
+  font-family: inherit;
+}
+
+/* Section Title */
+.shop-your-vibe-title {
+  margin: 20px 10px 10px;
+  padding: 0;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #111;
+}
+
+/* Slider Viewport */
+.shop-your-vibe-viewport {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Horizontal Track */
+.shop-your-vibe-track {
+  display: flex;
+  align-items: stretch;
+  gap: 27px;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/* Hide Scrollbar */
+.shop-your-vibe-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* Individual Card */
+.shop-your-vibe-card {
+  flex: 0 0 268px;
+  width: 268px;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 23px;
+}
+
+/* Card Image */
+.shop-your-vibe-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 3;
+  object-fit: fill;
+}
+
+/* Next Arrow */
+.shop-your-vibe-next {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: #fff;
+  color: #333;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 12%);
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .shop-your-vibe {
+    width: calc(100% - 24px);
+  }
+
+  .shop-your-vibe-title {
+    margin-bottom: 24px;
+    font-size: 20px;
+  }
+
+  .shop-your-vibe-track {
+    gap: 16px;
+  }
+
+  .shop-your-vibe-card {
+    flex-basis: 210px;
+    width: 210px;
+    border-radius: 18px;
+  }
+
+  .shop-your-vibe-next {
+    width: 42px;
+    height: 42px;
+  }
+}
