@@ -45,6 +45,25 @@
   box-sizing: border-box;
 }
 
+
+
+/* Trending Intel Laptop */
+.intel-lap-banner {
+  width: calc(100% - 40px);
+  max-width: 1300px;
+  margin: -25px auto 0;
+  box-sizing: border-box;
+}
+
+.intel-lap-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+
+
 /* ========================================
    RESPONSIVE DESIGN
 ======================================== */

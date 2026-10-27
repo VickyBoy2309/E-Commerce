@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 import "../../styles/MobilesDeals.css";
 
 function MobilesDeals({
-  title = "Top Premium Deals",
+  title = "",
   products = [],
   sectionId = "mobiles-premium-deals",
   className = "",

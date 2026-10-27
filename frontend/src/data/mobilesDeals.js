@@ -286,6 +286,100 @@ const mobilesDeals = {
       link: "/product/vivo-t4-lite-5g",
     },
   ],
+
+  // Electronics Page - Trending Intel Laptops
+  trendingIntelLaptops: [
+    {
+      id: 1,
+      image: new URL(
+        "../assets/images/05-Electronics/trendIntelLaptop/01-ExpertBook P3 AI PC.webp",
+        import.meta.url,
+      ).href,
+      alt: "ASUS ExpertBook P3 AI PC",
+      link: "/product/asus-expertbook-p3-ai-pc",
+    },
+    {
+      id: 2,
+      image: new URL(
+        "../assets/images/05-Electronics/trendIntelLaptop/02-Asus Expertbook P1.webp",
+        import.meta.url,
+      ).href,
+      alt: "ASUS ExpertBook P1",
+      link: "/product/asus-expertbook-p1",
+    },
+    {
+      id: 3,
+      image: new URL(
+        "../assets/images/05-Electronics/trendIntelLaptop/03-Motobook 60 OLEB.webp",
+        import.meta.url,
+      ).href,
+      alt: "Motorola Motobook 60 OLED",
+      link: "/product/motorola-motobook-60-oled",
+    },
+    {
+      id: 4,
+      image: new URL(
+        "../assets/images/05-Electronics/trendIntelLaptop/04-Samsung Book 4.webp",
+        import.meta.url,
+      ).href,
+      alt: "Samsung Galaxy Book 4",
+      link: "/product/samsung-galaxy-book-4",
+    },
+    {
+      id: 5,
+      image: new URL(
+        "../assets/images/05-Electronics/trendIntelLaptop/05-Lenovo Ideapad Slim 5.webp",
+        import.meta.url,
+      ).href,
+      alt: "Lenovo IdeaPad Slim 5",
+      link: "/product/lenovo-ideapad-slim-5",
+    },
+    {
+      id: 6,
+      image: new URL(
+        "../assets/images/05-Electronics/trendIntelLaptop/06-Asus Vivobook 15.webp",
+        import.meta.url,
+      ).href,
+      alt: "ASUS VivoBook 15",
+      link: "/product/asus-vivobook-15",
+    },
+    {
+      id: 7,
+      image: new URL(
+        "../assets/images/05-Electronics/trendIntelLaptop/07-HP Ominbook 3.webp",
+        import.meta.url,
+      ).href,
+      alt: "HP OmniBook 3",
+      link: "/product/hp-omnibook-3",
+    },
+    {
+      id: 8,
+      image: new URL(
+        "../assets/images/05-Electronics/trendIntelLaptop/08-Dell 14 AI PC.webp",
+        import.meta.url,
+      ).href,
+      alt: "Dell 14 AI PC",
+      link: "/product/dell-14-ai-pc",
+    },
+    {
+      id: 9,
+      image: new URL(
+        "../assets/images/05-Electronics/trendIntelLaptop/09-Asus Expertbook P1.webp",
+        import.meta.url,
+      ).href,
+      alt: "ASUS ExpertBook P1",
+      link: "/product/asus-expertbook-p1",
+    },
+    {
+      id: 10,
+      image: new URL(
+        "../assets/images/05-Electronics/trendIntelLaptop/10-Asus TUF Gaming.webp",
+        import.meta.url,
+      ).href,
+      alt: "ASUS TUF Gaming Laptop",
+      link: "/product/asus-tuf-gaming",
+    },
+  ],
 };
 
 export default mobilesDeals;
