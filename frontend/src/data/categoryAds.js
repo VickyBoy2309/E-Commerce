@@ -170,5 +170,25 @@ export const categoryAds = {
     },
   ],
 
-  // 05 
+  // 05 - Beauty
+  beauty: [
+    {
+      id: 1,
+      image: new URL(
+        "../assets/images/06-Beauty/ads",
+        import.meta.url,
+      ).href,
+      alt: "Samsung Galaxy S25",
+    },
+  ],
+  beauty: [
+    {
+      id: 2,
+      image: new URL(
+        "../assets/images/06-Beauty/ads",
+        import.meta.url,
+      ).href,
+      alt: "Samsung Galaxy S25",
+    },
+  ],
 };
