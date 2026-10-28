@@ -175,17 +175,15 @@ export const categoryAds = {
     {
       id: 1,
       image: new URL(
-        "../assets/images/06-Beauty/ads",
+        "../assets/images/06-Beauty/ads/01-Beardo.png",
         import.meta.url,
       ).href,
-      alt: "Samsung Galaxy S25",
+      alt: "Beardo Fragrance",
     },
-  ],
-  beauty: [
     {
       id: 2,
       image: new URL(
-        "../assets/images/06-Beauty/ads",
+        "../assets/images/06-Beauty/ads/02-Freed.png",
         import.meta.url,
       ).href,
       alt: "Samsung Galaxy S25",
