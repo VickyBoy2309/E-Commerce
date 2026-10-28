@@ -45,8 +45,6 @@
   box-sizing: border-box;
 }
 
-
-
 /* Trending Intel Laptop */
 .intel-lap-banner {
   width: calc(100% - 40px);
@@ -62,7 +60,96 @@
   margin-top: 20px;
 }
 
+/* =========================================
+   BLOCKBUSTER DEALS SECTION
+========================================= */
 
+.blockbuster-deals {
+  width: calc(100% - 40px);
+  max-width: 1300px;
+  min-width: 0;
+  margin: 20px auto;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: #d71935;
+}
+
+/* Top Banner */
+
+.blockbuster-deals-banner {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  box-sizing: border-box;
+}
+
+/* Deal Cards Grid */
+
+.blockbuster-deals-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  width: 100%;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+/* Individual Cards */
+
+.blockbuster-deal-card {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 34px;
+  background: #fff2c2;
+  text-decoration: none;
+  box-sizing: border-box;
+  transition: transform 0.2s ease;
+}
+
+.blockbuster-deal-card img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.blockbuster-deal-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .blockbuster-deals {
+    width: calc(100% - 24px);
+  }
+
+  .blockbuster-deals-grid {
+    gap: 8px;
+    padding: 8px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .blockbuster-deals {
+    width: calc(100% - 16px);
+    margin: 12px auto;
+  }
+
+  .blockbuster-deals-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    padding: 8px;
+  }
+}
 
 /* ========================================
    RESPONSIVE DESIGN
