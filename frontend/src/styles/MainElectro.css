@@ -1,0 +1,225 @@
+/* ========================================
+   NAMMACART - MAIN ELECTRO
+======================================== */
+
+.main-electro-section {
+  width: calc(100% - 40px);
+  max-width: 1300px;
+  margin: 18px auto 24px;
+  padding: var(--main-electro-section-padding, 0);
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+/* Section Title */
+
+.main-electro__title {
+  margin: 0 0 16px;
+  padding: 0;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #111;
+}
+
+/* Main Container */
+
+.main-electro {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+/* Slider Wrapper */
+
+.main-electro__slider {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+}
+
+/* Horizontal Scrolling Track */
+
+.main-electro__track {
+  display: flex;
+  align-items: stretch;
+  gap: var(--main-electro-card-gap, 15px);
+
+  width: 100%;
+  min-width: 0;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scroll-behavior: smooth;
+  scroll-snap-type: x proximity;
+  overscroll-behavior-x: contain;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.main-electro__track::-webkit-scrollbar {
+  display: none;
+}
+
+/* Individual Image Cards */
+
+.main-electro__card {
+  flex: 0 0 var(--main-electro-card-width, 195px);
+
+  width: var(--main-electro-card-width, 195px);
+  min-width: 0;
+
+  overflow: hidden;
+  border-radius: 20px;
+
+  scroll-snap-align: start;
+  box-sizing: border-box;
+}
+
+/* Clickable Image Wrapper */
+
+.main-electro__link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: inherit;
+  text-decoration: none;
+}
+
+/* Product/Banner Image */
+
+.main-electro__image {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  aspect-ratio: var(--main-electro-image-ratio, 195 / 295);
+  object-fit: var(--main-electro-image-fit, cover);
+  object-position: center;
+
+  border-radius: inherit;
+  user-select: none;
+
+  transition: transform 0.25s ease;
+}
+
+/* Optional Hover Effect */
+
+.main-electro__link:hover .main-electro__image {
+  transform: scale(1.02);
+}
+
+/* Arrow Navigation */
+
+.main-electro__arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 60px;
+  height: 60px;
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #fff;
+  color: #333;
+
+  box-shadow: 0 2px 8px rgb(0 0 0 / 12%);
+
+  font-family: Arial, sans-serif;
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 1;
+
+  cursor: pointer;
+  transform: translateY(-50%);
+
+  transition:
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.main-electro__arrow:hover {
+  background: #f7f7f7;
+  box-shadow: 0 3px 12px rgb(0 0 0 / 18%);
+}
+
+.main-electro__arrow--left {
+  left: 0;
+}
+
+.main-electro__arrow--right {
+  right: 0;
+}
+
+/* Keyboard Focus */
+
+.main-electro__arrow:focus-visible,
+.main-electro__link:focus-visible {
+  outline: 2px solid #2874f0;
+  outline-offset: 3px;
+}
+
+/* Tablet */
+
+@media (max-width: 1024px) {
+  .main-electro-section {
+    width: calc(100% - 30px);
+  }
+
+  .main-electro__title {
+    font-size: var(--main-electro-title-size, 24px);
+    margin-bottom: 13px;
+  }
+
+  .main-electro__card {
+    flex-basis: var(--main-electro-card-width, 175px);
+    width: var(--main-electro-card-width, 175px);
+  }
+
+  .main-electro__arrow {
+    width: 48px;
+    height: 48px;
+    font-size: 34px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .main-electro-section {
+    width: calc(100% - 20px);
+    margin: 14px auto 20px;
+  }
+
+  .main-electro__title {
+    font-size: var(--main-electro-title-size, 21px);
+    margin-bottom: 12px;
+  }
+
+  .main-electro__track {
+    gap: var(--main-electro-card-gap, 10px);
+  }
+
+  .main-electro__card {
+    flex-basis: var(--main-electro-card-width, 145px);
+    width: var(--main-electro-card-width, 145px);
+    border-radius: 14px;
+  }
+
+  .main-electro__arrow {
+    width: 38px;
+    height: 38px;
+    font-size: 28px;
+  }
+}

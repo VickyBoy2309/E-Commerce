@@ -1333,6 +1333,158 @@ const topDeals = {
       link: "/mobiles/products",
     },
   ],
+
+  // Electronics Page - Low Prices Everyday
+  lowPrices: [
+    {
+      id: 1,
+      image: new URL(
+        "../assets/images/05-Electronics/lowPrice/01-Rockerz+ 440.webp",
+        import.meta.url,
+      ).href,
+      alt: "Rockerz+ 440",
+      link: "/product/rockerz-plus-440",
+    },
+    {
+      id: 2,
+      image: new URL(
+        "../assets/images/05-Electronics/lowPrice/02-Smartwatches.webp",
+        import.meta.url,
+      ).href,
+      alt: "Smartwatches",
+      link: "/product/smartwatches",
+    },
+    {
+      id: 3,
+      image: new URL(
+        "../assets/images/05-Electronics/lowPrice/03-Realme Techlife.webp",
+        import.meta.url,
+      ).href,
+      alt: "Realme Techlife",
+      link: "/product/realme-techlife",
+    },
+    {
+      id: 4,
+      image: new URL(
+        "../assets/images/05-Electronics/lowPrice/04-Chromebook.webp",
+        import.meta.url,
+      ).href,
+      alt: "Chromebook",
+      link: "/product/chromebook",
+    },
+    {
+      id: 5,
+      image: new URL(
+        "../assets/images/05-Electronics/lowPrice/05-Accessories.webp",
+        import.meta.url,
+      ).href,
+      alt: "Accessories",
+      link: "/product/accessories",
+    },
+    {
+      id: 6,
+      image: new URL(
+        "../assets/images/05-Electronics/lowPrice/06-Screen Guards.webp",
+        import.meta.url,
+      ).href,
+      alt: "Screen Guards",
+      link: "/product/screen-guards",
+    },
+    {
+      id: 7,
+      image: new URL(
+        "../assets/images/05-Electronics/lowPrice/07-Chargers & More.webp",
+        import.meta.url,
+      ).href,
+      alt: "Chargers and More",
+      link: "/product/chargers",
+    },
+    {
+      id: 8,
+      image: new URL(
+        "../assets/images/05-Electronics/lowPrice/08-Ai Pulse Tab.webp",
+        import.meta.url,
+      ).href,
+      alt: "AI Pulse Tab",
+      link: "/product/ai-pulse-tab",
+    },
+  ],
+
+  // Electronics Page - Laptop & More
+  laptopsMore: [
+    {
+      id: 1,
+      image: new URL(
+        "../assets/images/05-Electronics/laptopMore/01-Lenovo Tower PC.webp",
+        import.meta.url,
+      ).href,
+      alt: "Lenovo Tower PC",
+      link: "/product/lenovo-tower-pc",
+    },
+    {
+      id: 2,
+      image: new URL(
+        "../assets/images/05-Electronics/laptopMore/02-HP 15 Core 3.webp",
+        import.meta.url,
+      ).href,
+      alt: "HP 15 Core 3",
+      link: "/product/hp-15-core-3",
+    },
+    {
+      id: 3,
+      image: new URL(
+        "../assets/images/05-Electronics/laptopMore/03-Primebook.webp",
+        import.meta.url,
+      ).href,
+      alt: "Primebook",
+      link: "/product/primebook",
+    },
+    {
+      id: 4,
+      image: new URL(
+        "../assets/images/05-Electronics/laptopMore/04-Asus Mini Tower PC.webp",
+        import.meta.url,
+      ).href,
+      alt: "ASUS Mini Tower PC",
+      link: "/product/asus-mini-tower-pc",
+    },
+    {
+      id: 5,
+      image: new URL(
+        "../assets/images/05-Electronics/laptopMore/05-Asus Vivobook R3.webp",
+        import.meta.url,
+      ).href,
+      alt: "ASUS Vivobook R3",
+      link: "/product/asus-vivobook-r3",
+    },
+    {
+      id: 6,
+      image: new URL(
+        "../assets/images/05-Electronics/laptopMore/06-Asus all in one PC.webp",
+        import.meta.url,
+      ).href,
+      alt: "ASUS All-in-One PC",
+      link: "/product/asus-all-in-one-pc",
+    },
+    {
+      id: 7,
+      image: new URL(
+        "../assets/images/05-Electronics/laptopMore/07-Dell Alienware.webp",
+        import.meta.url,
+      ).href,
+      alt: "Dell Alienware",
+      link: "/product/dell-alienware",
+    },
+    {
+      id: 8,
+      image: new URL(
+        "../assets/images/05-Electronics/laptopMore/08-Asus Chromebook.webp",
+        import.meta.url,
+      ).href,
+      alt: "ASUS Chromebook",
+      link: "/product/asus-chromebook",
+    },
+  ],
 };
 
 export default topDeals;
