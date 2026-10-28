@@ -163,7 +163,7 @@ export const categoryAds = {
     {
       id: 1,
       image: new URL(
-        "../assets/images/04-Mobiles/ads/01-Galaxy S25.png",
+        "../assets/images/04-Mobiles/ads/01-Galaxy S25.webp",
         import.meta.url,
       ).href,
       alt: "Samsung Galaxy S25",
