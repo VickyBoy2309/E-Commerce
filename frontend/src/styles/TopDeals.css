@@ -538,6 +538,11 @@
   transform: translateX(-15px);
 }
 
+/* Say Bye to Dry - Beauty page only */
+.top-deals-say-bye-to-dry > .spotlight-title {
+  margin-bottom: -20px;
+}
+
 /* ============================================
    TABLET — 3 VISIBLE CARDS
 ============================================ */

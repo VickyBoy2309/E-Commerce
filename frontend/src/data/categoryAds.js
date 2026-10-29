@@ -170,6 +170,25 @@ export const categoryAds = {
     },
   ],
 
+  mobiles2: [
+    {
+      id: 1,
+      image: new URL(
+        "../assets/images/04-Mobiles/ads/02-Edge 70 Pro.webp",
+        import.meta.url,
+      ).href,
+      alt: "Edge 70 Pro",
+    },
+    {
+      id: 2,
+      image: new URL(
+        "../assets/images/04-Mobiles/ads/03-Nova 2 Power 5G.webp",
+        import.meta.url,
+      ).href,
+      alt: "Nova 2 Power 5G",
+    },
+  ],
+
   // 05 - Beauty
   beauty: [
     {
@@ -186,7 +205,26 @@ export const categoryAds = {
         "../assets/images/06-Beauty/ads/02-Freed.png",
         import.meta.url,
       ).href,
-      alt: "Samsung Galaxy S25",
+      alt: "Freed Fragrance",
+    },
+  ],
+
+  beauty2: [
+    {
+      id: 1,
+      image: new URL(
+        "../assets/images/06-Beauty/spotLight/01-Beardo.png",
+        import.meta.url,
+      ).href,
+      alt: "Beardo Fragrance",
+    },
+    {
+      id: 2,
+      image: new URL(
+        "../assets/images/06-Beauty/spotLight/02-Freed.png",
+        import.meta.url,
+      ).href,
+      alt: "Freed Fragrance",
     },
   ],
 };

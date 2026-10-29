@@ -219,6 +219,100 @@ const featuredBrands = {
       link: "/product/infinix",
     },
   ],
+
+  // Beauty Page - Featured Brands
+  beauty: [
+    {
+      id: 1,
+      image: new URL(
+        "../assets/images/06-Beauty/featuredBrands/01-Daily cleansing.webp",
+        import.meta.url,
+      ).href,
+      alt: "Daily Cleansing",
+      link: "/daily-cleansing",
+    },
+    {
+      id: 2,
+      image: new URL(
+        "../assets/images/06-Beauty/featuredBrands/02-Engage.webp",
+        import.meta.url,
+      ).href,
+      alt: "Engage",
+      link: "/engage",
+    },
+    {
+      id: 3,
+      image: new URL(
+        "../assets/images/06-Beauty/featuredBrands/03-Clean and clear.webp",
+        import.meta.url,
+      ).href,
+      alt: "Clean and Clear",
+      link: "/clean-and-clear",
+    },
+    {
+      id: 4,
+      image: new URL(
+        "../assets/images/06-Beauty/featuredBrands/04-Himalaya.webp",
+        import.meta.url,
+      ).href,
+      alt: "Himalaya",
+      link: "/himalaya",
+    },
+    {
+      id: 5,
+      image: new URL(
+        "../assets/images/06-Beauty/featuredBrands/05-Derma.webp",
+        import.meta.url,
+      ).href,
+      alt: "Derma",
+      link: "/derma",
+    },
+    {
+      id: 6,
+      image: new URL(
+        "../assets/images/06-Beauty/featuredBrands/06-Himalaya.webp",
+        import.meta.url,
+      ).href,
+      alt: "Himalaya",
+      link: "/himalaya",
+    },
+    {
+      id: 7,
+      image: new URL(
+        "../assets/images/06-Beauty/featuredBrands/07-Just herbs.webp",
+        import.meta.url,
+      ).href,
+      alt: "Just Herbs",
+      link: "/just-herbs",
+    },
+    {
+      id: 8,
+      image: new URL(
+        "../assets/images/06-Beauty/featuredBrands/08-Mamaearth.webp",
+        import.meta.url,
+      ).href,
+      alt: "Mamaearth",
+      link: "/mamaearth",
+    },
+    {
+      id: 9,
+      image: new URL(
+        "../assets/images/06-Beauty/featuredBrands/09-Parachute.webp",
+        import.meta.url,
+      ).href,
+      alt: "Parachute",
+      link: "/parachute",
+    },
+    {
+      id: 10,
+      image: new URL(
+        "../assets/images/06-Beauty/featuredBrands/10-Aqualogica.webp",
+        import.meta.url,
+      ).href,
+      alt: "Aqualogica",
+      link: "/aqualogica",
+    },
+  ],
 };
 
 export default featuredBrands;

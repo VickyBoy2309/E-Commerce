@@ -22,6 +22,474 @@
   box-sizing: border-box;
 }
 
+.beauty-banner {
+  display: block;
+  width: 100%;
+  max-width: 1300px;
+  height: auto;
+  margin: 60px auto;
+  border-radius: 12px;
+  object-fit: contain;
+}
+
+/* Premium Bestsellers Section */
+.premium-bestsellers-section {
+  width: 730px;
+  max-width: 100%;
+  margin: 24px 0 24px max(0px, calc((100% - 1300px) / 2));
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Section Title */
+.premium-bestsellers-title {
+  margin: 10px 0 16px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #212121;
+}
+
+/* Products Grid */
+.premium-bestsellers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  align-items: start;
+  width: 100%;
+}
+
+/* Product Card */
+.premium-bestsellers-card {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 9px;
+  text-decoration: none;
+}
+
+/* Product Image */
+.premium-bestsellers-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.25s ease;
+}
+
+/* Hover Effect */
+.premium-bestsellers-card:hover .premium-bestsellers-image {
+  transform: scale(1.02);
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .premium-bestsellers-section {
+    max-width: 100%;
+    padding: 0 12px;
+  }
+
+  .premium-bestsellers-title {
+    font-size: 18px;
+    margin: 14px 0 12px;
+  }
+
+  .premium-bestsellers-grid {
+    gap: 12px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .premium-bestsellers-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+}
+/* Big Beauty Brands Section */
+.big-beauty-brands-section {
+  width: 730px;
+  max-width: 100%;
+  margin: 24px 0 24px max(0px, calc((100% - 1300px) / 2));
+  padding: 0px 0;
+  box-sizing: border-box;
+}
+
+/* Section Title */
+.big-beauty-brands-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #212121;
+  margin: 20px 0 16px;
+  padding: 0;
+}
+
+/* Brands Grid */
+.big-beauty-brands-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+  width: 100%;
+}
+
+/* Individual Brand Card */
+.big-beauty-brands-card {
+  display: block;
+  width: 100%;
+  aspect-ratio: 204 / 155;
+  overflow: hidden;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+/* Brand Image */
+.big-beauty-brands-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* Hover Effect */
+.big-beauty-brands-card:hover .big-beauty-brands-image {
+  transform: scale(1.02);
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .big-beauty-brands-section {
+    width: 100%;
+    max-width: 730px;
+    margin: 24px auto;
+    padding: 10px 12px;
+  }
+
+  .big-beauty-brands-title {
+    font-size: 18px;
+  }
+
+  .big-beauty-brands-grid {
+    gap: 12px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .big-beauty-brands-section {
+    padding: 8px 12px;
+  }
+
+  .big-beauty-brands-grid {
+    gap: 10px;
+  }
+
+  .big-beauty-brands-title {
+    font-size: 15px;
+  }
+}
+/* Budget Buys Section */
+.budget-buys-section {
+  width: 730px;
+  max-width: 100%;
+  margin: 24px 0 24px max(0px, calc((100% - 1300px) / 2));
+  padding: 0px 0;
+  box-sizing: border-box;
+}
+
+/* Section Title */
+.budget-buys-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #212121;
+  margin: 20px 0 16px;
+  padding: 0;
+}
+
+/* Budget Buys Grid */
+.budget-buys-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+  width: 100%;
+}
+
+/* Individual Card */
+.budget-buys-card {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+/* Budget Buys Image */
+.budget-buys-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* Hover Effect */
+.budget-buys-card:hover .budget-buys-image {
+  transform: scale(1.02);
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .budget-buys-section {
+    width: 100%;
+    max-width: 730px;
+    margin: 24px auto;
+    padding: 10px 12px;
+  }
+
+  .budget-buys-title {
+    font-size: 18px;
+  }
+
+  .budget-buys-grid {
+    gap: 12px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .budget-buys-section {
+    padding: 8px 12px;
+  }
+
+  .budget-buys-grid {
+    gap: 10px;
+  }
+
+  .budget-buys-title {
+    font-size: 14px;
+  }
+}
+
+/* ========================================
+   SHOP BY BUDGET SECTION
+======================================== */
+
+.shop-by-budget-section {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 40px 0px;
+  box-sizing: border-box;
+}
+
+/* Section Title */
+.shop-by-budget-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #212121;
+  line-height: 1.4;
+  margin: 0 0 14px;
+  text-align: left;
+}
+
+/* Cards Grid */
+.shop-by-budget-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 226px);
+  column-gap: 26px;
+  row-gap: 26px;
+  justify-content: start;
+  width: 100%;
+}
+
+/* Individual Card */
+.shop-by-budget-card {
+  display: block;
+  width: 226px;
+  height: 241px;
+  overflow: hidden;
+  border-radius: 12px;
+  text-decoration: none;
+  line-height: 0;
+  box-sizing: border-box;
+}
+
+/* Card Image */
+.shop-by-budget-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  border-radius: inherit;
+}
+
+/* Hover Effect */
+.shop-by-budget-card:hover {
+  transform: translateY(-2px);
+  transition: transform 0.2s ease;
+}
+
+/* ========================================
+   RESPONSIVE LAYOUT
+======================================== */
+
+@media (max-width: 800px) {
+  .shop-by-budget-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .shop-by-budget-card {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 226 / 241;
+  }
+}
+
+@media (max-width: 520px) {
+  .shop-by-budget-section {
+    padding: 10px 12px;
+  }
+
+  .shop-by-budget-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .shop-by-budget-title {
+    font-size: 21px;
+  }
+}
+
+/* ========================================
+   BEAUTY BUDGET COMBOS SECTION
+======================================== */
+
+.beauty-budget-combos {
+  width: 100%;
+  max-width: 1300px;
+  margin: 20px auto;
+  padding: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* ========================================
+   TOP BANNER
+======================================== */
+
+.beauty-budget-top-banner {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  object-fit: contain;
+}
+
+/* ========================================
+   SIX IMAGES - LARGER, SINGLE ROW
+======================================== */
+
+.beauty-budget-combos-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  align-items: start;
+  justify-items: stretch;
+
+  gap: 8px;
+  width: 100%;
+  margin: 0;
+  padding: 30px 12px;
+
+  box-sizing: border-box;
+  background-color: #e43135;
+}
+
+/* ========================================
+   IMAGE CARD
+======================================== */
+
+.beauty-budget-combo-link {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+  border-radius: 12px;
+  line-height: 0;
+  box-sizing: border-box;
+}
+
+/* ========================================
+   PROMOTIONAL IMAGE
+======================================== */
+
+.beauty-budget-combo-image {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  margin: 0;
+  padding: 0;
+  object-fit: contain;
+  object-position: center;
+  transition: transform 0.25s ease;
+}
+
+/* Hover Effect */
+.beauty-budget-combo-link:hover .beauty-budget-combo-image {
+  transform: scale(1.10);
+}
+
+/* ========================================
+   BOTTOM BANNER
+======================================== */
+
+.beauty-budget-bottom-banner {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  transform: translateY(-36px);
+  object-fit: contain;
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 768px) {
+  .beauty-budget-combos-grid {
+    gap: 5px;
+    padding: 12px 8px;
+  }
+
+  .beauty-budget-combo-link {
+    border-radius: 6px;
+  }
+}
+
+/* ========================================
+   MOBILE - KEEP SIX IN ONE ROW
+======================================== */
+
+@media (max-width: 480px) {
+  .beauty-budget-combos-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 3px;
+    padding: 8px 4px;
+  }
+
+  .beauty-budget-combo-link {
+    border-radius: 4px;
+  }
+}
+
 /* ========================================
    RESPONSIVE DESIGN
 ======================================== */

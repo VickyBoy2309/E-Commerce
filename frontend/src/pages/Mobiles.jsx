@@ -136,6 +136,7 @@ export default function Mobiles() {
         products={mobilesDeals.budgetDeals}
         className="budget-deals"
       />
+      <CategoryAdBanner ads={categoryAds.mobiles2} />
     </main>
   );
 }

@@ -380,6 +380,118 @@ const mobilesDeals = {
       link: "/product/asus-tuf-gaming",
     },
   ],
+
+  // Beauty Page - Brand New In Beauty !
+  brandNewInBeauty: [
+    {
+      id: 1,
+      image: new URL(
+        "../assets/images/06-Beauty/brandNewInBeauty!/01-Akind.webp",
+        import.meta.url,
+      ).href,
+      alt: "Akind skincare products",
+      link: "/beauty/akind",
+    },
+    {
+      id: 2,
+      image: new URL(
+        "../assets/images/06-Beauty/brandNewInBeauty!/02-Essence.webp",
+        import.meta.url,
+      ).href,
+      alt: "Essence beauty and makeup products",
+      link: "/beauty/essence",
+    },
+    {
+      id: 3,
+      image: new URL(
+        "../assets/images/06-Beauty/brandNewInBeauty!/03-Next.webp",
+        import.meta.url,
+      ).href,
+      alt: "Next beauty products",
+      link: "/beauty/next",
+    },
+    {
+      id: 4,
+      image: new URL(
+        "../assets/images/06-Beauty/brandNewInBeauty!/04-Melaglow.webp",
+        import.meta.url,
+      ).href,
+      alt: "Melaglow skincare products",
+      link: "/beauty/melaglow",
+    },
+    {
+      id: 5,
+      image: new URL(
+        "../assets/images/06-Beauty/brandNewInBeauty!/05-A'pleu.webp",
+        import.meta.url,
+      ).href,
+      alt: "A'pleu skincare and beauty products",
+      link: "/beauty/apleu",
+    },
+    {
+      id: 6,
+      image: new URL(
+        "../assets/images/06-Beauty/brandNewInBeauty!/06-Brtc.webp",
+        import.meta.url,
+      ).href,
+      alt: "BRTC skincare products",
+      link: "/beauty/brtc",
+    },
+    {
+      id: 7,
+      image: new URL(
+        "../assets/images/06-Beauty/brandNewInBeauty!/07-Dewdap.webp",
+        import.meta.url,
+      ).href,
+      alt: "Dewdap beauty products",
+      link: "/beauty/dewdap",
+    },
+    {
+      id: 8,
+      image: new URL(
+        "../assets/images/06-Beauty/brandNewInBeauty!/08-Cantabil.webp",
+        import.meta.url,
+      ).href,
+      alt: "Cantabil products",
+      link: "/beauty/cantabil",
+    },
+    {
+      id: 9,
+      image: new URL(
+        "../assets/images/06-Beauty/brandNewInBeauty!/09-Aeris.webp",
+        import.meta.url,
+      ).href,
+      alt: "Aeris beauty products",
+      link: "/beauty/aeris",
+    },
+    {
+      id: 10,
+      image: new URL(
+        "../assets/images/06-Beauty/brandNewInBeauty!/10-Biodance.webp",
+        import.meta.url,
+      ).href,
+      alt: "Biodance skincare products",
+      link: "/beauty/biodance",
+    },
+    {
+      id: 11,
+      image: new URL(
+        "../assets/images/06-Beauty/brandNewInBeauty!/11-Vokka.webp",
+        import.meta.url,
+      ).href,
+      alt: "Vokka beauty products",
+      link: "/beauty/vokka",
+    },
+    {
+      id: 12,
+      image: new URL(
+        "../assets/images/06-Beauty/brandNewInBeauty!/12-Etude.webp",
+        import.meta.url,
+      ).href,
+      alt: "Etude beauty and makeup products",
+      link: "/beauty/etude",
+    },
+  ],
 };
 
 export default mobilesDeals;

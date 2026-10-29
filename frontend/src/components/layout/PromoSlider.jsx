@@ -5,6 +5,7 @@ export default function PromoSlider({
   banners = [],
   autoPlay = true,
   interval = 4000,
+  className = "",
 }) {
   const hasMultipleBanners = banners.length > 1;
   const cloneCount = Math.min(3, banners.length);
@@ -212,7 +213,7 @@ export default function PromoSlider({
     banners.length;
 
   return (
-    <section className="promo-slider">
+    <section className={`promo-slider ${className}`}>
       <div
         ref={viewportRef}
         className={`promo-slider-viewport ${isDragging ? "is-dragging" : ""}`}

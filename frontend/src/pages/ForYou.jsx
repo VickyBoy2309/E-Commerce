@@ -35,7 +35,10 @@ export default function ForYou() {
   return (
     <main className="for-you-page">
       {/* Slideshow Banners */}
-      <PromoSlider banners={promoBanners.forYou} />
+      <PromoSlider
+        banners={promoBanners.forYou}
+        className="for-you-promo-slider"
+      />
 
       {/* Ads Banner */}
 

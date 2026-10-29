@@ -1485,6 +1485,336 @@ const topDeals = {
       link: "/product/asus-chromebook",
     },
   ],
+
+  // Beauty Page - Gift For Her
+
+  giftHer: [
+    {
+      id: 1,
+      image: new URL(
+        "../assets/images/06-Beauty/giftHer/01-Face Makeup.webp",
+        import.meta.url,
+      ).href,
+      alt: "Face makeup",
+      link: "/product/face-makeup",
+      label: "Under ₹199",
+      title: "Face makeup",
+    },
+    {
+      id: 2,
+      image: new URL(
+        "../assets/images/06-Beauty/giftHer/02-Lip Makeup.webp",
+        import.meta.url,
+      ).href,
+      alt: "Lip makeup",
+      link: "/product/lip-makeup",
+      label: "Under ₹199",
+      title: "Lip makeup",
+    },
+    {
+      id: 3,
+      image: new URL(
+        "../assets/images/06-Beauty/giftHer/03-Eye Makeup.webp",
+        import.meta.url,
+      ).href,
+      alt: "Eye makeup",
+      link: "/product/eye-makeup",
+      label: "Under ₹299",
+      title: "Eye makeup",
+    },
+    {
+      id: 4,
+      image: new URL(
+        "../assets/images/06-Beauty/giftHer/04-Skincare.webp",
+        import.meta.url,
+      ).href,
+      alt: "Skincare products",
+      link: "/product/skincare",
+      label: "Under ₹299",
+      title: "Skincare",
+    },
+    {
+      id: 5,
+      image: new URL(
+        "../assets/images/06-Beauty/giftHer/05-Hair Care.webp",
+        import.meta.url,
+      ).href,
+      alt: "Hair care products",
+      link: "/product/hair-care",
+      label: "Min. 40% Off",
+      title: "Hair care",
+    },
+    {
+      id: 6,
+      image: new URL(
+        "../assets/images/06-Beauty/giftHer/06-Bath Combo.webp",
+        import.meta.url,
+      ).href,
+      alt: "Bath and body products",
+      link: "/product/bath-and-body",
+      label: "Min. 40% Off",
+      title: "Bath & body",
+    },
+    {
+      id: 6,
+      image: new URL(
+        "../assets/images/06-Beauty/giftHer/07-Luxury Fragrances.webp",
+        import.meta.url,
+      ).href,
+      alt: "Luxury Fragrances",
+      link: "/product/luxury-fragrances",
+      label: "Min. 40% Off",
+      title: "Luxury Frangrances",
+    },
+  ],
+
+  // Beauty Pages - Special Gifts For Him
+  // Gift Him
+  giftHim: [
+    {
+      id: 1,
+      image: new URL(
+        "../assets/images/06-Beauty/giftHim/01-Beard Care.webp",
+        import.meta.url,
+      ).href,
+      alt: "Beard care products",
+      link: "/product/beard-care",
+      label: "Min. 40% Off",
+      title: "Beard Care",
+    },
+    {
+      id: 2,
+      image: new URL(
+        "../assets/images/06-Beauty/giftHim/02-Haircare.webp",
+        import.meta.url,
+      ).href,
+      alt: "Hair care products",
+      link: "/product/hair-care",
+      label: "Min. 40% Off",
+      title: "Haircare",
+    },
+    {
+      id: 3,
+      image: new URL(
+        "../assets/images/06-Beauty/giftHim/03-Skincare.webp",
+        import.meta.url,
+      ).href,
+      alt: "Skincare products",
+      link: "/product/skincare",
+      label: "Min. 40% Off",
+      title: "Skincare",
+    },
+    {
+      id: 4,
+      image: new URL(
+        "../assets/images/06-Beauty/giftHim/04-Luxe Fragrance.webp",
+        import.meta.url,
+      ).href,
+      alt: "Luxury fragrance",
+      link: "/product/luxe-fragrance",
+      label: "Min. 40% Off",
+      title: "Luxe Fragrance",
+    },
+    {
+      id: 5,
+      image: new URL(
+        "../assets/images/06-Beauty/giftHim/05-Perfumes.webp",
+        import.meta.url,
+      ).href,
+      alt: "Perfumes",
+      link: "/product/perfumes",
+      label: "Min. 40% Off",
+      title: "Perfumes",
+    },
+    {
+      id: 6,
+      image: new URL(
+        "../assets/images/06-Beauty/giftHim/06-Men's Self Care.webp",
+        import.meta.url,
+      ).href,
+      alt: "Men's self-care products",
+      link: "/product/mens-self-care",
+      label: "Min. 40% Off",
+      title: "Men's Self Care",
+    },
+    {
+      id: 7,
+      image: new URL(
+        "../assets/images/06-Beauty/giftHim/07-Grooming Kits.webp",
+        import.meta.url,
+      ).href,
+      alt: "Grooming kits",
+      link: "/product/grooming-kits",
+      label: "Min. 40% Off",
+      title: "Grooming Kits",
+    },
+  ],
+
+  // Beauty Page - Banner
+  // Beauty Banners
+  beautyBanners: [
+    {
+      id: 1,
+      image: new URL(
+        "../assets/images/06-Beauty/banner/01-Diwali Gifts.png",
+        import.meta.url,
+      ).href,
+      alt: "Diwali gifts",
+      link: "/beauty/diwali-gifts",
+    },
+    {
+      id: 2,
+      image: new URL(
+        "../assets/images/06-Beauty/banner/02-Stock Up.png",
+        import.meta.url,
+      ).href,
+      alt: "Stock up on beauty essentials",
+      link: "/beauty/stock-up",
+    },
+    {
+      id: 3,
+      image: new URL(
+        "../assets/images/06-Beauty/banner/03-Beauty Picks.png",
+        import.meta.url,
+      ).href,
+      alt: "Beauty picks",
+      link: "/beauty/beauty-picks",
+    },
+  ],
+
+  // Beauty Page - Say Bye To Dry !
+  sayByeToDry: [
+    {
+      id: 1,
+      image: new URL(
+        "../assets/images/06-Beauty/sayByeToDry/01-Personal care.webp",
+        import.meta.url,
+      ).href,
+      alt: "Personal care",
+      link: "/beauty/personal-care",
+    },
+    {
+      id: 2,
+      image: new URL(
+        "../assets/images/06-Beauty/sayByeToDry/02-Fragrances.webp",
+        import.meta.url,
+      ).href,
+      alt: "Fragrances",
+      link: "/beauty/fragrances",
+    },
+    {
+      id: 3,
+      image: new URL(
+        "../assets/images/06-Beauty/sayByeToDry/03-Skincare.webp",
+        import.meta.url,
+      ).href,
+      alt: "Skincare",
+      link: "/beauty/skincare",
+    },
+    {
+      id: 4,
+      image: new URL(
+        "../assets/images/06-Beauty/sayByeToDry/04-Makeup.webp",
+        import.meta.url,
+      ).href,
+      alt: "Makeup",
+      link: "/beauty/makeup",
+    },
+    {
+      id: 5,
+      image: new URL(
+        "../assets/images/06-Beauty/sayByeToDry/05-Hair care.webp",
+        import.meta.url,
+      ).href,
+      alt: "Hair care",
+      link: "/beauty/hair-care",
+    },
+  ],
+
+  // Beauty Page - New Deals Everyday!
+  beautyNewDeals: [
+    {
+      id: 1,
+      image: new URL(
+        "../assets/images/06-Beauty/newDeals/01-Facecream & Gel.webp",
+        import.meta.url,
+      ).href,
+      alt: "Face Cream & Gel",
+      link: "/beauty/face-cream-gel",
+    },
+    {
+      id: 2,
+      image: new URL(
+        "../assets/images/06-Beauty/newDeals/02-Primer.webp",
+        import.meta.url,
+      ).href,
+      alt: "Primer",
+      link: "/beauty/primer",
+    },
+    {
+      id: 3,
+      image: new URL(
+        "../assets/images/06-Beauty/newDeals/03-Shampoo.webp",
+        import.meta.url,
+      ).href,
+      alt: "Shampoo",
+      link: "/beauty/shampoo",
+    },
+    {
+      id: 4,
+      image: new URL(
+        "../assets/images/06-Beauty/newDeals/04-Face Pack.webp",
+        import.meta.url,
+      ).href,
+      alt: "Face Pack",
+      link: "/beauty/face-pack",
+    },
+    {
+      id: 5,
+      image: new URL(
+        "../assets/images/06-Beauty/newDeals/05-Foundation.webp",
+        import.meta.url,
+      ).href,
+      alt: "Foundation",
+      link: "/beauty/foundation",
+    },
+    {
+      id: 6,
+      image: new URL(
+        "../assets/images/06-Beauty/newDeals/06-Body Lotion.webp",
+        import.meta.url,
+      ).href,
+      alt: "Body Lotion",
+      link: "/beauty/body-lotion",
+    },
+    {
+      id: 7,
+      image: new URL(
+        "../assets/images/06-Beauty/newDeals/07-Makeup Kit.webp",
+        import.meta.url,
+      ).href,
+      alt: "Makeup Kit",
+      link: "/beauty/makeup-kit",
+    },
+    {
+      id: 8,
+      image: new URL(
+        "../assets/images/06-Beauty/newDeals/08-Facial Kit.webp",
+        import.meta.url,
+      ).href,
+      alt: "Facial Kit",
+      link: "/beauty/facial-kit",
+    },
+    {
+      id: 9,
+      image: new URL(
+        "../assets/images/06-Beauty/newDeals/09-Compact.webp",
+        import.meta.url,
+      ).href,
+      alt: "Compact",
+      link: "/beauty/compact",
+    },
+  ],
 };
 
 export default topDeals;
