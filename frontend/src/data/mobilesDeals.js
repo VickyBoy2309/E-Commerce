@@ -492,6 +492,221 @@ const mobilesDeals = {
       link: "/beauty/etude",
     },
   ],
+
+  // Home Page - Price Drop In Top Brands
+  priceDrop: [
+    {
+      id: 1,
+      image: new URL(
+        "../assets/images/07-Home/priceDrop/01-Godrej.webp",
+        import.meta.url,
+      ).href,
+      alt: "Godrej home products",
+      link: "/home/godrej",
+    },
+    {
+      id: 2,
+      image: new URL(
+        "../assets/images/07-Home/priceDrop/02-Basil.webp",
+        import.meta.url,
+      ).href,
+      alt: "Basil home decor products",
+      link: "/home/basil",
+    },
+    {
+      id: 3,
+      image: new URL(
+        "../assets/images/07-Home/priceDrop/03-Perfect Homes.webp",
+        import.meta.url,
+      ).href,
+      alt: "Perfect Homes furniture and decor",
+      link: "/home/perfect-homes",
+    },
+    {
+      id: 4,
+      image: new URL(
+        "../assets/images/07-Home/priceDrop/04-Philips.webp",
+        import.meta.url,
+      ).href,
+      alt: "Philips home appliances and lighting",
+      link: "/home/philips",
+    },
+    {
+      id: 5,
+      image: new URL(
+        "../assets/images/07-Home/priceDrop/05-Sleepycat.webp",
+        import.meta.url,
+      ).href,
+      alt: "Sleepycat mattresses and bedding",
+      link: "/home/sleepycat",
+    },
+    {
+      id: 6,
+      image: new URL(
+        "../assets/images/07-Home/priceDrop/06-Milton.webp",
+        import.meta.url,
+      ).href,
+      alt: "Milton kitchen and home essentials",
+      link: "/home/milton",
+    },
+    {
+      id: 7,
+      image: new URL(
+        "../assets/images/07-Home/priceDrop/07-Eveready.webp",
+        import.meta.url,
+      ).href,
+      alt: "Everyday home essentials",
+      link: "/home/everyday",
+    },
+    {
+      id: 8,
+      image: new URL(
+        "../assets/images/07-Home/priceDrop/08-Nilkamal.webp",
+        import.meta.url,
+      ).href,
+      alt: "Nilkamal furniture and home products",
+      link: "/home/nilkamal",
+    },
+    {
+      id: 9,
+      image: new URL(
+        "../assets/images/07-Home/priceDrop/09-Flipkart.webp",
+        import.meta.url,
+      ).href,
+      alt: "Flipkart home products",
+      link: "/home/flipkart",
+    },
+    {
+      id: 10,
+      image: new URL(
+        "../assets/images/07-Home/priceDrop/10-Kei.webp",
+        import.meta.url,
+      ).href,
+      alt: "KEI electrical products",
+      link: "/home/kei",
+    },
+    {
+      id: 11,
+      image: new URL(
+        "../assets/images/07-Home/priceDrop/11-Carlton.webp",
+        import.meta.url,
+      ).href,
+      alt: "Carlton home products",
+      link: "/home/carlton",
+    },
+    {
+      id: 12,
+      image: new URL(
+        "../assets/images/07-Home/priceDrop/12-Bosch.webp",
+        import.meta.url,
+      ).href,
+      alt: "Bosch home appliances",
+      link: "/home/bosch",
+    },
+    {
+      id: 13,
+      image: new URL(
+        "../assets/images/07-Home/priceDrop/13-Cello.webp",
+        import.meta.url,
+      ).href,
+      alt: "Cello kitchen and home products",
+      link: "/home/cello",
+    },
+    {
+      id: 14,
+      image: new URL(
+        "../assets/images/07-Home/priceDrop/14-Prestige.webp",
+        import.meta.url,
+      ).href,
+      alt: "Prestige kitchen appliances",
+      link: "/home/prestige",
+    },
+    {
+      id: 15,
+      image: new URL(
+        "../assets/images/07-Home/priceDrop/15-Raymond.webp",
+        import.meta.url,
+      ).href,
+      alt: "Raymond home products",
+      link: "/home/raymond",
+    },
+    {
+      id: 16,
+      image: new URL(
+        "../assets/images/07-Home/priceDrop/16-Incco.webp",
+        import.meta.url,
+      ).href,
+      alt: "Ingco tools and hardware",
+      link: "/home/ingco",
+    },
+    {
+      id: 17,
+      image: new URL(
+        "../assets/images/07-Home/priceDrop/17-Astride.webp",
+        import.meta.url,
+      ).href,
+      alt: "Astride home products",
+      link: "/home/astride",
+    },
+    {
+      id: 18,
+      image: new URL(
+        "../assets/images/07-Home/priceDrop/18-Ajanta.webp",
+        import.meta.url,
+      ).href,
+      alt: "Ajanta clocks and home products",
+      link: "/home/ajanta",
+    },
+  ],
+
+  // Home Page - Host In Style
+  luxeHostInStyle: [
+    {
+      id: 1,
+      image: new URL(
+        "../assets/images/07-Home/luxe/luxe/hostInStyle/01-Servware.webp",
+        import.meta.url,
+      ).href,
+      alt: "Premium serveware",
+      link: "/home/serveware",
+    },
+    {
+      id: 2,
+      image: new URL(
+        "../assets/images/07-Home/luxe/luxe/hostInStyle/02-Glassware.webp",
+        import.meta.url,
+      ).href,
+      alt: "Elegant glassware",
+      link: "/home/glassware",
+    },
+    {
+      id: 3,
+      image: new URL(
+        "../assets/images/07-Home/luxe/luxe/hostInStyle/03-Trays.webp",
+        import.meta.url,
+      ).href,
+      alt: "Decorative serving trays",
+      link: "/home/trays",
+    },
+    {
+      id: 4,
+      image: new URL(
+        "../assets/images/07-Home/luxe/luxe/hostInStyle/04-BBQ grills.webp",
+        import.meta.url,
+      ).href,
+      alt: "BBQ grills",
+      link: "/home/bbq-grills",
+    },
+    {
+      id: 5,
+      image: new URL(
+        "../assets/images/07-Home/luxe/luxe/hostInStyle/05-Plates.webp",
+        import.meta.url,
+      ).href,
+      alt: "Premium plates",
+      link: "/home/plates",
+    },
+  ],
 };
 
 export default mobilesDeals;

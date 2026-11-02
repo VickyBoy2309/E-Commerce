@@ -23,6 +23,196 @@
 }
 
 /* ========================================
+   BRANDS IN SPOTLIGHT SECTION
+======================================== */
+
+.brands-in-spotlight {
+  width: 100%;
+  max-width: 1300px;
+  margin: 20px auto;
+  padding: 20px 0px 15px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* ========================================
+   SECTION TITLE
+======================================== */
+
+.brands-in-spotlight-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #111111;
+  margin: 0 0 16px 0;
+  padding: 0;
+  line-height: 1.3;
+}
+
+/* ========================================
+   BRANDS CONTAINER
+======================================== */
+
+.brands-in-spotlight-container {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+  width: 100%;
+}
+
+/* ========================================
+   INDIVIDUAL BRAND CARD
+======================================== */
+
+.brands-in-spotlight-card {
+  display: block;
+  flex: 0 0 238px;
+  width: 238px;
+  height: auto;
+  aspect-ratio: 238 / 168;
+  overflow: hidden;
+  border-radius: 15px;
+  text-decoration: none;
+  box-sizing: border-box;
+  transition: transform 0.25s ease;
+}
+
+/* ========================================
+   BRAND IMAGE
+======================================== */
+
+.brands-in-spotlight-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  border-radius: 15px;
+}
+
+/* ========================================
+   HOVER EFFECT
+======================================== */
+
+.brands-in-spotlight-card:hover {
+  transform: translateY(-3px);
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 768px) {
+  .brands-in-spotlight {
+    padding: 15px 15px;
+  }
+
+  .brands-in-spotlight-title {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .brands-in-spotlight-container {
+    gap: 15px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .brands-in-spotlight-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .brands-in-spotlight-card {
+    flex: 0 0 200px;
+    width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .brands-in-spotlight-card {
+    flex: 0 0 170px;
+    width: 170px;
+  }
+}
+
+/* ========================================
+   HOME LUXE BUTTON SECTION
+======================================== */
+
+.home-luxe-section {
+  width: 100%;
+  max-width: 1300px;
+  margin: 20px auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.home-luxe-link {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.home-luxe-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0;
+  transition: transform 0.3s ease;
+}
+
+.home-luxe-link:hover .home-luxe-image {
+  transform: scale(1.005);
+}
+
+/* ================================
+   BEST BUDGET WONDERS
+================================ */
+
+.best-budget-wonders-section {
+  width: calc(100% - 40px);
+  max-width: 1300px;
+  margin: 24px auto;
+  padding: 0;
+}
+
+.best-budget-wonders-title {
+  font-size: 26px;
+  font-weight: 600;
+  color: #111;
+  margin: 0 0 18px 0;
+}
+
+.best-budget-wonders-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 220px);
+  gap: 24px 26px;
+  justify-content: start;
+}
+
+.best-budget-wonders-card {
+  display: block;
+  width: 220px;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 14px;
+  text-decoration: none;
+}
+
+.best-budget-wonders-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.best-budget-wonders-card:hover img {
+  transform: scale(1.03);
+}
+
+/* ========================================
    RESPONSIVE DESIGN
 ======================================== */
 

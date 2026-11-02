@@ -55,6 +55,59 @@ const shopByBudget = {
       link: "/beauty/minimum-80-off",
     },
   ],
+
+  // Home Page - Best Budget Wonders
+
+  bestBudgetWonders: [
+    {
+      id: 1,
+      image: new URL(
+        "../assets/images/07-Home/bestBudgetWonders/01-99.webp",
+        import.meta.url,
+      ).href,
+      alt: "Under ₹99",
+    },
+    {
+      id: 2,
+      image: new URL(
+        "../assets/images/07-Home/bestBudgetWonders/02-199.webp",
+        import.meta.url,
+      ).href,
+      alt: "Under ₹199",
+    },
+    {
+      id: 3,
+      image: new URL(
+        "../assets/images/07-Home/bestBudgetWonders/03-999.webp",
+        import.meta.url,
+      ).href,
+      alt: "Under ₹499",
+    },
+    {
+      id: 4,
+      image: new URL(
+        "../assets/images/07-Home/bestBudgetWonders/04-999.webp",
+        import.meta.url,
+      ).href,
+      alt: "Under ₹999",
+    },
+    {
+      id: 5,
+      image: new URL(
+        "../assets/images/07-Home/bestBudgetWonders/05-50%.webp",
+        import.meta.url,
+      ).href,
+      alt: "Flat 50% Off",
+    },
+    {
+      id: 6,
+      image: new URL(
+        "../assets/images/07-Home/bestBudgetWonders/06-80%.webp",
+        import.meta.url,
+      ).href,
+      alt: "Minimum 80% Off",
+    },
+  ],
 };
 
 export default shopByBudget;

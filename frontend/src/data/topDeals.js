@@ -1815,6 +1815,261 @@ const topDeals = {
       link: "/beauty/compact",
     },
   ],
+
+  // Home Page - Glam Up Your Space
+  luxeGlamUpYourSpace: [
+    {
+      id: 1,
+      image: new URL(
+        "../assets/images/07-Home/luxe/luxe/glamUpYourSpace/01-Gas stoves.webp",
+        import.meta.url,
+      ).href,
+      alt: "Premium gas stoves",
+      link: "/home/gas-stoves",
+    },
+    {
+      id: 2,
+      image: new URL(
+        "../assets/images/07-Home/luxe/luxe/glamUpYourSpace/02-Bedsheets.webp",
+        import.meta.url,
+      ).href,
+      alt: "Luxury bedsheets",
+      link: "/home/bedsheets",
+    },
+    {
+      id: 3,
+      image: new URL(
+        "../assets/images/07-Home/luxe/luxe/glamUpYourSpace/03-Home lighting.webp",
+        import.meta.url,
+      ).href,
+      alt: "Home lighting",
+      link: "/home/lighting",
+    },
+    {
+      id: 4,
+      image: new URL(
+        "../assets/images/07-Home/luxe/luxe/glamUpYourSpace/04-Living room curtains.webp",
+        import.meta.url,
+      ).href,
+      alt: "Living room curtains",
+      link: "/home/curtains",
+    },
+    {
+      id: 5,
+      image: new URL(
+        "../assets/images/07-Home/luxe/luxe/glamUpYourSpace/05-Shower systems.webp",
+        import.meta.url,
+      ).href,
+      alt: "Premium shower systems",
+      link: "/home/shower-systems",
+    },
+    {
+      id: 6,
+      image: new URL(
+        "../assets/images/07-Home/luxe/luxe/glamUpYourSpace/06-living room decor.webp",
+        import.meta.url,
+      ).href,
+      alt: "Living room decor",
+      link: "/home/living-room-decor",
+    },
+    {
+      id: 7,
+      image: new URL(
+        "../assets/images/07-Home/luxe/luxe/glamUpYourSpace/07-Luxury sinks.webp",
+        import.meta.url,
+      ).href,
+      alt: "Luxury sinks",
+      link: "/home/luxury-sinks",
+    },
+    {
+      id: 8,
+      image: new URL(
+        "../assets/images/07-Home/luxe/luxe/glamUpYourSpace/08-Premium commode.webp",
+        import.meta.url,
+      ).href,
+      alt: "Premium commodes",
+      link: "/home/premium-commodes",
+    },
+  ],
+
+  // Luxe Page - Furniture
+  luxeFurniture: [
+    {
+      id: 1,
+      image: new URL(
+        "../assets/images/07-Home/luxe/luxe/furniture/01-3 door wardrobes.webp",
+        import.meta.url,
+      ).href,
+      alt: "3 door wardrobes",
+      link: "/home/wardrobes",
+    },
+    {
+      id: 2,
+      image: new URL(
+        "../assets/images/07-Home/luxe/luxe/furniture/02-Recliners.webp",
+        import.meta.url,
+      ).href,
+      alt: "Premium recliners",
+      link: "/home/recliners",
+    },
+    {
+      id: 3,
+      image: new URL(
+        "../assets/images/07-Home/luxe/luxe/furniture/03-King mattress.webp",
+        import.meta.url,
+      ).href,
+      alt: "King size mattresses",
+      link: "/home/king-mattresses",
+    },
+    {
+      id: 4,
+      image: new URL(
+        "../assets/images/07-Home/luxe/luxe/furniture/04-L shape sofas.webp",
+        import.meta.url,
+      ).href,
+      alt: "L shape sofas",
+      link: "/home/sofas",
+    },
+    {
+      id: 5,
+      image: new URL(
+        "../assets/images/07-Home/luxe/luxe/furniture/05-Marble dining sets.webp",
+        import.meta.url,
+      ).href,
+      alt: "Marble dining sets",
+      link: "/home/dining-sets",
+    },
+    {
+      id: 6,
+      image: new URL(
+        "../assets/images/07-Home/luxe/luxe/furniture/06-Queen beds.webp",
+        import.meta.url,
+      ).href,
+      alt: "Queen size beds",
+      link: "/home/queen-beds",
+    },
+    {
+      id: 7,
+      image: new URL(
+        "../assets/images/07-Home/luxe/luxe/furniture/07-Dual layer coffee table.webp",
+        import.meta.url,
+      ).href,
+      alt: "Dual layer coffee tables",
+      link: "/home/coffee-tables",
+    },
+  ],
+
+  // Home Page - Festive Makeover
+  homeFestiveMakeover: [
+    {
+      id: 1,
+      image: new URL(
+        "../assets/images/07-Home/homeFestiveMakeover/01-Rice Lights.webp",
+        import.meta.url,
+      ).href,
+      alt: "Rice Lights",
+      link: "/home/rice-lights",
+    },
+    {
+      id: 2,
+      image: new URL(
+        "../assets/images/07-Home/homeFestiveMakeover/02-Curtains.webp",
+        import.meta.url,
+      ).href,
+      alt: "Curtains",
+      link: "/home/curtains",
+    },
+    {
+      id: 3,
+      image: new URL(
+        "../assets/images/07-Home/homeFestiveMakeover/03-Solar Lights.webp",
+        import.meta.url,
+      ).href,
+      alt: "Solar Lights",
+      link: "/home/solar-lights",
+    },
+    {
+      id: 4,
+      image: new URL(
+        "../assets/images/07-Home/homeFestiveMakeover/04-Diyas.webp",
+        import.meta.url,
+      ).href,
+      alt: "Diyas",
+      link: "/home/diyas",
+    },
+    {
+      id: 5,
+      image: new URL(
+        "../assets/images/07-Home/homeFestiveMakeover/05-Torans.webp",
+        import.meta.url,
+      ).href,
+      alt: "Torans",
+      link: "/home/torans",
+    },
+    {
+      id: 6,
+      image: new URL(
+        "../assets/images/07-Home/homeFestiveMakeover/06-Appliance Covers.webp",
+        import.meta.url,
+      ).href,
+      alt: "Appliance Covers",
+      link: "/home/appliance-covers",
+    },
+    {
+      id: 7,
+      image: new URL(
+        "../assets/images/07-Home/homeFestiveMakeover/07-Indoor Plants.webp",
+        import.meta.url,
+      ).href,
+      alt: "Indoor Plants",
+      link: "/home/indoor-plants",
+    },
+    {
+      id: 8,
+      image: new URL(
+        "../assets/images/07-Home/homeFestiveMakeover/08-Ceiling Lamps.webp",
+        import.meta.url,
+      ).href,
+      alt: "Ceiling Lamps",
+      link: "/home/ceiling-lamps",
+    },
+    {
+      id: 9,
+      image: new URL(
+        "../assets/images/07-Home/homeFestiveMakeover/09-Carpets.webp",
+        import.meta.url,
+      ).href,
+      alt: "Carpets",
+      link: "/home/carpets",
+    },
+    {
+      id: 10,
+      image: new URL(
+        "../assets/images/07-Home/homeFestiveMakeover/10-Showpieces.webp",
+        import.meta.url,
+      ).href,
+      alt: "Showpieces",
+      link: "/home/showpieces",
+    },
+    {
+      id: 11,
+      image: new URL(
+        "../assets/images/07-Home/homeFestiveMakeover/11-Wall Clocks.webp",
+        import.meta.url,
+      ).href,
+      alt: "Wall Clocks",
+      link: "/home/wall-clocks",
+    },
+    {
+      id: 12,
+      image: new URL(
+        "../assets/images/07-Home/homeFestiveMakeover/12-Curshion Covers.webp",
+        import.meta.url,
+      ).href,
+      alt: "Cushion Covers",
+      link: "/home/cushion-covers",
+    },
+  ],
 };
 
 export default topDeals;

@@ -1017,4 +1017,53 @@ export const promoBanners = {
       link: "/product/vivo-t5-lite-44w-5g",
     },
   ],
+
+  // Luxe Page - Slideshow
+  luxeSlideShow: [
+    {
+      id: 1,
+      image: new URL(
+        "../assets/images/07-Home/luxe/luxe/slideShow/01-Nautica.webp",
+        import.meta.url,
+      ).href,
+      alt: "Nautica",
+      link: "/home/nautica",
+    },
+    {
+      id: 2,
+      image: new URL(
+        "../assets/images/07-Home/luxe/luxe/slideShow/02-Eglo.webp",
+        import.meta.url,
+      ).href,
+      alt: "Eglo",
+      link: "/home/eglo",
+    },
+    {
+      id: 3,
+      image: new URL(
+        "../assets/images/07-Home/luxe/luxe/slideShow/03-Haus & Kinder.webp",
+        import.meta.url,
+      ).href,
+      alt: "Haus & Kinder",
+      link: "/home/haus-and-kinder",
+    },
+    {
+      id: 4,
+      image: new URL(
+        "../assets/images/07-Home/luxe/luxe/slideShow/04-Nesstasia.webp",
+        import.meta.url,
+      ).href,
+      alt: "Nesstasia",
+      link: "/home/nesstasia",
+    },
+    {
+      id: 5,
+      image: new URL(
+        "../assets/images/07-Home/luxe/luxe/slideShow/05-Bosch.webp",
+        import.meta.url,
+      ).href,
+      alt: "Bosch",
+      link: "/home/bosch",
+    },
+  ],
 };

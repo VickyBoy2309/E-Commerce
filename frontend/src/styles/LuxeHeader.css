@@ -1,0 +1,759 @@
+/* ========================================
+   LUXE HEADER - MAIN CONTAINER
+======================================== */
+
+.luxe-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  width: 100%;
+  background: #ffffff;
+
+  /* Same as Normal Header */
+  border-top: 3px solid #263238;
+
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  box-sizing: border-box;
+}
+
+.luxe-header *,
+.luxe-header *::before,
+.luxe-header *::after {
+  box-sizing: border-box;
+}
+
+/* ========================================
+   HEADER INNER CONTAINER
+======================================== */
+
+/* ========================================
+   LUXE HEADER INNER CONTAINER
+======================================== */
+
+.luxe-header-container {
+  display: flex;
+  align-items: center;
+
+  width: calc(100% - 40px);
+  max-width: 1300px;
+
+  min-height: 75px;
+  height: 75px;
+
+  margin: 0 auto;
+  padding: 8px 5px 14px;
+
+  gap: 32px;
+
+  /* Horizontal line matches 1300px width */
+  border-bottom: 1px solid #ddd;
+
+  box-sizing: border-box;
+}
+
+/* ========================================
+   NAMMACART LOGO BUTTON
+======================================== */
+
+.luxe-header-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 165px;
+
+  width: 165px;
+  height: 47px;
+
+  padding: 0 10px;
+
+  overflow: hidden;
+
+  background: #ffe51f;
+  border-radius: 15px;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+.luxe-brand-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  gap: 3px;
+
+  text-decoration: none;
+}
+
+.luxe-brand-icon {
+  display: block;
+  flex-shrink: 0;
+
+  width: 35px;
+  height: 35px;
+
+  object-fit: contain;
+}
+
+.luxe-brand-name {
+  display: block;
+  flex-shrink: 0;
+
+  width: 85px;
+  height: auto;
+
+  object-fit: contain;
+}
+
+/* ========================================
+   SEARCH BAR
+======================================== */
+
+.luxe-search-box {
+  display: flex;
+  align-items: center;
+
+  flex: 1 1 auto;
+
+  gap: 15px;
+  min-width: 0;
+  height: 50px;
+
+  padding: 0 20px;
+
+  border: 1px solid #2874f0;
+  border-radius: 15px;
+
+  background: #ffffff;
+
+  box-sizing: border-box;
+}
+
+.luxe-search-icon {
+  flex-shrink: 0;
+
+  width: 23px;
+  height: 23px;
+
+  color: #555555;
+}
+
+.luxe-search-box input {
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+
+  border: 0;
+  outline: 0;
+
+  background: transparent;
+
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+
+  color: #171717;
+}
+
+.luxe-search-box input::placeholder {
+  color: #666666;
+  opacity: 1;
+}
+
+/* ========================================
+   HEADER ACTIONS
+======================================== */
+
+.luxe-header-actions {
+  display: flex;
+  align-items: center;
+
+  flex-shrink: 0;
+
+  gap: 30px;
+}
+
+.luxe-header-action {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  color: #111111;
+
+  font-size: 16px;
+  font-weight: 500;
+
+  font-family: inherit;
+
+  white-space: nowrap;
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition: color 0.2s ease;
+}
+
+.luxe-header-action svg {
+  flex-shrink: 0;
+}
+
+.luxe-header-action:hover {
+  color: #2874f0;
+}
+
+/* ========================================
+   LOGIN WRAPPER
+======================================== */
+
+.luxe-login-wrapper {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+}
+
+.luxe-login-trigger {
+  padding: 8px 10px;
+
+  border-radius: 8px;
+
+  color: #111111;
+
+  text-decoration: none;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+.luxe-login-trigger:hover {
+  color: #2874f0;
+}
+
+/* ========================================
+   LOGIN DROPDOWN
+======================================== */
+
+.luxe-login-dropdown {
+  position: absolute;
+
+  top: 100%;
+  left: 50%;
+
+  z-index: 1100;
+
+  width: 350px;
+  padding: 12px 0;
+
+  border: 1px solid #d6d6d6;
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.12),
+    0 12px 30px rgba(0, 0, 0, 0.12);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transform: translate(-50%, -8px);
+
+  transition:
+    opacity 0.18s ease,
+    transform 0.18s ease,
+    visibility 0.18s ease;
+}
+
+.luxe-login-dropdown::before {
+  position: absolute;
+
+  top: -8px;
+  left: 50%;
+
+  width: 16px;
+  height: 16px;
+
+  border-top: 1px solid #d6d6d6;
+  border-left: 1px solid #d6d6d6;
+
+  background: #ffffff;
+
+  content: "";
+
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.luxe-login-wrapper:hover .luxe-login-dropdown,
+.luxe-login-wrapper:focus-within .luxe-login-dropdown {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+
+  transform: translate(-50%, 0);
+}
+
+/* ========================================
+   LOGIN DROPDOWN HEADER
+======================================== */
+
+.luxe-login-dropdown-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 50px;
+
+  margin-bottom: 6px;
+  padding: 0 20px;
+
+  border-bottom: 1px solid #eeeeee;
+}
+
+.luxe-login-dropdown-header span {
+  color: #555555;
+  font-size: 16px;
+}
+
+.luxe-login-dropdown-header a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 110px;
+  height: 42px;
+
+  padding: 0 20px;
+
+  border-radius: 2px;
+
+  background: #2874f0;
+  color: #ffffff;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition: background 0.2s ease;
+}
+
+.luxe-login-dropdown-header a:hover {
+  background: #1f5fd1;
+}
+
+/* ========================================
+   MORE WRAPPER
+======================================== */
+
+.luxe-more-wrapper {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+}
+
+.luxe-more-trigger {
+  padding: 8px 10px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: transparent;
+  color: #111111;
+
+  font-family: inherit;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+.luxe-more-trigger:hover {
+  color: #2874f0;
+}
+
+/* ========================================
+   MORE DROPDOWN
+======================================== */
+
+.luxe-more-dropdown {
+  position: absolute;
+
+  top: 100%;
+  right: -15px;
+
+  z-index: 1100;
+
+  width: 350px;
+  padding: 24px 20px;
+
+  border: 1px solid #d6d6d6;
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.12),
+    0 12px 30px rgba(0, 0, 0, 0.12);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transform: translateY(-8px);
+
+  transition:
+    opacity 0.18s ease,
+    transform 0.18s ease,
+    visibility 0.18s ease;
+}
+
+.luxe-more-dropdown::before {
+  position: absolute;
+
+  top: -8px;
+  right: 40px;
+
+  width: 16px;
+  height: 16px;
+
+  border-top: 1px solid #d6d6d6;
+  border-left: 1px solid #d6d6d6;
+
+  background: #ffffff;
+
+  content: "";
+
+  transform: rotate(45deg);
+}
+
+.luxe-more-wrapper:hover .luxe-more-dropdown,
+.luxe-more-wrapper:focus-within .luxe-more-dropdown {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+
+  transform: translateY(0);
+}
+
+/* ========================================
+   DROPDOWN ITEMS
+======================================== */
+
+.luxe-dropdown-item {
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  width: 100%;
+  height: 50px;
+
+  padding: 0 20px;
+
+  border: 0;
+  border-radius: 8px;
+
+  background: transparent;
+  color: #333333;
+
+  font-family: inherit;
+  font-size: 16px;
+
+  text-align: left;
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+}
+
+.luxe-dropdown-item svg {
+  flex-shrink: 0;
+
+  color: #222222;
+  stroke-width: 1.8;
+}
+
+.luxe-dropdown-item span {
+  white-space: nowrap;
+}
+
+.luxe-dropdown-item:hover {
+  background: #f5f7ff;
+  color: #2874f0;
+}
+
+.luxe-dropdown-item:hover svg {
+  color: #2874f0;
+}
+
+/* ========================================
+   CART
+======================================== */
+
+.luxe-cart {
+  gap: 8px;
+
+  color: #111111;
+  text-decoration: none;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 1100px) {
+  .luxe-header-container {
+    width: calc(100% - 32px);
+    gap: 24px;
+  }
+
+  .luxe-header-actions {
+    gap: 16px;
+  }
+
+  .luxe-header-action {
+    gap: 6px;
+    font-size: 15px;
+  }
+
+  .luxe-header-brand {
+    flex-basis: 150px;
+    width: 150px;
+  }
+
+  .luxe-brand-name {
+    width: 90px;
+  }
+}
+
+/* ========================================
+   TABLET RESPONSIVE
+======================================== */
+
+@media (max-width: 900px) {
+  .luxe-header-container {
+    gap: 16px;
+  }
+
+  .luxe-search-box {
+    min-width: 0;
+    padding: 0 14px;
+  }
+
+  .luxe-search-box input {
+    font-size: 16px;
+  }
+
+  .luxe-header-actions {
+    gap: 12px;
+  }
+
+  .luxe-header-action {
+    font-size: 14px;
+  }
+}
+
+/* ========================================
+   MOBILE RESPONSIVE
+======================================== */
+
+@media (max-width: 700px) {
+  .luxe-header {
+    height: auto;
+    min-height: 78px;
+  }
+
+  .luxe-header-container {
+    width: calc(100% - 24px);
+
+    height: auto;
+    min-height: 78px;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+    padding: 10px 0;
+  }
+
+  .luxe-header-brand {
+    flex-basis: 138px;
+    width: 138px;
+    height: 43px;
+
+    border-radius: 12px;
+  }
+
+  .luxe-brand-icon {
+    width: 34px;
+  }
+
+  .luxe-brand-name {
+    width: 84px;
+  }
+
+  .luxe-search-box {
+    flex: 1 1 100%;
+
+    width: 100%;
+    height: 46px;
+
+    gap: 10px;
+    padding: 0 12px;
+
+    border-radius: 12px;
+  }
+
+  .luxe-search-box svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .luxe-search-box input {
+    font-size: 16px;
+  }
+
+  .luxe-header-actions {
+    display: flex;
+    justify-content: space-between;
+
+    flex: 1 1 100%;
+    width: 100%;
+
+    gap: 8px;
+  }
+
+  .luxe-header-action {
+    gap: 5px;
+    padding: 7px 5px;
+
+    font-size: 14px;
+  }
+
+  .luxe-login-dropdown {
+    left: auto;
+    right: 0;
+
+    width: min(350px, calc(100vw - 24px));
+
+    transform: translateY(-8px);
+  }
+
+  .luxe-login-wrapper:hover .luxe-login-dropdown,
+  .luxe-login-wrapper:focus-within .luxe-login-dropdown {
+    transform: translateY(0);
+  }
+
+  .luxe-login-dropdown::before {
+    left: auto;
+    right: 34px;
+
+    transform: rotate(45deg);
+  }
+
+  .luxe-more-dropdown {
+    right: 0;
+
+    width: min(350px, calc(100vw - 24px));
+  }
+
+  .luxe-more-dropdown::before {
+    right: 30px;
+  }
+}
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 420px) {
+  .luxe-header-container {
+    width: calc(100% - 20px);
+  }
+
+  .luxe-header-actions {
+    gap: 4px;
+  }
+
+  .luxe-header-action {
+    gap: 4px;
+    padding: 7px 3px;
+
+    font-size: 12px;
+  }
+
+  .luxe-header-action svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .luxe-login-dropdown,
+  .luxe-more-dropdown {
+    width: min(330px, calc(100vw - 20px));
+  }
+
+  .luxe-login-dropdown-header {
+    gap: 10px;
+    padding: 0 12px;
+  }
+
+  .luxe-login-dropdown-header span {
+    font-size: 14px;
+  }
+
+  .luxe-login-dropdown-header a {
+    min-width: 88px;
+    padding: 0 12px;
+
+    font-size: 14px;
+  }
+
+  .luxe-dropdown-item {
+    gap: 12px;
+    padding: 0 14px;
+
+    font-size: 14px;
+  }
+
+  .luxe-more-dropdown {
+    padding: 16px 12px;
+  }
+}
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .luxe-header *,
+  .luxe-header *::before,
+  .luxe-header *::after {
+    scroll-behavior: auto !important;
+
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

@@ -8,6 +8,7 @@ import Gaming from "./pages/Gaming";
 import Electronics from "./pages/Electronics";
 import Beauty from "./pages/Beauty";
 import Home from "./pages/Home";
+import Luxe from "./pages/Luxe";
 import Appliances from "./pages/Appliances";
 import ToysBaby from "./pages/ToysBaby";
 import SportsFitness from "./pages/SportsFitness";
@@ -42,6 +43,8 @@ function App() {
           <Route path="/beauty" element={<Beauty />} />
 
           <Route path="/home" element={<Home />} />
+
+          <Route path="/luxe" element={<Luxe />} />
 
           <Route path="/appliances" element={<Appliances />} />
 

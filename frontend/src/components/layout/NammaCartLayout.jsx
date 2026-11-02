@@ -7,8 +7,19 @@ import AdRotationProvider from "./AdRotation";
 
 function NammaCartLayout() {
   const location = useLocation();
+
   const isFirstRender = useRef(true);
   const [isLoading, setIsLoading] = useState(false);
+
+  // ========================================
+  // CHECK CURRENT PAGE
+  // ========================================
+
+  const isLuxePage = location.pathname === "/luxe";
+
+  // ========================================
+  // PAGE TRANSITION LOADING
+  // ========================================
 
   useLayoutEffect(() => {
     if (isFirstRender.current) {
@@ -25,11 +36,17 @@ function NammaCartLayout() {
     return () => window.clearTimeout(timer);
   }, [location.pathname]);
 
+  // ========================================
+  // MAIN LAYOUT
+  // ========================================
+
   return (
     <AdRotationProvider>
-      <Header />
+      {/* NORMAL HEADER - HIDDEN ON LUXE */}
+      {!isLuxePage && <Header />}
 
-      {isLoading ? <CategorySkeleton /> : <Outlet />}
+      {/* PAGE CONTENT */}
+      {isLoading && !isLuxePage ? <CategorySkeleton /> : <Outlet />}
     </AdRotationProvider>
   );
 }
