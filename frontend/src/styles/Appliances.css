@@ -23,6 +23,33 @@
 }
 
 /* ========================================
+   FOR EVERYDAY LIVING - WIDTH FIX
+======================================== */
+
+#mobiles-premium-deals.mobiles-deals-section.price-drop {
+  width: calc(100% - 40px);
+  max-width: 1300px;
+  margin: 24px auto;
+  box-sizing: border-box;
+}
+
+/* Any To Any Exchange */
+.any-to-any-exchange {
+  padding-top: 0px;
+  padding-bottom: -10px;
+}
+
+/* Reduce space between title and images */
+.any-to-any-exchange .title {
+  margin-bottom: 12px;
+}
+
+/* Product images */
+.any-to-any-exchange img {
+  display: block;
+}
+
+/* ========================================
    RESPONSIVE DESIGN
 ======================================== */
 

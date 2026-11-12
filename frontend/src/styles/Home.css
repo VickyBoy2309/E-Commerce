@@ -212,6 +212,410 @@
   transform: scale(1.03);
 }
 
+/* Festive Gifting - Section Spacing */
+.festive-gifting-first {
+  margin-top: 40px;
+}
+
+:is(
+  .festive-gifting-second,
+  .festive-gifting-third,
+  .festive-gifting-fourth,
+  .festive-gifting-fifth
+) {
+  margin-top: 18px;
+}
+
+/* Festive Gifting - Image Styling */
+:is(
+    .festive-gifting-first,
+    .festive-gifting-second,
+    .festive-gifting-third,
+    .festive-gifting-fourth,
+    .festive-gifting-fifth
+  )
+  img {
+  border-radius: 12px;
+}
+
+.light-up-your-home {
+  margin-top: 40px;
+}
+.light-up-your-home img {
+  border-radius: 12px;
+}
+
+.bathroom-essentials {
+  margin-top: 40px;
+}
+
+.bathroom-essentials img {
+  border-radius: 12px;
+}
+
+.winter-collection {
+  margin-top: 40px;
+}
+
+.winter-collection img {
+  border-radius: 12px;
+}
+
+.explore-trending {
+  margin-top: 40px;
+}
+
+.explore-trending img {
+  border-radius: 12px;
+}
+
+.kitchen-essentials {
+  margin-top: 40px;
+}
+
+.kitchen-essentials img {
+  border-radius: 12px;
+}
+
+.furnishing {
+  margin-top: 40px;
+}
+
+.furnishing img {
+  border-radius: 12px;
+}
+
+/* ========================================
+   HOME DECOR SECTION
+======================================== */
+
+.home-decor-section {
+  width: calc(100% - 40px);
+  max-width: 1300px;
+  margin: 30px auto;
+}
+
+/* Section Title */
+
+.home-decor-header {
+  margin-bottom: 18px;
+}
+
+.home-decor-header h2 {
+  font-size: 28px;
+  font-weight: 500;
+  color: #111;
+  margin: 0;
+}
+
+/* Slider Wrapper */
+
+.home-decor-slider-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* Horizontal Slider */
+
+.home-decor-slider {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-snap-type: x proximity;
+}
+
+.home-decor-slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* Individual Cards */
+
+.home-decor-card {
+  flex: 0 0 calc((100% - 90px) / 7);
+  min-width: 0;
+  display: block;
+  overflow: hidden;
+  border-radius: 20px;
+  text-decoration: none;
+  scroll-snap-align: start;
+}
+
+.home-decor-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 20px;
+}
+
+/* ========================================
+   LEFT & RIGHT ARROWS
+======================================== */
+
+.home-decor-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 55px;
+  height: 55px;
+
+  border: none;
+  border-radius: 50%;
+  background: #fff;
+  color: #333;
+
+  font-size: 36px;
+  font-weight: 400;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  z-index: 10;
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+}
+
+.home-decor-arrow:hover {
+  background: #f1f1f1;
+  transform: translateY(-50%) scale(1.08);
+}
+
+/* Left Arrow */
+
+.home-decor-prev {
+  left: -20px;
+}
+
+/* Right Arrow */
+
+.home-decor-next {
+  right: -20px;
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 1100px) {
+  .home-decor-card {
+    flex: 0 0 calc((100% - 45px) / 4);
+  }
+}
+
+@media (max-width: 768px) {
+  .home-decor-section {
+    width: calc(100% - 24px);
+  }
+
+  .home-decor-card {
+    flex: 0 0 calc((100% - 30px) / 3);
+  }
+
+  .home-decor-arrow {
+    width: 42px;
+    height: 42px;
+    font-size: 29px;
+  }
+
+  .home-decor-prev {
+    left: -10px;
+  }
+
+  .home-decor-next {
+    right: -10px;
+  }
+
+  .home-decor-header h2 {
+    font-size: 23px;
+  }
+}
+
+
+/* ========================================
+   NAMMACART - BRANDED PRICE CUTS
+======================================== */
+
+.branded-price-cuts-section {
+  width: 100%;
+  min-width: 0;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========================================
+   BRANDED PRICE CUTS CONTAINER
+======================================== */
+
+.branded-price-cuts-container {
+  position: relative;
+
+  width: calc(100% - 40px);
+  max-width: 1300px;
+  min-width: 0;
+
+  margin: 20px auto;
+  padding: 0;
+
+  box-sizing: border-box;
+  overflow: hidden;
+
+  background: #CE1622;
+  border-radius: 16px;
+}
+
+/* ========================================
+   TOP BANNER
+======================================== */
+
+.branded-price-cuts-header {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.branded-price-cuts-header img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ========================================
+   BRAND CARDS GRID
+======================================== */
+
+.branded-price-cuts-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 16px;
+
+  width: 100%;
+  padding: 16px;
+
+  margin: 0;
+
+  box-sizing: border-box;
+}
+
+/* ========================================
+   INDIVIDUAL BRAND CARDS
+======================================== */
+
+.branded-price-cuts-card {
+  display: block;
+
+  width: 100%;
+  min-width: 0;
+
+  overflow: hidden;
+
+  border-radius: 16px;
+
+  text-decoration: none;
+
+  box-sizing: border-box;
+
+  transition: transform 0.2s ease;
+}
+
+.branded-price-cuts-card img {
+  display: block;
+
+  width: 100%;
+  max-width: 100%;
+
+  height: auto;
+
+  object-fit: contain;
+}
+
+.branded-price-cuts-card:hover {
+  transform: translateY(-3px);
+}
+
+/* ========================================
+   BOTTOM BANNER
+======================================== */
+
+.branded-price-cuts-footer {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.branded-price-cuts-footer img {
+  display: block;
+
+  width: 100%;
+  max-width: 100%;
+
+  height: auto;
+
+  object-fit: contain;
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 900px) {
+
+  .branded-price-cuts-container {
+    width: calc(100% - 24px);
+  }
+
+  .branded-price-cuts-grid {
+    gap: 10px;
+    padding: 10px;
+  }
+
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+  .branded-price-cuts-container {
+    width: calc(100% - 16px);
+    margin: 12px auto;
+  }
+
+  .branded-price-cuts-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    padding: 8px;
+  }
+
+}
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 480px) {
+
+  .branded-price-cuts-container {
+    width: calc(100% - 20px);
+  }
+
+}
+
+
 /* ========================================
    RESPONSIVE DESIGN
 ======================================== */

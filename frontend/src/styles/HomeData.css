@@ -1,0 +1,161 @@
+/* ========================================
+   HOME DATA SECTION
+======================================== */
+
+.home-data-section {
+  width: calc(100% - 40px);
+  max-width: 1300px;
+  margin: 30px auto;
+}
+
+/* Section Title */
+
+.home-data-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #111;
+  margin: 0 0 18px;
+}
+
+/* Carousel Wrapper */
+
+.home-data-carousel {
+  position: relative;
+  width: 100%;
+}
+
+/* Slider Track */
+
+.home-data-track {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.home-data-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* Individual Cards */
+
+.home-data-card {
+  flex: 0 0
+    calc(
+      (100% - (15px * (var(--visible-cards, 7) - 1))) / var(--visible-cards, 7)
+    );
+
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+/* Clickable Link */
+
+.home-data-link {
+  display: block;
+  width: 100%;
+}
+
+/* Images */
+
+.home-data-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+/* ========================================
+   NAVIGATION ARROWS
+======================================== */
+
+.home-data-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 55px;
+  height: 55px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #fff;
+  color: #333;
+
+  font-size: 36px;
+  font-weight: 400;
+
+  cursor: pointer;
+  z-index: 10;
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+
+  transition: background 0.2s ease;
+}
+
+.home-data-arrow:hover {
+  background: #f1f1f1;
+}
+
+/* Left Arrow */
+
+.home-data-prev {
+  left: -20px;
+}
+
+/* Right Arrow */
+
+.home-data-next {
+  right: -20px;
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 1100px) {
+  .home-data-card {
+    flex-basis: calc((100% - 45px) / 4);
+  }
+}
+
+@media (max-width: 768px) {
+  .home-data-section {
+    width: calc(100% - 24px);
+  }
+
+  .home-data-card {
+    flex-basis: calc((100% - 30px) / 3);
+  }
+
+  .home-data-title {
+    font-size: 23px;
+  }
+
+  .home-data-arrow {
+    width: 42px;
+    height: 42px;
+    font-size: 29px;
+  }
+
+  .home-data-prev {
+    left: -10px;
+  }
+
+  .home-data-next {
+    right: -10px;
+  }
+}

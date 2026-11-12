@@ -2070,6 +2070,82 @@ const topDeals = {
       link: "/home/cushion-covers",
     },
   ],
+
+  // Appliances Page - Any to Any Exchange
+  priceDropFestival: [
+    {
+      id: 1,
+      image: new URL(
+        "../assets/images/08-Appliances/priceDropFestival/01-Sony TVs.webp",
+        import.meta.url,
+      ).href,
+      alt: "Sony TVs",
+      link: "/category/television",
+    },
+    {
+      id: 2,
+      image: new URL(
+        "../assets/images/08-Appliances/priceDropFestival/02-LG.webp",
+        import.meta.url,
+      ).href,
+      alt: "LG Appliances",
+      link: "/category/appliances",
+    },
+    {
+      id: 3,
+      image: new URL(
+        "../assets/images/08-Appliances/priceDropFestival/03-Fridges.webp",
+        import.meta.url,
+      ).href,
+      alt: "Refrigerators",
+      link: "/category/refrigerators",
+    },
+    {
+      id: 4,
+      image: new URL(
+        "../assets/images/08-Appliances/priceDropFestival/04-Mixer.webp",
+        import.meta.url,
+      ).href,
+      alt: "Mixer Grinders",
+      link: "/category/mixer-grinders",
+    },
+    {
+      id: 5,
+      image: new URL(
+        "../assets/images/08-Appliances/priceDropFestival/05-Premium ACs.webp",
+        import.meta.url,
+      ).href,
+      alt: "Premium Air Conditioners",
+      link: "/category/air-conditioners",
+    },
+    {
+      id: 6,
+      image: new URL(
+        "../assets/images/08-Appliances/priceDropFestival/06-Convection ovens.webp",
+        import.meta.url,
+      ).href,
+      alt: "Convection Ovens",
+      link: "/category/ovens",
+    },
+    {
+      id: 7,
+      image: new URL(
+        "../assets/images/08-Appliances/priceDropFestival/07-Robtic cleaner.webp",
+        import.meta.url,
+      ).href,
+      alt: "Robot Vacuum Cleaners",
+      link: "/category/robot-vacuum-cleaners",
+    },
+    {
+      id: 9,
+      image: new URL(
+        "../assets/images/08-Appliances/priceDropFestival/09-Storage geyser.webp",
+        import.meta.url,
+      ).href,
+      alt: "Storage Geysers",
+      link: "/category/water-heaters",
+    },
+  ],
 };
 
 export default topDeals;

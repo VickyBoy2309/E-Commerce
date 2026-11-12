@@ -22,6 +22,13 @@ import topDeals from "../data/topDeals";
 
 import makeoverBackgroundBanner from "../assets/images/07-Home/homeFestiveMakeover/Background Banner.png";
 
+import HomeData from "../components/layout/HomeData.jsx";
+import homeData from "../data/homeData.js";
+
+import giftsSaving from "../data/giftsSavings.js";
+import topBanner from "../assets/images/07-Home/brandedPriceCuts/Top Banner.webp";
+import bottomBanner from "../assets/images/07-Home/brandedPriceCuts/Bottom Banner.webp";
+
 const brandsInSpotlight = [
   {
     id: 1,
@@ -116,6 +123,92 @@ export default function Home() {
         backgroundImage={makeoverBackgroundBanner}
         products={topDeals.homeFestiveMakeover}
       />
+
+      <MobilesDeals
+        title="Festive Gifting"
+        products={mobilesDeals.festiveGiftingFirst}
+        className="festive-gifting-first"
+      />
+      <MobilesDeals
+        products={mobilesDeals.festiveGiftingSecond}
+        className="festive-gifting-second"
+      />
+      <MobilesDeals
+        products={mobilesDeals.festiveGiftingThird}
+        className="festive-gifting-third"
+      />
+      <MobilesDeals
+        products={mobilesDeals.festiveGiftingFourth}
+        className="festive-gifting-fourth"
+      />
+      <MobilesDeals
+        products={mobilesDeals.festiveGiftingFifth}
+        className="festive-gifting-fifth"
+      />
+      <MobilesDeals
+        title="Light Up Your Home"
+        products={mobilesDeals.lightUpYourHome}
+        className="light-up-your-home"
+      />
+      <MobilesDeals
+        title="Bathroom Essentials"
+        products={mobilesDeals.bathroomEssentials}
+        className="bathroom-essentials"
+      />
+      <MobilesDeals
+        title="Winter Collection"
+        products={mobilesDeals.winterCollection}
+        className="winter-collection"
+      />
+      <MobilesDeals
+        title="Explore What's Trending"
+        products={mobilesDeals.exploreTrending}
+        className="explore-trending"
+      />
+      <MobilesDeals
+        title="Kitchen Essentials"
+        products={mobilesDeals.kitchenEssentials}
+        className="kitchen-essentials"
+      />
+      <MobilesDeals
+        title="Furnishing"
+        products={mobilesDeals.furnishing}
+        className="furnishing"
+      />
+      {/* Home Decor Section */}
+      <HomeData title="Home Decor" products={homeData.homeDecor} />
+      <HomeData title="Hardware Range" products={homeData.hardwareRange} />
+      <HomeData title="Furniture Picks" products={homeData.furniturePicks} />
+
+      {/* Branded Price Cuts Section */}
+
+      <section className="branded-price-cuts-section">
+        <div className="branded-price-cuts-container">
+          {/* Top Banner */}
+          <div className="branded-price-cuts-header">
+            <img src={topBanner} alt="Branded Price Cuts" />
+          </div>
+
+          {/* Brand Cards */}
+          <div className="branded-price-cuts-grid">
+            {giftsSaving.brandedPriceCuts.map((brand) => (
+              <Link
+                to={brand.link}
+                key={brand.id}
+                className="branded-price-cuts-card"
+                aria-label={`Shop ${brand.alt}`}
+              >
+                <img src={brand.image} alt={brand.alt} />
+              </Link>
+            ))}
+          </div>
+
+          {/* Bottom Banner */}
+          <div className="branded-price-cuts-footer">
+            <img src={bottomBanner} alt="Diya Decoration" />
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

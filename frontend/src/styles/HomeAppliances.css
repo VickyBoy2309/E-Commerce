@@ -1,0 +1,454 @@
+/* ========================================
+   NAMMACART - HOME APPLIANCES SECTION
+======================================== */
+
+/* Main Section */
+.home-appliances-section {
+  width: 100%;
+  padding: 0 20px;
+  margin: 24px auto;
+  box-sizing: border-box;
+}
+
+/* ========================================
+   MAIN CONTAINER
+======================================== */
+
+.home-appliances-container {
+  position: relative;
+
+  width: 100%;
+  max-width: 1300px;
+  min-width: 0;
+
+  margin: 0 auto;
+  padding: 18px 14px 22px;
+
+  box-sizing: border-box;
+
+  background: linear-gradient(
+    180deg,
+    #ed0075 0%,
+    #f02778 30%,
+    #f75d87 58%,
+    #ffb28e 82%,
+    #ffe58a 100%
+  );
+
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+/* ========================================
+   HOME APPLIANCES GRADIENT
+======================================== */
+
+.home-appliances-section.home .home-appliances-container {
+  background: linear-gradient(
+    180deg,
+    #ed0075 0%,
+    #f02778 30%,
+    #f75d87 58%,
+    #ffb28e 82%,
+    #ffe58a 100%
+  );
+}
+
+/* ========================================
+   KITCHEN APPLIANCES GRADIENT
+======================================== */
+
+.home-appliances-section.kitchen .home-appliances-container {
+  background: linear-gradient(180deg, #f45108 0%, #ff8d35 53%, #ffe58c 100%);
+}
+
+/* ========================================
+   SECTION TITLE
+======================================== */
+
+.home-appliances-title {
+  width: 100%;
+  max-width: 1300px;
+
+  margin: 36px auto 12px;
+  padding: 0 4px;
+
+  box-sizing: border-box;
+
+  color: #111111;
+
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.3;
+
+  text-align: left;
+}
+
+/* ========================================
+   CATEGORY NAVIGATION - SMOOTH SCROLL
+======================================== */
+
+.home-appliances-navigation {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+
+  width: 100%;
+  height: 118px;
+  min-width: 0;
+
+  margin: 0 0 18px;
+  padding: 0;
+
+  /* Horizontal scrolling only */
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  /* Hide scrollbar */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  /* JavaScript controls smooth animation */
+  scroll-behavior: auto;
+  scroll-snap-type: none;
+
+  /* Prevent scroll chaining */
+  overscroll-behavior: contain;
+
+  /* Enable horizontal touch scrolling */
+  touch-action: pan-x;
+
+  cursor: grab;
+
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.home-appliances-navigation::-webkit-scrollbar {
+  display: none;
+}
+
+/* Four Categories Visible */
+.home-appliances-category {
+  position: relative;
+
+  flex: 0 0 25%;
+  width: 25%;
+  min-width: 25%;
+  max-width: 25%;
+  flex-shrink: 0;
+
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  gap: 7px;
+  padding: 5px 4px 14px;
+
+  box-sizing: border-box;
+
+  border: none;
+  border-radius: 0;
+  background: transparent;
+
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Category Icon */
+.home-appliances-category-icon {
+  width: 76px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+.home-appliances-category-icon img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+  pointer-events: none;
+}
+
+/* Category Name */
+.home-appliances-category span {
+  width: 100%;
+
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Active Underline */
+.home-appliances-active-line {
+  position: absolute;
+  bottom: -1px;
+  left: 10%;
+
+  width: 80%;
+  height: 4px;
+
+  background: transparent;
+  border-radius: 5px;
+}
+
+.home-appliances-category.active .home-appliances-active-line {
+  background: #ffffff;
+}
+
+/* Keyboard Focus */
+.home-appliances-category:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: -4px;
+}
+
+/* ========================================
+   PRODUCT SHOWCASE
+======================================== */
+
+.home-appliances-products-wrapper {
+  position: relative;
+
+  width: 100%;
+  min-width: 0;
+}
+
+/* Product Slider */
+.home-appliances-products-slider {
+  display: flex;
+  align-items: flex-start;
+
+  width: 100%;
+
+  gap: 12px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.home-appliances-products-slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* ========================================
+   PRODUCT CARDS
+======================================== */
+
+.home-appliances-product-card {
+  flex: 0 0 calc((100% - 48px) / 5);
+
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-decoration: none;
+  color: #111111;
+
+  scroll-snap-align: start;
+
+  cursor: pointer;
+}
+
+/* Complete Promotional Image */
+.home-appliances-product-img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  max-width: 100%;
+
+  object-fit: contain;
+  object-position: top center;
+
+  border: none;
+  border-radius: 12px;
+
+  transition: transform 0.25s ease;
+}
+
+/* Hover Effect */
+.home-appliances-product-card:hover .home-appliances-product-img {
+  transform: scale(1.015);
+}
+
+/* Product Name Below Image */
+.home-appliances-product-name {
+  width: 100%;
+
+  margin: 10px 0 0;
+  padding: 0 3px;
+
+  color: #171717;
+
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 1.3;
+
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* ========================================
+   PRODUCT SLIDER ARROWS
+======================================== */
+
+.home-appliances-arrow {
+  position: absolute;
+  top: 42%;
+  z-index: 5;
+
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #ffffff;
+  color: #333333;
+
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transform: translateY(-50%);
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.home-appliances-arrow:hover {
+  background: #f4f4f4;
+  transform: translateY(-50%) scale(1.08);
+}
+
+.home-appliances-arrow-left {
+  left: -10px;
+}
+
+.home-appliances-arrow-right {
+  right: -10px;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 1024px) {
+  .home-appliances-category {
+    flex-basis: 25%;
+    min-width: 25%;
+  }
+
+  .home-appliances-product-card {
+    flex-basis: calc((100% - 36px) / 4);
+  }
+
+  .home-appliances-product-name {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-appliances-section {
+    padding: 0 12px;
+  }
+
+  .home-appliances-container {
+    padding: 16px 12px 20px;
+  }
+
+  .home-appliances-title {
+    font-size: 21px;
+  }
+
+  .home-appliances-navigation {
+    height: 108px;
+  }
+
+  .home-appliances-category {
+    flex-basis: 33.333%;
+    min-width: 33.333%;
+    max-width: 33.333%;
+  }
+
+  .home-appliances-category-icon {
+    width: 65px;
+    height: 50px;
+  }
+
+  .home-appliances-category span {
+    font-size: 13px;
+  }
+
+  .home-appliances-product-card {
+    flex-basis: calc((100% - 24px) / 3);
+  }
+
+  .home-appliances-product-name {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-appliances-category {
+    flex-basis: 50%;
+    min-width: 50%;
+    max-width: 50%;
+  }
+
+  .home-appliances-product-card {
+    flex-basis: 75%;
+  }
+
+  .home-appliances-product-name {
+    font-size: 16px;
+  }
+
+  .home-appliances-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 24px;
+  }
+}

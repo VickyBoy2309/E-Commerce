@@ -1066,4 +1066,89 @@ export const promoBanners = {
       link: "/home/bosch",
     },
   ],
+
+  // Appliances Page - Slideshow
+  applianceSlideshow: [
+    {
+      id: 1,
+      image: new URL(
+        "../assets/images/08-Appliances/slideshow/01-TCL C71 series.webp",
+        import.meta.url,
+      ).href,
+      alt: "TCL C71 Series",
+      link: "/category/television",
+    },
+    {
+      id: 2,
+      image: new URL(
+        "../assets/images/08-Appliances/slideshow/02-Ninja air fryer.webp",
+        import.meta.url,
+      ).href,
+      alt: "Ninja Air Fryer",
+      link: "/category/air-fryers",
+    },
+    {
+      id: 3,
+      image: new URL(
+        "../assets/images/08-Appliances/slideshow/03-Smart purifier.webp",
+        import.meta.url,
+      ).href,
+      alt: "Smart Purifier",
+      link: "/category/air-purifiers",
+    },
+    {
+      id: 4,
+      image: new URL(
+        "../assets/images/08-Appliances/slideshow/04-Panasonic ac.webp",
+        import.meta.url,
+      ).href,
+      alt: "Panasonic AC",
+      link: "/category/air-conditioners",
+    },
+    {
+      id: 5,
+      image: new URL(
+        "../assets/images/08-Appliances/slideshow/05-Storage geyser.webp",
+        import.meta.url,
+      ).href,
+      alt: "Storage Geyser",
+      link: "/category/water-heaters",
+    },
+    {
+      id: 6,
+      image: new URL(
+        "../assets/images/08-Appliances/slideshow/06-BLDC fan.webp",
+        import.meta.url,
+      ).href,
+      alt: "BLDC Fan",
+      link: "/category/fans",
+    },
+    {
+      id: 7,
+      image: new URL(
+        "../assets/images/08-Appliances/slideshow/07-Smart washers.webp",
+        import.meta.url,
+      ).href,
+      alt: "Smart Washers",
+      link: "/category/washing-machines",
+    },
+    {
+      id: 8,
+      image: new URL(
+        "../assets/images/08-Appliances/slideshow/08-Acerpure.webp",
+        import.meta.url,
+      ).href,
+      alt: "Acerpure",
+      link: "/category/air-purifiers",
+    },
+    {
+      id: 9,
+      image: new URL(
+        "../assets/images/08-Appliances/slideshow/09-LQ ovens.webp",
+        import.meta.url,
+      ).href,
+      alt: "LQ Ovens",
+      link: "/category/ovens",
+    },
+  ],
 };

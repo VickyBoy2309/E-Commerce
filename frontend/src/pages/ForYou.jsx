@@ -80,7 +80,7 @@ export default function ForYou() {
       />
 
       {/* Top Brands & Best Deals */}
-      <TopBrands title="Top Brands & Best Deals" brands={topBrands} />
+      <TopBrands title="Top Brands & Best Deals" brands={topBrands.forYou} />
     </main>
   );
 }

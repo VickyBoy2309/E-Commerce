@@ -227,4 +227,39 @@ export const categoryAds = {
       alt: "Freed Fragrance",
     },
   ],
+
+  appliancesAds: [
+    {
+      id: 1,
+      image: new URL(
+        "../assets/images/08-Appliances/ads/01-TCL A400M Mini LED TV.webp",
+        import.meta.url,
+      ).href,
+      alt: "TCL A400M Mini LED TV",
+    },
+    {
+      id: 2,
+      image: new URL(
+        "../assets/images/08-Appliances/ads/02-TCL P6L 4K Smart TV.webp",
+        import.meta.url,
+      ).href,
+      alt: "TCL P6L 4K Smart TV",
+    },
+    {
+      id: 3,
+      image: new URL(
+        "../assets/images/08-Appliances/ads/03-TCL T6D QLED TV.webp",
+        import.meta.url,
+      ).href,
+      alt: "TCL T6D QLED TV",
+    },
+    {
+      id: 4,
+      image: new URL(
+        "../assets/images/08-Appliances/ads/04-TCL T89D QLED TV.webp",
+        import.meta.url,
+      ).href,
+      alt: "TCL T89D QLED TV",
+    },
+  ],
 };
